@@ -1,0 +1,13 @@
+.github-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  border: 1px solid red;
+}
+
+.github-container {
+  margin-top: 1rem;
+  width: 100%;
+  border: 1px solid white;
+}
