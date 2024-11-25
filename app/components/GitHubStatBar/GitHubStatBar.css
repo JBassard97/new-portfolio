@@ -1,0 +1,12 @@
+.stats-bar {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.stat-block {
+  width: 30%;
+  border: 1px solid blue;
+}

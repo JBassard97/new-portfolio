@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import house from "../../public/house.svg";
-import octocat from "../../public/github.svg";
-import react from "../../public/react.svg";
+import house from "../../../public/house.svg";
+import octocat from "../../../public/github.svg";
+import react from "../../../public/react.svg";
 
 export default function Header() {
   return (
