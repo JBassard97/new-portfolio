@@ -4,10 +4,28 @@ header ul {
   justify-content: space-evenly;
 }
 
-.tech-link img {
-  transition: transform 2s ease-in-out;
+/* Slide-up animation */
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0; /* Start hidden */
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1; /* End at normal position */
+  }
 }
 
-.tech-link:hover img {
-  transform: rotate(360deg);
+.icon-container {
+  width: 64px;
+  height: 64px;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.5s ease-in-out;
+  opacity: 1; /* Make the logo visible immediately */
+}
+
+/* Apply slide-up animation */
+.icon-container.slide-up {
+  animation: slideUp 0.5s ease-in-out forwards;
 }
