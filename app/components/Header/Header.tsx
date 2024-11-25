@@ -8,7 +8,7 @@ import octocat from "../../../public/github.svg";
 import "./Header.css";
 
 export default function Header() {
-  const [currentLogo, setCurrentLogo] = useState("toolbox"); // Start with toolbox logo
+  const [currentLogo, setCurrentLogo] = useState("toolbox");
   const [isHovered, setIsHovered] = useState(false);
 
   const tech_logos = [
@@ -20,17 +20,15 @@ export default function Header() {
 
   useEffect(() => {
     let cycleInterval: NodeJS.Timeout | null = null;
-    let i = 0; // Start from the first logo in the cycling array
+    let i = 0;
 
     if (isHovered) {
-      // If hovered, start from the first logo (vue)
-      setCurrentLogo(tech_logos[i].name); // Set the first logo immediately
+      setCurrentLogo(tech_logos[i].name);
       cycleInterval = setInterval(() => {
-        i = (i + 1) % tech_logos.length; // Cycle through the tech_logos array
+        i = (i + 1) % tech_logos.length;
         setCurrentLogo(tech_logos[i].name);
-      }, 1000); // Change every 1 second
+      }, 750);
     } else {
-      // Reset to toolbox logo when not hovering
       setCurrentLogo("toolbox");
     }
 
@@ -42,27 +40,35 @@ export default function Header() {
   return (
     <header>
       <ul>
-        <Link href="/">
-          <Image src={house} alt="Home" />
-        </Link>
-        <Link href="/github">
-          <Image src={octocat} alt="GitHub" />
-        </Link>
-        <Link className="tech-link" href="technologies">
-          <div
-            className={`icon-container ${isHovered ? "slide-up" : ""}`} // Apply slide-up only when hovering
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            style={{
-              backgroundImage: `url(${
-                currentLogo === "toolbox"
-                  ? "/toolbox.svg"
-                  : tech_logos.find((logo) => logo.name === currentLogo)?.url
-              })`,
-            }}
-            key={currentLogo} // Use key to force re-render for animation
-          ></div>
-        </Link>
+        <li className="nav-item slide-up-1">
+          <Link href="/">
+            <Image src={house} alt="Home" />
+          </Link>
+        </li>
+        <li className="nav-item slide-up-2">
+          <Link href="/github">
+            <Image src={octocat} alt="GitHub" />
+          </Link>
+        </li>
+        <li className="nav-item slide-up-3">
+          <Link className="tech-link" href="technologies">
+            <div
+              className={`icon-container ${
+                isHovered ? "tech-slide-up" : "toolbox-slide-up"
+              }`}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+              style={{
+                backgroundImage: `url(${
+                  currentLogo === "toolbox"
+                    ? "/toolbox.svg"
+                    : tech_logos.find((logo) => logo.name === currentLogo)?.url
+                })`,
+              }}
+              key={currentLogo}
+            ></div>
+          </Link>
+        </li>
       </ul>
     </header>
   );

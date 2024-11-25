@@ -2,17 +2,61 @@ header ul {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-/* Slide-up animation */
+.nav-item {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Initial entrance animation for all nav items */
 @keyframes slideUp {
   0% {
     transform: translateY(20px);
-    opacity: 0; /* Start hidden */
+    opacity: 0;
   }
   100% {
     transform: translateY(0);
-    opacity: 1; /* End at normal position */
+    opacity: 1;
+  }
+}
+
+.slide-up-1 {
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+.slide-up-2 {
+  animation: slideUp 0.7s ease-out forwards;
+}
+
+.slide-up-3 {
+  animation: slideUp 0.9s ease-out forwards;
+}
+
+/* Tech logo hover animation */
+@keyframes techSlideUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Toolbox return animation */
+@keyframes toolboxSlideUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -22,10 +66,12 @@ header ul {
   background-size: cover;
   background-position: center;
   transition: background-image 0.5s ease-in-out;
-  opacity: 1; /* Make the logo visible immediately */
 }
 
-/* Apply slide-up animation */
-.icon-container.slide-up {
-  animation: slideUp 0.5s ease-in-out forwards;
+.icon-container.tech-slide-up {
+  animation: techSlideUp 0.5s ease-in-out forwards;
+}
+
+.icon-container.toolbox-slide-up {
+  animation: toolboxSlideUp 0.5s ease-in-out forwards;
 }
