@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap");
+
 .stats-bar {
   width: 100%;
   display: flex;
@@ -8,5 +10,10 @@
 
 .stat-block {
   width: 30%;
-  border: 1px solid blue;
+  color: rgb(0, 255, 255);
+  font-family: "Doto", sans-serif;
+}
+
+.stat-label {
+    font-size: 13px;
 }
