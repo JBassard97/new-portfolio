@@ -3,6 +3,7 @@ import Image from "next/image";
 import house from "../../../public/house.svg";
 import octocat from "../../../public/github.svg";
 import react from "../../../public/react.svg";
+import "./Header.css"
 
 export default function Header() {
   return (
@@ -14,7 +15,7 @@ export default function Header() {
         <Link href="/github">
           <Image src={octocat} alt="GitHub"></Image>
         </Link>
-        <Link href="technologies">
+        <Link className="tech-link" href="technologies">
           <Image src={react} alt="Technologies"></Image>
         </Link>
       </ul>

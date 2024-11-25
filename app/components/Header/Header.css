@@ -1,0 +1,13 @@
+header ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.tech-link img {
+  transition: transform 2s ease-in-out;
+}
+
+.tech-link:hover img {
+  transform: rotate(360deg);
+}
