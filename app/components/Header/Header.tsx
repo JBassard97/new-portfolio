@@ -12,10 +12,15 @@ export default function Header() {
   const [isHovered, setIsHovered] = useState(false);
 
   const tech_logos = [
+    { name: "react", url: "/react_svg.svg" },
     { name: "vue", url: "/vue.svg" },
+    { name: "next", url: "/next-js.svg" },
+    { name: "svelte", url: "/svelte.svg" },
+    { name: "typescript", url: "/typescript.svg" },
+    { name: "python", url: "/python.svg" },
+    { name: "php", url: "/php.svg" },
     { name: "mongo", url: "/mongo.svg" },
     { name: "node", url: "/node.svg" },
-    { name: "react", url: "/react_svg.svg" },
   ];
 
   useEffect(() => {
@@ -27,7 +32,7 @@ export default function Header() {
       cycleInterval = setInterval(() => {
         i = (i + 1) % tech_logos.length;
         setCurrentLogo(tech_logos[i].name);
-      }, 750);
+      }, 500);
     } else {
       setCurrentLogo("toolbox");
     }

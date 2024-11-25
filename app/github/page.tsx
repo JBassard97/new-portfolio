@@ -4,6 +4,7 @@ import useSWR from "swr";
 // import Link from "next/link";
 import GitHubCalendar from "../components/GitHubCalendar/GitHubCalendar";
 import GitHubStatBar from "../components/GitHubStatBar/GitHubStatBar";
+import CommitKey from "../components/CommitKey/CommitKey";
 import "./github-page.css";
 
 interface ContributionDay {
@@ -47,13 +48,14 @@ const GitHub: React.FC = () => {
 
   return (
     <div className="github-page">
-      <h1 className="underline">JBassard97's GitHub</h1>
+      <h4 className="underline">JBassard97's GitHub</h4>
       <div className="github-container">
         <GitHubStatBar
           repositoryTotal={repositoryTotal}
           contributionTotal={contributionTotal}
           longestStreak={longestStreak}
         />
+        <CommitKey />
         <GitHubCalendar contributions={contributions} />
       </div>
     </div>
