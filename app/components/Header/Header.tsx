@@ -49,11 +49,13 @@ export default function Header() {
           <Link href="/">
             <Image src={house} alt="Home" />
           </Link>
+          <p className="link-title">Home</p>
         </li>
         <li className="nav-item slide-up-2">
           <Link href="/github">
             <Image src={octocat} alt="GitHub" />
           </Link>
+          <p className="link-title">GitHub</p>
         </li>
         <li className="nav-item slide-up-3">
           <Link className="tech-link" href="technologies">
@@ -73,6 +75,7 @@ export default function Header() {
               key={currentLogo}
             ></div>
           </Link>
+          <p className="link-title">Tools</p>
         </li>
       </ul>
     </header>

@@ -2,7 +2,6 @@
 
 import React, { useMemo } from "react";
 import "./GitHubCalendar.css";
-import { WrappedNextRouterError } from "next/dist/server/route-modules/app-route/module";
 
 interface ContributionDay {
   contributionCount: number;
@@ -29,22 +28,56 @@ const GitHubCalendar: React.FC<GitHubCalendarProps> = ({ contributions }) => {
     []
   );
 
+  // Extract unique months from the contributions
+  const months = useMemo(() => {
+    const allMonths: string[] = [];
+    contributions.forEach((week) => {
+      const lastDay = week.contributionDays[week.contributionDays.length - 1];
+      const date = new Date(lastDay.date);
+      const monthName = date.toLocaleString("default", { month: "short" });
+      if (!allMonths.includes(monthName)) {
+        allMonths.push(monthName);
+      }
+    });
+    // const firstMonth = allMonths[0];
+    // allMonths.push(firstMonth);
+    return allMonths;
+  }, [contributions]);
+
+  // Days of the week labels
+  const dayLabels = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
   return (
     <div className="contribution-bar-wrapper">
-      <div className="month-labels"></div>
-      <div className="contribution-bar">
-        {contributions.map((week, weekIndex) => (
-          <div key={weekIndex} className="week">
-            {week.contributionDays.map((day, dayIndex) => (
-              <div
-                key={dayIndex}
-                className="day"
-                style={{ backgroundColor: getColor(day.contributionCount) }}
-                title={`${day.date}: ${day.contributionCount} contributions`}
-              />
-            ))}
+      <div className="month-labels">
+        {months.map((month, index) => (
+          <div key={index} className="month-label">
+            {month}
           </div>
         ))}
+      </div>
+      <div className="calendar-container">
+        <div className="day-labels">
+          {dayLabels.map((day, index) => (
+            <div key={index} className="day-label">
+              {day}
+            </div>
+          ))}
+        </div>
+        <div className="contribution-bar">
+          {contributions.map((week, weekIndex) => (
+            <div key={weekIndex} className="week">
+              {week.contributionDays.map((day, dayIndex) => (
+                <div
+                  key={dayIndex}
+                  className="day"
+                  style={{ backgroundColor: getColor(day.contributionCount) }}
+                  title={`${day.date}: ${day.contributionCount} contributions`}
+                />
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

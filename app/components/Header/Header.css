@@ -76,3 +76,9 @@ header ul {
 .icon-container.toolbox-slide-up {
   animation: toolboxSlideUp 0.5s ease-in-out forwards;
 }
+
+.link-title {
+  margin-top: 0.3rem;
+  text-align: center;
+  z-index: 2;
+}
