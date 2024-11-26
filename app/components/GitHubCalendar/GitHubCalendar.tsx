@@ -49,34 +49,36 @@ const GitHubCalendar: React.FC<GitHubCalendarProps> = ({ contributions }) => {
 
   return (
     <div className="contribution-bar-wrapper">
-      <div className="month-labels">
-        {months.map((month, index) => (
-          <div key={index} className="month-label">
-            {month}
-          </div>
-        ))}
-      </div>
       <div className="calendar-container">
-        <div className="day-labels">
-          {dayLabels.map((day, index) => (
-            <div key={index} className="day-label">
-              {day}
+        <div className="month-labels">
+          {months.map((month, index) => (
+            <div key={index} className="month-label">
+              {month}
             </div>
           ))}
         </div>
-        <div className="contribution-bar">
-          {contributions.map((week, weekIndex) => (
-            <div key={weekIndex} className="week">
-              {week.contributionDays.map((day, dayIndex) => (
-                <div
-                  key={dayIndex}
-                  className="day"
-                  style={{ backgroundColor: getColor(day.contributionCount) }}
-                  title={`${day.date}: ${day.contributionCount} contributions`}
-                />
-              ))}
-            </div>
-          ))}
+        <div className="row">
+          <div className="day-labels">
+            {dayLabels.map((day, index) => (
+              <div key={index} className="day-label">
+                {day}
+              </div>
+            ))}
+          </div>
+          <div className="contribution-bar">
+            {contributions.map((week, weekIndex) => (
+              <div key={weekIndex} className="week">
+                {week.contributionDays.map((day, dayIndex) => (
+                  <div
+                    key={dayIndex}
+                    className="day"
+                    style={{ backgroundColor: getColor(day.contributionCount) }}
+                    title={`${day.date}: ${day.contributionCount} contributions`}
+                  />
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
