@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useMemo } from "react";
+import Loading from "../Loading/Loading";
 import "./GitHubCalendar.css";
 
 interface ContributionDay {
@@ -48,7 +49,7 @@ const GitHubCalendar: React.FC<GitHubCalendarProps> = ({ contributions }) => {
   const dayLabels = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   if (!contributions || contributions.length === 0) {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 
   return (
