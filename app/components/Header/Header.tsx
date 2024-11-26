@@ -1,10 +1,12 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { Tooltip } from "react-tooltip";
 import Link from "next/link";
 import Image from "next/image";
 import house from "../../../public/house.svg";
 import octocat from "../../../public/github.svg";
+import journeys from "../../../public/journeys.svg";
 import "./Header.css";
 
 export default function Header() {
@@ -45,19 +47,29 @@ export default function Header() {
   return (
     <header>
       <ul>
-        <li className="nav-item slide-up-1">
+        <li
+          className="nav-item"
+          data-tooltip-id="home-tooltip"
+          data-tooltip-content="Home"
+        >
           <Link href="/">
             <Image src={house} alt="Home" />
           </Link>
-          <p className="link-title">Home</p>
         </li>
-        <li className="nav-item slide-up-2">
+        <li
+          className="nav-item"
+          data-tooltip-id="github-tooltip"
+          data-tooltip-content="GitHub Profile"
+        >
           <Link href="/github">
             <Image src={octocat} alt="GitHub" />
           </Link>
-          <p className="link-title">GitHub</p>
         </li>
-        <li className="nav-item slide-up-3">
+        <li
+          className="nav-item"
+          data-tooltip-id="tech-tooltip"
+          data-tooltip-content="Technologies"
+        >
           <Link className="tech-link" href="technologies">
             <div
               className={`icon-container ${
@@ -75,9 +87,22 @@ export default function Header() {
               key={currentLogo}
             ></div>
           </Link>
-          <p className="link-title">Tools</p>
+        </li>
+        <li
+          className="nav-item"
+          data-tooltip-id="journey-tooltip"
+          data-tooltip-content={"My Journeys"}
+        >
+          <Link href="/journeys">
+            <Image src={journeys} alt="Journeys" />
+          </Link>
         </li>
       </ul>
+
+      <Tooltip id="home-tooltip" place="bottom" />
+      <Tooltip id="github-tooltip" place="bottom" />
+      <Tooltip id="tech-tooltip" place="bottom" />
+      <Tooltip id="journey-tooltip" place="bottom" />
     </header>
   );
 }

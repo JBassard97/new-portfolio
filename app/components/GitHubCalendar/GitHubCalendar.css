@@ -7,9 +7,8 @@
   overflow-x: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   display: flex;
-  /* justify-content: center; */
 }
 
 .contribution-bar-wrapper::-webkit-scrollbar {
@@ -19,17 +18,21 @@
 .month-labels {
   display: flex;
   font-size: 0.8rem;
-  margin-left: 2rem;
+  margin-left: 1.75rem;
   width: 966px;
   color: #666;
   justify-content: space-between;
+}
+
+.month-label {
+  animation: fadeInFromTop 0.5s ease-in-out forwards;
+  opacity: 0;
 }
 
 .day-labels {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-right: 5px;
   font-size: 0.7rem;
   color: #666;
 }
@@ -38,6 +41,8 @@
   height: 15px;
   width: 25px;
   margin: 2px 0;
+  opacity: 0;
+  animation: fadeInFromLeft 0.5s ease-in-out forwards;
 }
 
 .calendar-container {
@@ -53,11 +58,7 @@
 /* ! FINE */
 .contribution-bar {
   display: flex;
-  /* flex-direction: column; */
-  /* align-items: flex-start; */
 }
-
-
 
 .week {
   display: flex;
@@ -72,6 +73,29 @@
   cursor: pointer;
 }
 
+/* ! Animations */
+
+@keyframes fadeInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 @media screen and (min-width: 1060px) {
   .contribution-bar-wrapper {

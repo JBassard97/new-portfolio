@@ -47,12 +47,20 @@ const GitHubCalendar: React.FC<GitHubCalendarProps> = ({ contributions }) => {
   // Days of the week labels
   const dayLabels = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
+  if (!contributions || contributions.length === 0) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className="contribution-bar-wrapper">
       <div className="calendar-container">
         <div className="month-labels">
           {months.map((month, index) => (
-            <div key={index} className="month-label">
+            <div
+              key={index}
+              className="month-label"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
               {month}
             </div>
           ))}
@@ -60,7 +68,11 @@ const GitHubCalendar: React.FC<GitHubCalendarProps> = ({ contributions }) => {
         <div className="row">
           <div className="day-labels">
             {dayLabels.map((day, index) => (
-              <div key={index} className="day-label">
+              <div
+                key={index}
+                className="day-label"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
                 {day}
               </div>
             ))}
