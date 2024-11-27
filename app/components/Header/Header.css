@@ -87,3 +87,11 @@ header ul {
   text-align: center;
   z-index: 2;
 }
+
+.nav-item[data-tooltip-id="github-tooltip"] a img {
+  transition: filter 0.3s ease;
+}
+
+.nav-item[data-tooltip-id="github-tooltip"] a:hover img {
+  filter: invert(1);
+}

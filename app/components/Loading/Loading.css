@@ -1,7 +1,7 @@
 .container {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   padding-top: 3rem;
 }
@@ -10,8 +10,9 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  animation: wave 1.5s ease-in-out infinite;
+  animation: wave 1s ease-in-out infinite;
   background-color: #161b21;
+  margin: 10px;
 }
 
 .ball:nth-child(2) {

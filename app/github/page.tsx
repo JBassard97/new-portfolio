@@ -57,7 +57,6 @@ const GitHub: React.FC = () => {
           longestStreak={longestStreak}
         />
         <CommitKey />
-        {/* <Loading /> */}
         <GitHubCalendar contributions={contributions} />
       </div>
     </div>
