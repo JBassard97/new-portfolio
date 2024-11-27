@@ -5,7 +5,7 @@ import useSWR from "swr";
 import GitHubCalendar from "../components/GitHubCalendar/GitHubCalendar";
 import GitHubStatBar from "../components/GitHubStatBar/GitHubStatBar";
 import CommitKey from "../components/CommitKey/CommitKey";
-import Loading from "../components/Loading/Loading";
+// import Loading from "../components/Loading/Loading";
 import "./github-page.css";
 
 interface ContributionDay {

@@ -1,0 +1,25 @@
+{
+  "technologyData": {
+    "excellent": [
+      { "name": "JavaScript" },
+      { "name": "TypeScript" },
+      { "name": "NodeJS" },
+      { "name": "Express.js" },
+      { "name": "MongoDB" },
+      { "name": "React" },
+      { "name": "Next" }
+    ],
+    "comfortable": [
+      { "name": "Python" },
+      { "name": "Vue" },
+      { "name": "GraphQL" }
+    ],
+    "familiar": [{ "name": "Svelte" }, { "name": "WebPack" }],
+    "used_once": [
+      { "name": "PHP" },
+      { "name": "Deno" },
+      { "name": "C" },
+      { "name": "C++" }
+    ]
+  }
+}

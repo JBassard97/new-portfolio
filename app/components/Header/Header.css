@@ -1,5 +1,6 @@
 header {
-  margin: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 header ul {
@@ -97,5 +98,5 @@ header ul {
 
 .nav-item.github:hover {
   filter: invert(1);
-  box-shadow: 0 0 30px 12px white;
+  box-shadow: 0 0 20px 20px white inset, 0 0 15px 15px white;
 }
