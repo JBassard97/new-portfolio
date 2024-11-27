@@ -58,6 +58,7 @@
 /* ! FINE */
 .contribution-bar {
   display: flex;
+  animation: slideInFromBottom 0.2s ease-in-out forwards;
 }
 
 .week {
@@ -71,9 +72,12 @@
   margin: 2px;
   border-radius: 3px;
   cursor: pointer;
-  opacity: 0;
-  animation: fadeInFromBottom 0.2s ease-in-out forwards;
+  /* animation: slideInFromBottom 0.2s ease-in-out forwards; */
 }
+
+/* .day:hover {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.422);
+} */
 
 /* ! Animations */
 
@@ -99,13 +103,11 @@
   }
 }
 
-@keyframes fadeInFromBottom {
+@keyframes slideInFromBottom {
   from {
-    opacity: 0;
     transform: translateY(100px);
   }
   to {
-    opacity: 1;
     transform: translateY(0);
   }
 }

@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Tooltip } from "react-tooltip";
 import Link from "next/link";
 import Image from "next/image";
 import house from "../../../public/house.svg";
@@ -19,10 +18,9 @@ export default function Header() {
     { name: "next", url: "/next-js.svg" },
     { name: "svelte", url: "/svelte.svg" },
     { name: "typescript", url: "/typescript.svg" },
-    { name: "python", url: "/python.svg" },
-    { name: "php", url: "/php.svg" },
-    { name: "mongo", url: "/mongo.svg" },
     { name: "node", url: "/node.svg" },
+    { name: "python", url: "/python.svg" },
+    { name: "mongo", url: "/mongo.svg" },
   ];
 
   useEffect(() => {
@@ -34,7 +32,7 @@ export default function Header() {
       cycleInterval = setInterval(() => {
         i = (i + 1) % tech_logos.length;
         setCurrentLogo(tech_logos[i].name);
-      }, 500);
+      }, 350);
     } else {
       setCurrentLogo("toolbox");
     }
@@ -47,30 +45,18 @@ export default function Header() {
   return (
     <header>
       <ul>
-        <li
-          className="nav-item"
-          data-tooltip-id="home-tooltip"
-          data-tooltip-content="Home"
-        >
+        <li className="nav-item">
           <Link href="/">
             <Image src={house} alt="Home" />
           </Link>
         </li>
-        <li
-          className="nav-item"
-          data-tooltip-id="github-tooltip"
-          data-tooltip-content="GitHub Profile"
-        >
+        <li className="nav-item github">
           <Link href="/github">
             <Image src={octocat} alt="GitHub" />
           </Link>
         </li>
-        <li
-          className="nav-item"
-          data-tooltip-id="tech-tooltip"
-          data-tooltip-content="Technologies"
-        >
-          <Link className="tech-link" href="technologies">
+        <li className="nav-item">
+          <Link className="tech-link" href="/technologies">
             <div
               className={`icon-container ${
                 isHovered ? "tech-slide-up" : "toolbox-slide-up"
@@ -84,25 +70,15 @@ export default function Header() {
                     : tech_logos.find((logo) => logo.name === currentLogo)?.url
                 })`,
               }}
-              key={currentLogo}
             ></div>
           </Link>
         </li>
-        <li
-          className="nav-item"
-          data-tooltip-id="journey-tooltip"
-          data-tooltip-content={"My Journeys"}
-        >
+        <li className="nav-item">
           <Link href="/journeys">
             <Image src={journeys} alt="Journeys" />
           </Link>
         </li>
       </ul>
-
-      <Tooltip id="home-tooltip" place="bottom" />
-      <Tooltip id="github-tooltip" place="bottom" />
-      <Tooltip id="tech-tooltip" place="bottom" />
-      <Tooltip id="journey-tooltip" place="bottom" />
     </header>
   );
 }

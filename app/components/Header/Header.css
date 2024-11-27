@@ -1,11 +1,12 @@
+header {
+  margin: 0.5rem;
+}
+
 header ul {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   list-style: none;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 20px;
 }
 
 .nav-item {
@@ -71,11 +72,12 @@ header ul {
   height: 50px;
   background-size: cover;
   background-position: center;
-  transition: background-image 0.2s ease-in-out;
+  transition: transform 0.3s ease, background-image 0.3s ease;
 }
 
 .icon-container.tech-slide-up {
   animation: techSlideUp 0.5s ease-in-out forwards;
+  will-change: background-image;
 }
 
 .icon-container.toolbox-slide-up {
@@ -88,10 +90,12 @@ header ul {
   z-index: 2;
 }
 
-.nav-item[data-tooltip-id="github-tooltip"] a img {
-  transition: filter 0.3s ease;
+.nav-item.github {
+  transition: filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 50%;
 }
 
-.nav-item[data-tooltip-id="github-tooltip"] a:hover img {
+.nav-item.github:hover {
   filter: invert(1);
+  box-shadow: 0 0 30px 12px white;
 }

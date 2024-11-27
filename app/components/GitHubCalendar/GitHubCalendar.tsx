@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useMemo } from "react";
+import { Tooltip } from "react-tooltip";
 import Loading from "../Loading/Loading";
 import "./GitHubCalendar.css";
 
@@ -86,7 +87,8 @@ const GitHubCalendar: React.FC<GitHubCalendarProps> = ({ contributions }) => {
                     key={dayIndex}
                     className="day"
                     style={{ backgroundColor: getColor(day.contributionCount) }}
-                    title={`${day.date}: ${day.contributionCount} contributions`}
+                    data-tooltip-id={`day-tooltip-${weekIndex}-${dayIndex}`}
+                    data-tooltip-content={`${day.date}: ${day.contributionCount} contributions`}
                   />
                 ))}
               </div>
@@ -94,6 +96,17 @@ const GitHubCalendar: React.FC<GitHubCalendarProps> = ({ contributions }) => {
           </div>
         </div>
       </div>
+      {/* Tooltip Element */}
+      {contributions.map((week, weekIndex) =>
+        week.contributionDays.map((day, dayIndex) => (
+          <Tooltip
+            key={`tooltip-${weekIndex}-${dayIndex}`}
+            id={`day-tooltip-${weekIndex}-${dayIndex}`}
+            place="top"
+            className="custom-tooltip"
+          />
+        ))
+      )}
     </div>
   );
 };
