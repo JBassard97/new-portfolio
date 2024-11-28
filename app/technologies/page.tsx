@@ -54,7 +54,7 @@ export default function Technologies() {
                 <div key={tech.name} className="tech-item">
                   <Image
                     className="tech-icon"
-                    src="/charizard.png"
+                    src={tech.icon ? tech.icon : "/charizard.png"}
                     alt={`${tech.name} icon`}
                     width={50}
                     height={50}

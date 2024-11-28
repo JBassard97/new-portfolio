@@ -41,7 +41,8 @@
 
 .tech-item {
   min-width: 100px;
-  height: 150px;
+  height: 200px;
+  padding: 0.4rem;
   background-color: black;
   border-radius: 10px;
   display: flex;

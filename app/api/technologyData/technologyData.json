@@ -3,72 +3,181 @@
     "excellent": [
       {
         "name": "JavaScript",
-        "docs": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+        "docs": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+        "icon": "/javascript.svg"
       },
-      { "name": "TypeScript", "docs": "https://www.typescriptlang.org/docs/" },
-      { "name": "NodeJS", "docs": "https://nodejs.org/docs/latest/api/" },
-      { "name": "Express.js", "docs": "https://expressjs.com/en/5x/api.html" },
-      { "name": "MongoDB", "docs": "https://www.mongodb.com/docs/" },
-      { "name": "React", "docs": "https://react.dev/" },
-      { "name": "Next.js", "docs": "https://nextjs.org/docs" },
+      {
+        "name": "TypeScript",
+        "docs": "https://www.typescriptlang.org/docs/",
+        "icon": "/typescript.svg"
+      },
+      {
+        "name": "NodeJS",
+        "docs": "https://nodejs.org/docs/latest/api/",
+        "icon": "/node.svg"
+      },
+      {
+        "name": "Express.js",
+        "docs": "https://expressjs.com/en/5x/api.html",
+        "icon": "/express.svg"
+      },
+      {
+        "name": "MongoDB",
+        "docs": "https://www.mongodb.com/docs/",
+        "icon": "/mongo.svg"
+      },
+      {
+        "name": "React",
+        "docs": "https://react.dev/",
+        "icon": "/react_svg.svg"
+      },
+      {
+        "name": "Next.js",
+        "docs": "https://nextjs.org/docs",
+        "icon": "/next-js.svg"
+      },
       {
         "name": "HTML",
-        "docs": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+        "docs": "https://developer.mozilla.org/en-US/docs/Web/HTML",
+        "icon": "/html.svg"
       },
       {
         "name": "CSS",
-        "docs": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+        "docs": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+        "icon": "/css.svg"
       },
-      { "name": "SASS", "docs": "https://sass-lang.com/documentation/" },
+      {
+        "name": "SASS",
+        "docs": "https://sass-lang.com/documentation/",
+        "icon": "sass.svg"
+      },
       {
         "name": "Bootstrap",
-        "docs": "https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+        "docs": "https://getbootstrap.com/docs/5.3/getting-started/introduction/",
+        "icon": "/bootstrap.svg"
       },
-      { "name": "Insomnia", "docs": "https://docs.insomnia.rest/" },
-      { "name": "GitHub", "docs": "https://docs.github.com/en" }
+      {
+        "name": "Insomnia",
+        "docs": "https://docs.insomnia.rest/",
+        "icon": "/insomnia.svg"
+      },
+      {
+        "name": "GitHub",
+        "docs": "https://docs.github.com/en",
+        "icon": "/github.svg"
+      }
     ],
     "comfortable": [
-      { "name": "Python", "docs": "https://docs.python.org/3/" },
-      { "name": "Vue", "docs": "https://vuejs.org/guide/introduction.html" },
-      { "name": "MySQL", "docs": "https://dev.mysql.com/doc/" },
-      { "name": "GraphQL", "docs": "https://graphql.org/learn/" },
-      { "name": "Apollo", "docs": "https://www.apollographql.com/docs/" },
-      { "name": "Vite", "docs": "https://vite.dev/" },
+      {
+        "name": "Python",
+        "docs": "https://docs.python.org/3/",
+        "icon": "/python.svg"
+      },
+      {
+        "name": "Vue",
+        "docs": "https://vuejs.org/guide/introduction.html",
+        "icon": "/vue.svg"
+      },
+      {
+        "name": "MySQL",
+        "docs": "https://dev.mysql.com/doc/",
+        "icon": "/mysql.svg"
+      },
+      {
+        "name": "GraphQL",
+        "docs": "https://graphql.org/learn/",
+        "icon": "/graphql.svg"
+      },
+      {
+        "name": "Apollo",
+        "docs": "https://www.apollographql.com/docs/",
+        "icon": "/apollo.svg"
+      },
+      { "name": "Vite", "docs": "https://vite.dev/", "icon": "/vite.svg" },
       {
         "name": "Tailwind",
-        "docs": "https://tailwindcss.com/docs/installation"
+        "docs": "https://tailwindcss.com/docs/installation",
+        "icon": "/tailwind.svg"
       },
       {
         "name": "Postman",
-        "docs": "https://learning.postman.com/docs/publishing-your-api/documenting-your-api/?deviceId=4eee1cf0-3b06-4db1-8491-f298cdaa5913"
+        "docs": "https://learning.postman.com/docs/publishing-your-api/documenting-your-api/?deviceId=4eee1cf0-3b06-4db1-8491-f298cdaa5913",
+        "icon": "/postman.svg"
       }
     ],
     "familiar": [
-      { "name": "Deno", "docs": "https://docs.deno.com/" },
-      { "name": "Svelte", "docs": "https://svelte.dev/docs/svelte/overview" },
-      { "name": "Figma", "docs": "https://help.figma.com/hc/en-us" },
-      { "name": "WebPack", "docs": "https://webpack.js.org/" },
-      { "name": "JQuery", "docs": "https://api.jquery.com/" },
-      { "name": "Handlebars", "docs": "https://handlebarsjs.com/guide/" }
+      { "name": "Deno", "docs": "https://docs.deno.com/", "icon": "/deno.svg" },
+      {
+        "name": "Svelte",
+        "docs": "https://svelte.dev/docs/svelte/overview",
+        "icon": "/svelte.svg"
+      },
+      {
+        "name": "Figma",
+        "docs": "https://help.figma.com/hc/en-us",
+        "icon": "/figma.svg"
+      },
+      {
+        "name": "WebPack",
+        "docs": "https://webpack.js.org/",
+        "icon": "/webpack.svg"
+      },
+      {
+        "name": "JQuery",
+        "docs": "https://api.jquery.com/",
+        "icon": "/jquery.svg"
+      },
+      {
+        "name": "Handlebars",
+        "docs": "https://handlebarsjs.com/guide/",
+        "icon": "/handlebars.svg"
+      }
     ],
     "used_once": [
-      { "name": "PHP", "docs": "https://www.php.net/manual/en/" },
-      { "name": "WordPress", "docs": "https://wordpress.org/documentation/" },
-      { "name": "AWS", "docs": "https://docs.aws.amazon.com/" },
-      { "name": "Angular", "docs": "https://angular.dev/overview" },
-      { "name": "Django", "docs": "https://docs.djangoproject.com/en/5.1/" },
+      {
+        "name": "PHP",
+        "docs": "https://www.php.net/manual/en/",
+        "icon": "/php.svg"
+      },
+      {
+        "name": "WordPress",
+        "docs": "https://wordpress.org/documentation/",
+        "icon": "/wordpress.svg"
+      },
+      {
+        "name": "AWS",
+        "docs": "https://docs.aws.amazon.com/",
+        "icon": "/aws.svg"
+      },
+      {
+        "name": "Angular",
+        "docs": "https://angular.dev/overview",
+        "icon": "/angular.svg"
+      },
+      {
+        "name": "Django",
+        "docs": "https://docs.djangoproject.com/en/5.1/",
+        "icon": "/django.svg"
+      },
       {
         "name": "Flask",
-        "docs": "https://flask.palletsprojects.com/en/stable/"
+        "docs": "https://flask.palletsprojects.com/en/stable/",
+        "icon": "/flask.svg"
       },
-      { "name": "Java", "docs": "https://docs.oracle.com/en/java/" },
+      {
+        "name": "Java",
+        "docs": "https://docs.oracle.com/en/java/",
+        "icon": "/java.svg"
+      },
       {
         "name": "C",
-        "docs": "https://learn.microsoft.com/en-us/cpp/?view=msvc-170"
+        "docs": "https://learn.microsoft.com/en-us/cpp/?view=msvc-170",
+        "icon": "/c.svg"
       },
       {
         "name": "C++",
-        "docs": "https://learn.microsoft.com/en-us/cpp/?view=msvc-170"
+        "docs": "https://learn.microsoft.com/en-us/cpp/?view=msvc-170",
+        "icon": "/cplusplus.svg"
       }
     ]
   }
