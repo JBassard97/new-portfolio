@@ -1,0 +1,102 @@
+.tech-item-button {
+  width: 100px;
+  height: 22px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  margin: 5px;
+}
+
+.tech-item-button.excellent {
+  color: #00aced;
+  padding: 0;
+  border: 1px solid #00aced;
+  box-shadow: 0 0 5px #00aced, 0 0 5px inset;
+}
+.tech-item-button.excellent:after {
+  position: absolute;
+  background-color: transparent;
+  content: "";
+  top: 2px;
+  left: 5px;
+  width: 90%;
+  height: 75%;
+  border: 1px solid #00aced;
+  box-shadow: 0 0 5px #00aced inset;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.tech-item-button.excellent:hover:after {
+  opacity: 1;
+}
+
+/* ! ------------------------------------- */
+.tech-item-button.comfortable {
+  color: #04ed00;
+  padding: 0;
+  border: 1px solid #04ed00;
+  box-shadow: 0 0 5px #04ed00, 0 0 5px inset;
+}
+.tech-item-button.comfortable:after {
+  position: absolute;
+  background-color: transparent;
+  content: "";
+  top: 2px;
+  left: 5px;
+  width: 90%;
+  height: 70%;
+  border: 1px solid #04ed00;
+  box-shadow: 0 0 5px #04ed00 inset;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.tech-item-button.comfortable:hover:after {
+  opacity: 1;
+}
+
+.tech-item-button.familiar {
+  color: yellow;
+  padding: 0;
+  border: 1px solid yellow;
+  box-shadow: 0 0 5px yellow, 0 0 5px inset;
+}
+.tech-item-button.familiar:after {
+  position: absolute;
+  background-color: transparent;
+  content: "";
+  top: 2px;
+  left: 5px;
+  width: 90%;
+  height: 70%;
+  border: 1px solid yellow;
+  box-shadow: 0 0 5px yellow inset;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.tech-item-button.familiar:hover:after {
+  opacity: 1;
+}
+
+.tech-item-button.used_once {
+  color: orange;
+  padding: 0;
+  border: 1px solid orange;
+  box-shadow: 0 0 5px orange, 0 0 5px inset;
+}
+.tech-item-button.used_once:after {
+  position: absolute;
+  background-color: transparent;
+  content: "";
+  top: 2px;
+  left: 5px;
+  width: 90%;
+  height: 70%;
+  border: 1px solid orange;
+  box-shadow: 0 0 5px orange inset;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.tech-item-button.used_once:hover:after {
+  opacity: 1;
+}

@@ -46,10 +46,8 @@
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
-
 
 @media (max-width: 396px) {
   .tech-category {

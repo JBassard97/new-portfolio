@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import "./technologies.css";
 import ProficiencyKey from "../components/ProficiencyKey/ProficiencyKey";
+import TechItemButton from "../components/TechItemButton/TechItemButton";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -60,8 +61,14 @@ export default function Technologies() {
                   />
                   <p>{tech.name}</p>
                   <Link href={tech.docs} target="_blank">
-                    <button>Read The Docs</button>
+                    <TechItemButton
+                      text="View Docs"
+                      proficiency={proficiency}
+                    />
                   </Link>
+                  {/* Link */}
+                  <TechItemButton text="Projects" proficiency={proficiency} />
+                  {/* /Link */}
                 </div>
               ))}
             </div>
