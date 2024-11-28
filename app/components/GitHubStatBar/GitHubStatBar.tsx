@@ -84,9 +84,9 @@ const GitHubStatBar: React.FC<GitHubStatBarProps> = ({
         <p className="stat-label">Contributions</p>
       </div>
       <div className="stat-block">
-        <p>{animatedStreak.toLocaleString()}</p>
-        <p className="stat-label">Day</p>
-        <p className="stat-label">Longest Streak</p>
+        <p>{animatedStreak.toLocaleString()} Day</p>
+        <p className="stat-label">Longest</p>
+        <p className="stat-label">Streak</p>
       </div>
     </div>
   );

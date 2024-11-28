@@ -12,10 +12,11 @@
 .tech-category {
   width: 100%;
   margin-bottom: 1rem;
-  padding: 0.5rem;
+  gap: 1rem;
+  padding: 1rem;
   border-radius: 10px;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 0.5fr));
 }
 
 .tech-category.excellent {
@@ -35,8 +36,14 @@
 }
 
 .tech-item {
+  min-width: 100px;
   height: 150px;
-  width: 100px;
   border: 1px solid white;
   border-radius: 10px;
+}
+
+@media (max-width: 396px) {
+  .tech-category {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+  }
 }

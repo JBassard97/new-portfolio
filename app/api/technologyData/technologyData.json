@@ -1,23 +1,58 @@
 {
   "technologyData": {
     "excellent": [
-      { "name": "JavaScript" },
-      { "name": "TypeScript" },
-      { "name": "NodeJS" },
-      { "name": "Express.js" },
-      { "name": "MongoDB" },
-      { "name": "React" },
-      { "name": "Next" }
+      {
+        "name": "JavaScript",
+        "docs": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+      },
+      { "name": "TypeScript", "docs": "https://www.typescriptlang.org/docs/" },
+      { "name": "NodeJS", "docs": "https://nodejs.org/docs/latest/api/" },
+      { "name": "Express.js", "docs": "https://expressjs.com/en/5x/api.html" },
+      { "name": "MongoDB", "docs": "https://www.mongodb.com/docs/" },
+      { "name": "React", "docs": "https://react.dev/" },
+      { "name": "Next.js", "docs": "https://nextjs.org/docs" },
+      {
+        "name": "HTML",
+        "docs": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        "name": "CSS",
+        "docs": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+      },
+      { "name": "SASS", "docs": "https://sass-lang.com/documentation/" },
+      {
+        "name": "Bootstrap",
+        "docs": "https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+      },
+      { "name": "Insomnia", "docs": "https://docs.insomnia.rest/" },
+      { "name": "GitHub", "docs": "https://docs.github.com/en" }
     ],
     "comfortable": [
       { "name": "Python" },
       { "name": "Vue" },
-      { "name": "GraphQL" }
+      { "name": "MySQL" },
+      { "name": "GraphQL" },
+      { "name": "Apollo" },
+      { "name": "Vite" },
+      { "name": "Tailwind" },
+      { "name": "Postman" }
     ],
-    "familiar": [{ "name": "Svelte" }, { "name": "WebPack" }],
+    "familiar": [
+      { "name": "Deno" },
+      { "name": "Svelte" },
+      { "name": "Figma" },
+      { "name": "WebPack" },
+      { "name": "JQuery" },
+      { "name": "Handlebars" }
+    ],
     "used_once": [
       { "name": "PHP" },
-      { "name": "Deno" },
+      { "name": "WordPress" },
+      { "name": "AWS" },
+      { "name": "Angular" },
+      { "name": "Django" },
+      { "name": "Flask" },
+      { "name": "Java" },
       { "name": "C" },
       { "name": "C++" }
     ]
