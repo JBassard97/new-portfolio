@@ -7,91 +7,103 @@
         "icon": "/javascript.svg",
         "hasProjects": true,
         "type": "language",
-        "desc": "Core Web Programming Language"
+        "desc": "Web Programming Language"
       },
       {
         "name": "TypeScript",
         "docs": "https://www.typescriptlang.org/docs/",
         "icon": "/typescript.svg",
         "hasProjects": true,
-        "type": "language"
+        "type": "language",
+        "desc": "JavaScript With Types"
       },
       {
         "name": "NodeJS",
         "docs": "https://nodejs.org/docs/latest/api/",
         "icon": "/node.svg",
         "hasProjects": true,
-        "type": "runtime"
+        "type": "runtime",
+        "desc": "JS Runtime For Servers"
       },
       {
         "name": "Express.js",
         "docs": "https://expressjs.com/en/5x/api.html",
         "icon": "/express.svg",
         "hasProjects": true,
-        "type": "framework"
+        "type": "framework",
+        "desc": "Minimalist Web Framework"
       },
       {
         "name": "MongoDB",
         "docs": "https://www.mongodb.com/docs/",
         "icon": "/mongo.svg",
         "hasProjects": true,
-        "type": "database"
+        "type": "database",
+        "desc": "NoSQL Database Solution"
       },
       {
         "name": "React",
         "docs": "https://react.dev/",
         "icon": "/react_svg.svg",
         "hasProjects": true,
-        "type": "framework"
+        "type": "framework",
+        "desc": "Frontend UI Library"
       },
       {
         "name": "Next.js",
         "docs": "https://nextjs.org/docs",
         "icon": "/next-js.svg",
         "hasProjects": true,
-        "type": "framework"
+        "type": "framework",
+        "desc": "React Framework For Web Apps"
       },
       {
         "name": "HTML",
         "docs": "https://developer.mozilla.org/en-US/docs/Web/HTML",
         "icon": "/html.svg",
         "hasProjects": true,
-        "type": "language"
+        "type": "language",
+        "desc": "Standard For Web Pages"
       },
       {
         "name": "CSS",
         "docs": "https://developer.mozilla.org/en-US/docs/Web/CSS",
         "icon": "/css.svg",
         "hasProjects": true,
-        "type": "language"
+        "type": "language",
+        "desc": "Style Web Elements and Layouts"
       },
       {
         "name": "SASS",
         "docs": "https://sass-lang.com/documentation/",
         "icon": "sass.svg",
         "hasProjects": true,
-        "type": "tool"
+        "type": "tool",
+        "desc": "CSS Preprocessor With Extras"
       },
       {
         "name": "Bootstrap",
         "docs": "https://getbootstrap.com/docs/5.3/getting-started/introduction/",
         "icon": "/bootstrap.svg",
         "hasProjects": true,
-        "type": "framework"
+        "type": "framework",
+        "desc": "UI Framework For Styling"
       },
       {
         "name": "Insomnia",
         "docs": "https://docs.insomnia.rest/",
         "icon": "/insomnia.svg",
         "hasProjects": true,
-        "type": "tool"
+        "type": "tool",
+        "desc": "API Testing And Debugging"
       },
       {
         "name": "GitHub",
         "docs": "https://docs.github.com/en",
         "icon": "/github.svg",
         "hasProjects": true,
-        "type": "tool"
+        "type": "tool",
+        "desc": "Code Hosting And Collaboration"
       }
     ],
     "comfortable": [
@@ -100,56 +112,64 @@
         "docs": "https://docs.python.org/3/",
         "icon": "/python.svg",
         "hasProjects": true,
-        "type": "language"
+        "type": "language",
+        "desc": "Versatile Scripting Language"
       },
       {
         "name": "Vue",
         "docs": "https://vuejs.org/guide/introduction.html",
         "icon": "/vue.svg",
         "hasProjects": true,
-        "type": "framework"
+        "type": "framework",
+        "desc": "Reactive Frontend Framework"
       },
       {
         "name": "MySQL",
         "docs": "https://dev.mysql.com/doc/",
         "icon": "/mysql.svg",
         "hasProjects": true,
-        "type": "database"
+        "type": "database",
+        "desc": "Relational Database System"
       },
       {
         "name": "GraphQL",
         "docs": "https://graphql.org/learn/",
         "icon": "/graphql.svg",
         "hasProjects": true,
-        "type": "language"
+        "type": "language",
+        "desc": "API Query Language"
       },
       {
         "name": "Apollo",
         "docs": "https://www.apollographql.com/docs/",
         "icon": "/apollo.svg",
         "hasProjects": true,
-        "type": "tool"
+        "type": "tool",
+        "desc": "GraphQL Client and Server"
       },
       {
         "name": "Vite",
         "docs": "https://vite.dev/",
         "icon": "/vite.svg",
         "hasProjects": true,
-        "type": "tool"
+        "type": "tool",
+        "desc": "Modern Web App Build Tool"
       },
       {
         "name": "Tailwind",
         "docs": "https://tailwindcss.com/docs/installation",
         "icon": "/tailwind.svg",
         "hasProjects": true,
-        "type": "framework"
+        "type": "framework",
+        "desc": "Utility-First CSS Framework"
       },
       {
         "name": "Postman",
         "docs": "https://learning.postman.com/docs/publishing-your-api/documenting-your-api/?deviceId=4eee1cf0-3b06-4db1-8491-f298cdaa5913",
         "icon": "/postman.svg",
         "hasProjects": false,
-        "type": "tool"
+        "type": "tool",
+        "desc": "API Testing and Development"
       }
     ],
     "familiar": [
@@ -158,42 +178,48 @@
         "docs": "https://docs.deno.com/",
         "icon": "/deno.svg",
         "hasProjects": false,
-        "type": "runtime"
+        "type": "runtime",
+        "desc": "Secure JS Runtime"
       },
       {
         "name": "Svelte",
         "docs": "https://svelte.dev/docs/svelte/overview",
         "icon": "/svelte.svg",
         "hasProjects": false,
-        "type": "framework"
+        "type": "framework",
+        "desc": "Frontend Framework With Reactivity"
       },
       {
         "name": "Figma",
         "docs": "https://help.figma.com/hc/en-us",
         "icon": "/figma.svg",
         "hasProjects": true,
-        "type": "tool"
+        "type": "tool",
+        "desc": "Collaborative Design Tool"
       },
       {
         "name": "WebPack",
         "docs": "https://webpack.js.org/",
         "icon": "/webpack.svg",
         "hasProjects": true,
-        "type": "tool"
+        "type": "tool",
+        "desc": "Module Bundler For JS"
       },
       {
         "name": "JQuery",
         "docs": "https://api.jquery.com/",
         "icon": "/jquery.svg",
         "hasProjects": true,
-        "type": "framework"
+        "type": "framework",
+        "desc": "Simplify DOM Manipulation"
       },
       {
         "name": "Handlebars",
         "docs": "https://handlebarsjs.com/guide/",
         "icon": "/handlebars.svg",
         "hasProjects": true,
-        "type": "framework"
+        "type": "framework",
+        "desc": "Simple Templating Engine"
       }
     ],
     "used_once": [
@@ -202,63 +228,72 @@
         "docs": "https://www.php.net/manual/en/",
         "icon": "/php.svg",
         "hasProjects": true,
-        "type": "language"
+        "type": "language",
+        "desc": "Backend Scripting Language"
       },
       {
         "name": "WordPress",
         "docs": "https://wordpress.org/documentation/",
         "icon": "/wordpress.svg",
         "hasProjects": true,
-        "type": "framework"
+        "type": "framework",
+        "desc": "CMS For Web Content"
       },
       {
         "name": "AWS",
         "docs": "https://docs.aws.amazon.com/",
         "icon": "/aws.svg",
         "hasProjects": false,
-        "type": "tool"
+        "type": "tool",
+        "desc": "Cloud Services And Hosting"
       },
       {
         "name": "Angular",
         "docs": "https://angular.dev/overview",
         "icon": "/angular.svg",
         "hasProjects": false,
-        "type": "framework"
+        "type": "framework",
+        "desc": "Frontend Web Framework"
       },
       {
         "name": "Django",
         "docs": "https://docs.djangoproject.com/en/5.1/",
         "icon": "/django.svg",
         "hasProjects": false,
-        "type": "framework"
+        "type": "framework",
+        "desc": "Python Web Framework"
       },
       {
         "name": "Flask",
         "docs": "https://flask.palletsprojects.com/en/stable/",
         "icon": "/flask.svg",
         "hasProjects": false,
-        "type": "framework"
+        "type": "framework",
+        "desc": "Lightweight Python Framework"
       },
       {
         "name": "Java",
         "docs": "https://docs.oracle.com/en/java/",
         "icon": "/java.svg",
         "hasProjects": false,
-        "type": "language"
+        "type": "language",
+        "desc": "Cross-Platform Programming"
       },
       {
         "name": "C",
         "docs": "https://learn.microsoft.com/en-us/cpp/?view=msvc-170",
         "icon": "/c.svg",
         "hasProjects": false,
-        "type": "language"
+        "type": "language",
+        "desc": "Low-Level Programming Language"
       },
       {
         "name": "C++",
         "docs": "https://learn.microsoft.com/en-us/cpp/?view=msvc-170",
         "icon": "/cplusplus.svg",
         "hasProjects": false,
-        "type": "language"
+        "type": "language",
+        "desc": "C With Object-Oriented Features"
       }
     ]
   }
