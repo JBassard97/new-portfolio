@@ -11,8 +11,8 @@
 
 .tech-category {
   width: 100%;
-  margin-bottom: 1rem;
-  gap: 1rem;
+  margin-bottom: 2rem;
+  gap: 1.5rem;
   padding: 1rem;
   border-radius: 10px;
   display: grid;
@@ -20,27 +20,36 @@
 }
 
 .tech-category.excellent {
-  background-color: rgba(0, 0, 255, 0.5);
+  background-color: rgba(0, 0, 255, 0.15);
+  border: 2px solid blue;
 }
 
 .tech-category.comfortable {
-  background-color: rgba(0, 128, 0, 0.5);
+  background-color: rgba(0, 128, 0, 0.2);
+  border: 2px solid green;
 }
 
 .tech-category.familiar {
-  background-color: rgba(255, 255, 0, 0.5);
+  background-color: rgba(255, 255, 0, 0.1);
+  border: 2px solid yellow;
 }
 
 .tech-category.used_once {
-  background-color: rgba(255, 166, 0, 0.5);
+  background-color: rgba(255, 166, 0, 0.15);
+  border: 2px solid orange;
 }
 
 .tech-item {
   min-width: 100px;
   height: 150px;
-  border: 1px solid white;
+  background-color: black;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
 
 @media (max-width: 396px) {
   .tech-category {

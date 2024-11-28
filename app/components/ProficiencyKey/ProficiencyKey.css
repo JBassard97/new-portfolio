@@ -4,6 +4,11 @@
   align-items: center;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: black;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .proficiency-key-label {

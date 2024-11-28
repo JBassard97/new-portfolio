@@ -3,9 +3,13 @@
 import React, { useState, useEffect } from "react";
 import "./technologies.css";
 import ProficiencyKey from "../components/ProficiencyKey/ProficiencyKey";
+import Link from "next/link";
+import Image from "next/image";
 
 interface Technology {
   name: string;
+  docs: string;
+  icon: string;
 }
 
 interface Proficiency {
@@ -47,7 +51,17 @@ export default function Technologies() {
             <div key={proficiency} className={`tech-category ${proficiency}`}>
               {(technologies as Technology[]).map((tech) => (
                 <div key={tech.name} className="tech-item">
-                  {tech.name}
+                  <Image
+                    className="tech-icon"
+                    src="/charizard.png"
+                    alt={`${tech.name} icon`}
+                    width={50}
+                    height={50}
+                  />
+                  <p>{tech.name}</p>
+                  <Link href={tech.docs} target="_blank">
+                    <button>Read The Docs</button>
+                  </Link>
                 </div>
               ))}
             </div>

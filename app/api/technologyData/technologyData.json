@@ -28,33 +28,48 @@
       { "name": "GitHub", "docs": "https://docs.github.com/en" }
     ],
     "comfortable": [
-      { "name": "Python" },
-      { "name": "Vue" },
-      { "name": "MySQL" },
-      { "name": "GraphQL" },
-      { "name": "Apollo" },
-      { "name": "Vite" },
-      { "name": "Tailwind" },
-      { "name": "Postman" }
+      { "name": "Python", "docs": "https://docs.python.org/3/" },
+      { "name": "Vue", "docs": "https://vuejs.org/guide/introduction.html" },
+      { "name": "MySQL", "docs": "https://dev.mysql.com/doc/" },
+      { "name": "GraphQL", "docs": "https://graphql.org/learn/" },
+      { "name": "Apollo", "docs": "https://www.apollographql.com/docs/" },
+      { "name": "Vite", "docs": "https://vite.dev/" },
+      {
+        "name": "Tailwind",
+        "docs": "https://tailwindcss.com/docs/installation"
+      },
+      {
+        "name": "Postman",
+        "docs": "https://learning.postman.com/docs/publishing-your-api/documenting-your-api/?deviceId=4eee1cf0-3b06-4db1-8491-f298cdaa5913"
+      }
     ],
     "familiar": [
-      { "name": "Deno" },
-      { "name": "Svelte" },
-      { "name": "Figma" },
-      { "name": "WebPack" },
-      { "name": "JQuery" },
-      { "name": "Handlebars" }
+      { "name": "Deno", "docs": "https://docs.deno.com/" },
+      { "name": "Svelte", "docs": "https://svelte.dev/docs/svelte/overview" },
+      { "name": "Figma", "docs": "https://help.figma.com/hc/en-us" },
+      { "name": "WebPack", "docs": "https://webpack.js.org/" },
+      { "name": "JQuery", "docs": "https://api.jquery.com/" },
+      { "name": "Handlebars", "docs": "https://handlebarsjs.com/guide/" }
     ],
     "used_once": [
-      { "name": "PHP" },
-      { "name": "WordPress" },
-      { "name": "AWS" },
-      { "name": "Angular" },
-      { "name": "Django" },
-      { "name": "Flask" },
-      { "name": "Java" },
-      { "name": "C" },
-      { "name": "C++" }
+      { "name": "PHP", "docs": "https://www.php.net/manual/en/" },
+      { "name": "WordPress", "docs": "https://wordpress.org/documentation/" },
+      { "name": "AWS", "docs": "https://docs.aws.amazon.com/" },
+      { "name": "Angular", "docs": "https://angular.dev/overview" },
+      { "name": "Django", "docs": "https://docs.djangoproject.com/en/5.1/" },
+      {
+        "name": "Flask",
+        "docs": "https://flask.palletsprojects.com/en/stable/"
+      },
+      { "name": "Java", "docs": "https://docs.oracle.com/en/java/" },
+      {
+        "name": "C",
+        "docs": "https://learn.microsoft.com/en-us/cpp/?view=msvc-170"
+      },
+      {
+        "name": "C++",
+        "docs": "https://learn.microsoft.com/en-us/cpp/?view=msvc-170"
+      }
     ]
   }
 }
