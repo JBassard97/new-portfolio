@@ -4,180 +4,261 @@
       {
         "name": "JavaScript",
         "docs": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-        "icon": "/javascript.svg"
+        "icon": "/javascript.svg",
+        "hasProjects": true,
+        "type": "language",
+        "desc": "Core Web Programming Language"
       },
       {
         "name": "TypeScript",
         "docs": "https://www.typescriptlang.org/docs/",
-        "icon": "/typescript.svg"
+        "icon": "/typescript.svg",
+        "hasProjects": true,
+        "type": "language"
       },
       {
         "name": "NodeJS",
         "docs": "https://nodejs.org/docs/latest/api/",
-        "icon": "/node.svg"
+        "icon": "/node.svg",
+        "hasProjects": true,
+        "type": "runtime"
       },
       {
         "name": "Express.js",
         "docs": "https://expressjs.com/en/5x/api.html",
-        "icon": "/express.svg"
+        "icon": "/express.svg",
+        "hasProjects": true,
+        "type": "framework"
       },
       {
         "name": "MongoDB",
         "docs": "https://www.mongodb.com/docs/",
-        "icon": "/mongo.svg"
+        "icon": "/mongo.svg",
+        "hasProjects": true,
+        "type": "database"
       },
       {
         "name": "React",
         "docs": "https://react.dev/",
-        "icon": "/react_svg.svg"
+        "icon": "/react_svg.svg",
+        "hasProjects": true,
+        "type": "framework"
       },
       {
         "name": "Next.js",
         "docs": "https://nextjs.org/docs",
-        "icon": "/next-js.svg"
+        "icon": "/next-js.svg",
+        "hasProjects": true,
+        "type": "framework"
       },
       {
         "name": "HTML",
         "docs": "https://developer.mozilla.org/en-US/docs/Web/HTML",
-        "icon": "/html.svg"
+        "icon": "/html.svg",
+        "hasProjects": true,
+        "type": "language"
       },
       {
         "name": "CSS",
         "docs": "https://developer.mozilla.org/en-US/docs/Web/CSS",
-        "icon": "/css.svg"
+        "icon": "/css.svg",
+        "hasProjects": true,
+        "type": "language"
       },
       {
         "name": "SASS",
         "docs": "https://sass-lang.com/documentation/",
-        "icon": "sass.svg"
+        "icon": "sass.svg",
+        "hasProjects": true,
+        "type": "tool"
       },
       {
         "name": "Bootstrap",
         "docs": "https://getbootstrap.com/docs/5.3/getting-started/introduction/",
-        "icon": "/bootstrap.svg"
+        "icon": "/bootstrap.svg",
+        "hasProjects": true,
+        "type": "framework"
       },
       {
         "name": "Insomnia",
         "docs": "https://docs.insomnia.rest/",
-        "icon": "/insomnia.svg"
+        "icon": "/insomnia.svg",
+        "hasProjects": true,
+        "type": "tool"
       },
       {
         "name": "GitHub",
         "docs": "https://docs.github.com/en",
-        "icon": "/github.svg"
+        "icon": "/github.svg",
+        "hasProjects": true,
+        "type": "tool"
       }
     ],
     "comfortable": [
       {
         "name": "Python",
         "docs": "https://docs.python.org/3/",
-        "icon": "/python.svg"
+        "icon": "/python.svg",
+        "hasProjects": true,
+        "type": "language"
       },
       {
         "name": "Vue",
         "docs": "https://vuejs.org/guide/introduction.html",
-        "icon": "/vue.svg"
+        "icon": "/vue.svg",
+        "hasProjects": true,
+        "type": "framework"
       },
       {
         "name": "MySQL",
         "docs": "https://dev.mysql.com/doc/",
-        "icon": "/mysql.svg"
+        "icon": "/mysql.svg",
+        "hasProjects": true,
+        "type": "database"
       },
       {
         "name": "GraphQL",
         "docs": "https://graphql.org/learn/",
-        "icon": "/graphql.svg"
+        "icon": "/graphql.svg",
+        "hasProjects": true,
+        "type": "language"
       },
       {
         "name": "Apollo",
         "docs": "https://www.apollographql.com/docs/",
-        "icon": "/apollo.svg"
+        "icon": "/apollo.svg",
+        "hasProjects": true,
+        "type": "tool"
       },
-      { "name": "Vite", "docs": "https://vite.dev/", "icon": "/vite.svg" },
+      {
+        "name": "Vite",
+        "docs": "https://vite.dev/",
+        "icon": "/vite.svg",
+        "hasProjects": true,
+        "type": "tool"
+      },
       {
         "name": "Tailwind",
         "docs": "https://tailwindcss.com/docs/installation",
-        "icon": "/tailwind.svg"
+        "icon": "/tailwind.svg",
+        "hasProjects": true,
+        "type": "framework"
       },
       {
         "name": "Postman",
         "docs": "https://learning.postman.com/docs/publishing-your-api/documenting-your-api/?deviceId=4eee1cf0-3b06-4db1-8491-f298cdaa5913",
-        "icon": "/postman.svg"
+        "icon": "/postman.svg",
+        "hasProjects": false,
+        "type": "tool"
       }
     ],
     "familiar": [
-      { "name": "Deno", "docs": "https://docs.deno.com/", "icon": "/deno.svg" },
+      {
+        "name": "Deno",
+        "docs": "https://docs.deno.com/",
+        "icon": "/deno.svg",
+        "hasProjects": false,
+        "type": "runtime"
+      },
       {
         "name": "Svelte",
         "docs": "https://svelte.dev/docs/svelte/overview",
-        "icon": "/svelte.svg"
+        "icon": "/svelte.svg",
+        "hasProjects": false,
+        "type": "framework"
       },
       {
         "name": "Figma",
         "docs": "https://help.figma.com/hc/en-us",
-        "icon": "/figma.svg"
+        "icon": "/figma.svg",
+        "hasProjects": true,
+        "type": "tool"
       },
       {
         "name": "WebPack",
         "docs": "https://webpack.js.org/",
-        "icon": "/webpack.svg"
+        "icon": "/webpack.svg",
+        "hasProjects": true,
+        "type": "tool"
       },
       {
         "name": "JQuery",
         "docs": "https://api.jquery.com/",
-        "icon": "/jquery.svg"
+        "icon": "/jquery.svg",
+        "hasProjects": true,
+        "type": "framework"
       },
       {
         "name": "Handlebars",
         "docs": "https://handlebarsjs.com/guide/",
-        "icon": "/handlebars.svg"
+        "icon": "/handlebars.svg",
+        "hasProjects": true,
+        "type": "framework"
       }
     ],
     "used_once": [
       {
         "name": "PHP",
         "docs": "https://www.php.net/manual/en/",
-        "icon": "/php.svg"
+        "icon": "/php.svg",
+        "hasProjects": true,
+        "type": "language"
       },
       {
         "name": "WordPress",
         "docs": "https://wordpress.org/documentation/",
-        "icon": "/wordpress.svg"
+        "icon": "/wordpress.svg",
+        "hasProjects": true,
+        "type": "framework"
       },
       {
         "name": "AWS",
         "docs": "https://docs.aws.amazon.com/",
-        "icon": "/aws.svg"
+        "icon": "/aws.svg",
+        "hasProjects": false,
+        "type": "tool"
       },
       {
         "name": "Angular",
         "docs": "https://angular.dev/overview",
-        "icon": "/angular.svg"
+        "icon": "/angular.svg",
+        "hasProjects": false,
+        "type": "framework"
       },
       {
         "name": "Django",
         "docs": "https://docs.djangoproject.com/en/5.1/",
-        "icon": "/django.svg"
+        "icon": "/django.svg",
+        "hasProjects": false,
+        "type": "framework"
       },
       {
         "name": "Flask",
         "docs": "https://flask.palletsprojects.com/en/stable/",
-        "icon": "/flask.svg"
+        "icon": "/flask.svg",
+        "hasProjects": false,
+        "type": "framework"
       },
       {
         "name": "Java",
         "docs": "https://docs.oracle.com/en/java/",
-        "icon": "/java.svg"
+        "icon": "/java.svg",
+        "hasProjects": false,
+        "type": "language"
       },
       {
         "name": "C",
         "docs": "https://learn.microsoft.com/en-us/cpp/?view=msvc-170",
-        "icon": "/c.svg"
+        "icon": "/c.svg",
+        "hasProjects": false,
+        "type": "language"
       },
       {
         "name": "C++",
         "docs": "https://learn.microsoft.com/en-us/cpp/?view=msvc-170",
-        "icon": "/cplusplus.svg"
+        "icon": "/cplusplus.svg",
+        "hasProjects": false,
+        "type": "language"
       }
     ]
   }

@@ -6,11 +6,15 @@ import ProficiencyKey from "../components/ProficiencyKey/ProficiencyKey";
 import TechItemButton from "../components/TechItemButton/TechItemButton";
 import Link from "next/link";
 import Image from "next/image";
+import { Tooltip } from "react-tooltip";
 
 interface Technology {
   name: string;
   docs: string;
   icon: string;
+  hasProjects: boolean;
+  type: string;
+  desc: string;
 }
 
 interface Proficiency {
@@ -41,6 +45,23 @@ export default function Technologies() {
     fetchTechnologyData();
   }, []);
 
+  const techTypeToIcon = (type: string) => {
+    switch (type) {
+      case "tool":
+        return "/toolbox.svg";
+      case "database":
+        return "/databaseIcon.svg";
+      case "language":
+        return "/languageIcon.svg";
+      case "framework":
+        return "/frameworkIcon.svg";
+      case "runtime":
+        return "/runtimeIcon.svg";
+      default:
+        return "/charizard.png";
+    }
+  };
+
   return (
     <div className="tech-page">
       <h4 className="tech-header">Technologies I Use</h4>
@@ -53,22 +74,44 @@ export default function Technologies() {
               {(technologies as Technology[]).map((tech) => (
                 <div key={tech.name} className="tech-item">
                   <Image
+                    className="tech-type-icon"
+                    alt="placeholder"
+                    src={techTypeToIcon(tech.type)}
+                    width="20"
+                    height="20"
+                    data-tooltip-id={`tooltip-${tech.name}`}
+                    data-tooltip-content={
+                      tech.type.charAt(0).toUpperCase() + tech.type.slice(1)
+                    }
+                  />
+                  <Image
                     className="tech-icon"
                     src={tech.icon ? tech.icon : "/charizard.png"}
-                    alt={`${tech.name} icon`}
+                    alt={tech.name}
                     width={50}
                     height={50}
                   />
-                  <p>{tech.name}</p>
-                  <Link href={tech.docs} target="_blank">
-                    <TechItemButton
-                      text="View Docs"
-                      proficiency={proficiency}
-                    />
-                  </Link>
-                  {/* Link */}
-                  <TechItemButton text="Projects" proficiency={proficiency} />
-                  {/* /Link */}
+                  <div className="tech-text">
+                    <p className="tech-name">{tech.name}</p>
+                    {tech.desc && <p className="tech-desc">{tech.desc}</p>}
+                  </div>
+                  <div className="tech-buttons">
+                    <Link href={tech.docs} target="_blank">
+                      <TechItemButton
+                        text="View Docs"
+                        proficiency={proficiency}
+                      />
+                    </Link>
+                    {tech.hasProjects ? (
+                      <TechItemButton
+                        text="Projects"
+                        proficiency={proficiency}
+                      />
+                    ) : (
+                      <TechItemButton text="Projects" proficiency="none" />
+                    )}
+                  </div>
+                  <Tooltip id={`tooltip-${tech.name}`} />
                 </div>
               ))}
             </div>

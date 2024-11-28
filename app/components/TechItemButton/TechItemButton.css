@@ -1,11 +1,11 @@
 .tech-item-button {
-  width: 100px;
+  width: 80px;
   height: 22px;
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
-  margin: 5px;
+  margin-bottom: 5px;
 }
 
 .tech-item-button.excellent {
@@ -19,8 +19,8 @@
   background-color: transparent;
   content: "";
   top: 2px;
-  left: 5px;
-  width: 90%;
+  left: 2px;
+  width: 93%;
   height: 75%;
   border: 1px solid #00aced;
   box-shadow: 0 0 5px #00aced inset;
@@ -43,9 +43,9 @@
   background-color: transparent;
   content: "";
   top: 2px;
-  left: 5px;
-  width: 90%;
-  height: 70%;
+  left: 2px;
+  width: 93%;
+  height: 75%;
   border: 1px solid #04ed00;
   box-shadow: 0 0 5px #04ed00 inset;
   opacity: 0;
@@ -66,9 +66,9 @@
   background-color: transparent;
   content: "";
   top: 2px;
-  left: 5px;
-  width: 90%;
-  height: 70%;
+  left: 2px;
+  width: 93%;
+  height: 75%;
   border: 1px solid yellow;
   box-shadow: 0 0 5px yellow inset;
   opacity: 0;
@@ -89,14 +89,37 @@
   background-color: transparent;
   content: "";
   top: 2px;
-  left: 5px;
-  width: 90%;
-  height: 70%;
+  left: 2px;
+  width: 93%;
+  height: 75%;
   border: 1px solid orange;
   box-shadow: 0 0 5px orange inset;
   opacity: 0;
   transition: all 0.3s ease;
 }
 .tech-item-button.used_once:hover:after {
+  opacity: 1;
+}
+
+.tech-item-button.none {
+  color: grey;
+  padding: 0;
+  border: 1px solid grey;
+  box-shadow: 0 0 5px grey, 0 0 5px inset;
+}
+.tech-item-button.none:after {
+  position: absolute;
+  background-color: transparent;
+  content: "";
+  top: 2px;
+  left: 2px;
+  width: 93%;
+  height: 75%;
+  border: 1px solid grey;
+  box-shadow: 0 0 5px grey inset;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.tech-item-button.none:hover:after {
   opacity: 1;
 }

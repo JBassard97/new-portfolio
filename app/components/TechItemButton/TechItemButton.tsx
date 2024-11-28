@@ -12,7 +12,14 @@ const TechItemButton: React.FC<TechItemButtonProps> = ({
   text,
   proficiency,
 }) => {
-  return <button className={`tech-item-button ${proficiency}`}>{text}</button>;
+  return (
+    <button
+      className={`tech-item-button ${proficiency}`}
+      disabled={proficiency === "none"}
+    >
+      {text}
+    </button>
+  );
 };
 
 export default TechItemButton;
