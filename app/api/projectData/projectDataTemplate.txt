@@ -1,0 +1,15 @@
+{
+  "name": "",
+  "githubLink": "",
+  "images": ["/charizard.png"],
+  "isComplete": true,
+  "isDeployed": true,
+  "deployedLink": "",
+  "desc": "Fill In Later",
+  "hasFrontend": false,
+  "hasBackend": false,
+  "isFullStack": false,
+  "type": "",
+  "hostedOn": "",
+  "stack": []
+},

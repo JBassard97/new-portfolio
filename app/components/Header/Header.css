@@ -16,6 +16,46 @@ header ul {
   animation: slideUp 0.5s ease-out forwards;
 }
 
+/* ! controlling size of all icons */
+.nav-item a img,
+.nav-item a div,
+.line-icon {
+  height: 30px;
+  width: 30px;
+}
+
+.line-icon {
+  fill: none;
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 280;
+  stroke-dashoffset: 0;
+}
+
+.stroke-4 {
+  stroke-width: 4;
+}
+
+.stroke-2 {
+  stroke-width: 2;
+}
+
+.line-icon:hover {
+  -webkit-animation: draw 2s linear alternate infinite;
+  animation: draw 2s linear alternate infinite;
+  stroke: white;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 280;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
 /* Initial entrance animation for all nav items */
 @keyframes slideUp {
   0% {
@@ -44,51 +84,14 @@ header ul {
   animation-delay: 0.45s;
 }
 
-/* Tech logo hover animation */
-@keyframes techSlideUp {
-  0% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* Toolbox return animation */
-@keyframes toolboxSlideUp {
-  0% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+.nav-item:nth-child(5) {
+  animation-delay: 0.6s;
 }
 
 .icon-container {
-  width: 50px;
-  height: 50px;
   background-size: cover;
   background-position: center;
-  transition: transform 0.3s ease, background-image 0.3s ease;
-}
-
-.icon-container.tech-slide-up {
-  animation: techSlideUp 0.5s ease-in-out forwards;
-  will-change: background-image;
-}
-
-.icon-container.toolbox-slide-up {
-  animation: toolboxSlideUp 0.5s ease-in-out forwards;
-}
-
-.link-title {
-  margin-top: 0.3rem;
-  text-align: center;
-  z-index: 2;
+  transition: all 0.3s ease;
 }
 
 .nav-item.github {

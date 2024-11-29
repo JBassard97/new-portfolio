@@ -123,7 +123,7 @@
       },
       {
         "name": "Mongoose",
-        "docs": "",
+        "docs": "https://mongoosejs.com/docs/",
         "icon": "/mongoose.svg",
         "hasProjects": true,
         "type": "tool",

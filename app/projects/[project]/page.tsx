@@ -6,5 +6,12 @@ type RouteParams = { params: { project: string } };
 const SingleProject = async ({ params }: RouteParams) => {
   const { project } = await params;
 
-  return <h1>Single Project: {project}</h1>;
+  return (
+    <div className="single-project">
+      <Link href="/projects/all">Back to All Projects</Link>
+      <h1>Single Project: {project}</h1>
+    </div>
+  );
 };
+
+export default SingleProject;
