@@ -1,0 +1,23 @@
+.projects-that-use {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.projects-that-use-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.line-2 {
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.line-2 p {
+    margin-right: 0.3rem;
+}

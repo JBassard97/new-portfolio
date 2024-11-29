@@ -58,6 +58,14 @@
         "desc": "React Framework For Web Apps"
       },
       {
+        "name": "Netlify",
+        "docs": "https://docs.netlify.com/",
+        "icon": "/netlify.svg",
+        "hasProjects": true,
+        "type": "hosting",
+        "desc": "Hosting For Web Projects"
+      },
+      {
         "name": "HTML",
         "docs": "https://developer.mozilla.org/en-US/docs/Web/HTML",
         "icon": "/html.svg",
@@ -82,14 +90,6 @@
         "desc": "CSS Preprocessor With Extras"
       },
       {
-        "name": "Bootstrap",
-        "docs": "https://getbootstrap.com/docs/5.3/getting-started/introduction/",
-        "icon": "/bootstrap.svg",
-        "hasProjects": true,
-        "type": "framework",
-        "desc": "UI Framework For Styling"
-      },
-      {
         "name": "Insomnia",
         "docs": "https://docs.insomnia.rest/",
         "icon": "/insomnia.svg",
@@ -104,6 +104,30 @@
         "hasProjects": true,
         "type": "tool",
         "desc": "Code Hosting And Collaboration"
+      },
+      {
+        "name": "Render",
+        "docs": "https://render.com/docs",
+        "icon": "/render.svg",
+        "hasProjects": true,
+        "type": "hosting",
+        "desc": "Cloud Platform For Apps"
+      },
+      {
+        "name": "NPM",
+        "docs": "https://docs.npmjs.com/",
+        "icon": "/npm.svg",
+        "hasProjects": true,
+        "type": "tool",
+        "desc": "NodeJS Package Manager"
+      },
+      {
+        "name": "Mongoose",
+        "docs": "",
+        "icon": "/mongoose.svg",
+        "hasProjects": true,
+        "type": "tool",
+        "desc": "MongoDB Object Modeling Tool"
       }
     ],
     "comfortable": [
@@ -154,6 +178,14 @@
         "hasProjects": true,
         "type": "tool",
         "desc": "Modern Web App Build Tool"
+      },
+      {
+        "name": "Bootstrap",
+        "docs": "https://getbootstrap.com/docs/5.3/getting-started/introduction/",
+        "icon": "/bootstrap.svg",
+        "hasProjects": true,
+        "type": "framework",
+        "desc": "UI Framework For Styling"
       },
       {
         "name": "Tailwind",
@@ -238,6 +270,14 @@
         "hasProjects": true,
         "type": "framework",
         "desc": "CMS For Web Content"
+      },
+      {
+        "name": "YAML",
+        "docs": "https://yaml.org/",
+        "icon": "/yaml.svg",
+        "hasProjects": true,
+        "type": "language",
+        "desc": "Human-Readable Data Format"
       },
       {
         "name": "AWS",

@@ -57,6 +57,8 @@ export default function Technologies() {
         return "/frameworkIcon.svg";
       case "runtime":
         return "/runtimeIcon.svg";
+      case "hosting":
+        return "/house.svg";
       default:
         return "/charizard.png";
     }
@@ -103,10 +105,12 @@ export default function Technologies() {
                       />
                     </Link>
                     {tech.hasProjects ? (
-                      <TechItemButton
-                        text="Projects"
-                        proficiency={proficiency}
-                      />
+                      <Link href={`/projects/that_use/${tech.name}`}>
+                        <TechItemButton
+                          text="Projects"
+                          proficiency={proficiency}
+                        />
+                      </Link>
                     ) : (
                       <TechItemButton text="Projects" proficiency="none" />
                     )}
