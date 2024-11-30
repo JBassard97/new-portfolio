@@ -51,7 +51,7 @@
       ]
     },
     {
-      "name": "Just Another Text Editor",
+      "name": "Just_Another_Text_Editor",
       "githubLink": "https://github.com/JBassard97/Browser-Text-Editor",
       "images": ["/charizard.png"],
       "isComplete": true,
@@ -137,7 +137,7 @@
       "isFullStack": false,
       "type": "Web App",
       "hostedOn": "Netlify",
-      "stack": ["Vue", "TypeScript", "Vite", "NPM"]
+      "stack": ["Vue", "TypeScript", "Vite", "NPM", "Netlify"]
     },
 
     {

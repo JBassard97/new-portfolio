@@ -20,10 +20,8 @@ export default function Header() {
     { name: "vue", url: "/vue.svg" },
     { name: "next", url: "/next-js.svg" },
     { name: "svelte", url: "/svelte.svg" },
-    { name: "typescript", url: "/typescript.svg" },
     { name: "node", url: "/node.svg" },
     { name: "python", url: "/python.svg" },
-    { name: "mongo", url: "/mongo.svg" },
   ];
 
   // Preload images on component mount
@@ -56,7 +54,7 @@ export default function Header() {
       cycleInterval = setInterval(() => {
         i = (i + 1) % tech_logos.length;
         setCurrentLogo(tech_logos[i].name);
-      }, 600);
+      }, 750);
     } else {
       setCurrentLogo("toolbox");
     }

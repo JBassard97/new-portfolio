@@ -1,29 +1,15 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
-
-interface Project {
-  name: string;
-  githubLink: string;
-  images: string[];
-  isComplete: boolean;
-  isDeployed: boolean;
-  deployedLink: string;
-  desc: string;
-  hasFrontend: boolean;
-  hasBackend: boolean;
-  isFullStack: boolean;
-  type: string;
-  hostedOn: string;
-  stack: string[];
-}
+import ProjectCard from "@/app/components/ProjectCard/ProjectCard";
+import { Project } from "../../interfaces";
+import "./all.css";
 
 const ProjectsAll = () => {
   const [projectsData, setProjectsData] = useState<Project[]>([]);
 
   useEffect(() => {
-    const fetchProjectData = async () => {
+    const fetchAllProjects = async () => {
       try {
         const response = await fetch("/api/projectData/allProjects");
         if (!response.ok) {
@@ -37,7 +23,7 @@ const ProjectsAll = () => {
       }
     };
 
-    fetchProjectData();
+    fetchAllProjects();
   }, []);
   return (
     <div className="all-projects">
@@ -45,12 +31,8 @@ const ProjectsAll = () => {
 
       {projectsData.length > 0 ? (
         <div className="projects-container">
-          {projectsData.map((project, index) => (
-            <div key={index} className="project">
-              <Link href={`/projects/${project.name}`}>
-                <p>{project.name}</p>
-              </Link>
-            </div>
+          {projectsData.map((project) => (
+            <ProjectCard key={project.name} project={project} />
           ))}
         </div>
       ) : (

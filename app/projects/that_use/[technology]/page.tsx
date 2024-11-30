@@ -1,18 +1,54 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import techToLogo from "../../techToLogo";
-import "./projects_that_use.css";
+import { Project } from "../../../interfaces";
+import ProjectCard from "@/app/components/ProjectCard/ProjectCard";
+import "./that_use.css";
 
 type RouteParams = { params: { technology: string } };
 
-const ProjectsThatUse = async ({ params }: RouteParams) => {
-  const { technology } = await params;
+const ProjectsThatUse = ({ params }: RouteParams) => {
+  const [technology, setTechnology] = useState<string | null>(null);
+  const [projectsData, setProjectsData] = useState<Project[]>([]);
+
+  useEffect(() => {
+    const fetchTechParam = async () => {
+      const resolvedParams = await params;
+      setTechnology(resolvedParams.technology);
+    };
+    fetchTechParam();
+  }, [params]);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      if (technology) {
+        try {
+          const response = await fetch(
+            `/api/projectData/projectsByTech/${technology}`
+          );
+          if (!response.ok) {
+            throw new Error(
+              `No projects found for the technology ${technology}`
+            );
+          }
+          const data = await response.json();
+          console.log(data);
+          setProjectsData(data);
+        } catch (error) {
+          console.error("Error fetching project data: ", error);
+        }
+      }
+    };
+    fetchProjects();
+  }, [technology]);
 
   return (
     <div className="projects-that-use">
-      <div className="projects-that-use-header">
-        <h4 className="line-1">Projects That Use</h4>
+      <h4 className="line-1">Projects That Use</h4>
+      {technology && (
         <div className="line-2">
           <p>{technology}</p>
           <Image
@@ -22,7 +58,16 @@ const ProjectsThatUse = async ({ params }: RouteParams) => {
             height="30"
           />
         </div>
-      </div>
+      )}
+      {projectsData.length > 0 ? (
+        <div className="projects-container">
+          {projectsData.map((project) => (
+            <ProjectCard key={project.name} project={project} />
+          ))}
+        </div>
+      ) : (
+        <p>Loading Projects...</p>
+      )}
     </div>
   );
 };

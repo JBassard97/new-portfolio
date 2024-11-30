@@ -1,10 +1,20 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
 type RouteParams = { params: { project: string } };
 
-const SingleProject = async ({ params }: RouteParams) => {
-  const { project } = await params;
+const SingleProject = ({ params }: RouteParams) => {
+  const [project, setProject] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchProjectParam = async () => {
+      const resolvedParams = await params;
+      setProject(resolvedParams.project);
+    };
+    fetchProjectParam();
+  }, [params]);
 
   return (
     <div className="single-project">
