@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import techToLogo from "../../techToLogo";
 import { Project } from "../../../interfaces";
 import ProjectCard from "@/app/components/ProjectCard/ProjectCard";
@@ -13,6 +13,8 @@ type RouteParams = { params: { technology: string } };
 const ProjectsThatUse = ({ params }: RouteParams) => {
   const [technology, setTechnology] = useState<string | null>(null);
   const [projectsData, setProjectsData] = useState<Project[]>([]);
+  const [isLoading, setIsLoading] = useState(true); // Track loading state
+  const [errorMessage, setErrorMessage] = useState<string | null>(null); // Track error state
 
   useEffect(() => {
     const fetchTechParam = async () => {
@@ -25,20 +27,28 @@ const ProjectsThatUse = ({ params }: RouteParams) => {
   useEffect(() => {
     const fetchProjects = async () => {
       if (technology) {
+        setIsLoading(true); // Start loading
         try {
           const response = await fetch(
             `/api/projectData/projectsByTech/${technology}`
           );
+
           if (!response.ok) {
             throw new Error(
               `No projects found for the technology ${technology}`
             );
           }
+
           const data = await response.json();
-          console.log(data);
+          console.log("Fetched data:", data);
           setProjectsData(data);
+          setErrorMessage(null); // Clear any error messages
         } catch (error) {
-          console.error("Error fetching project data: ", error);
+          console.error(error);
+          setProjectsData([]); // Set projectsData to empty array
+          setErrorMessage(`No projects found containing "${technology}".`);
+        } finally {
+          setIsLoading(false); // Stop loading
         }
       }
     };
@@ -59,14 +69,21 @@ const ProjectsThatUse = ({ params }: RouteParams) => {
           />
         </div>
       )}
-      {projectsData.length > 0 ? (
+      {isLoading ? (
+        <p>Loading Projects...</p>
+      ) : errorMessage ? (
+        <p>{errorMessage}</p>
+      ) : projectsData.length > 0 ? (
         <div className="projects-container">
           {projectsData.map((project) => (
             <ProjectCard key={project.name} project={project} />
           ))}
         </div>
       ) : (
-        <p>Loading Projects...</p>
+        <div>
+          <p>No projects found containing "{technology}"</p>
+          <Link href="/technologies">Go Back To Technologies</Link>
+        </div>
       )}
     </div>
   );

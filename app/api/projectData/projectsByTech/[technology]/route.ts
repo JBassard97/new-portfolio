@@ -5,13 +5,13 @@ export const GET = async (request: Request, { params }: { params: { technology: 
     const { technology } = await params;
 
     if (!technology) {
-        return NextResponse.json("No technology name provided.");
+        return NextResponse.json([]);
     }
 
     const matchingProjects = data.projectData.filter((project) => project.stack.includes(technology));
 
     if (matchingProjects.length === 0) {
-        return NextResponse.json(`No projects found for ${technology}`)
+        return NextResponse.json([])
     }
 
     return NextResponse.json(matchingProjects);
