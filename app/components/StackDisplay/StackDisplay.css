@@ -1,0 +1,13 @@
+.stack-display {
+  width: 100%;
+  border: 1px solid orange;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.technology-image {
+    margin: 10px;
+}
+
+

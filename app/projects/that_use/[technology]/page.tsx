@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import techToLogo from "../../techToLogo";
+import techToLogo from "../../../techToLogo";
 import { Project } from "../../../interfaces";
 import ProjectCard from "@/app/components/ProjectCard/ProjectCard";
 import "./that_use.css";
