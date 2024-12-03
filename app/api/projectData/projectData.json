@@ -165,7 +165,7 @@
       "hasFrontend": false,
       "hasBackend": false,
       "isFullStack": false,
-      "type": "Terminal App",
+      "type": "CLI",
       "hostedOn": "",
       "stack": ["JavaScript"]
     }

@@ -19,7 +19,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         return "/globe.svg";
       case "API":
         return "/api.svg";
-      case "Terminal App":
+      case "CLI":
         return "/powershell.svg";
       case "Other":
         return "/spiral.svg";
@@ -31,7 +31,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <div className="project">
       <Image
-        className="project-type-icon"
+        className="type-icon"
         src={projectTypeToIcon(project.type)}
         alt={project.type}
         data-tooltip-id={project.type}
@@ -41,9 +41,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       />
       <Tooltip id={project.type} />
 
-      <div className="project-image-container">
-        <img src="/charizard.png"></img>
-      </div>
+      <img className="project-image" src="/charizard.png"></img>
       <div className="project-data">
         <div className="project-text">
           <Link href={`/projects/${project.name}`}>
@@ -52,55 +50,52 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           <p className="project-desc">{project.desc}</p>
         </div>
 
-        <div className="all-buttons">
-          <div className="stack-type-display">
-            {project.hasBackend && <p className="backend">Back End</p>}
-            {project.hasFrontend && <p className="frontend">Front End</p>}
-            {project.isFullStack && <p className="fullstack">Full Stack</p>}
-            {!project.hasBackend &&
-              !project.hasFrontend &&
-              !project.isFullStack && <p className="other">Other</p>}
-          </div>
+        <div className="stack-type-display">
+          {project.hasBackend && <p className="backend">Back End</p>}
+          {project.hasFrontend && <p className="frontend">Front End</p>}
+          {project.isFullStack && <p className="fullstack">Full Stack</p>}
+          {!project.hasBackend &&
+            !project.hasFrontend &&
+            !project.isFullStack && <p className="other">Other</p>}
+        </div>
 
-          <div className="stack-display">
-            {project.stack.map((technology, index) => (
-              <Link href={`/projects/that_use/${technology}`} key={index}>
+        <div className="project-links">
+          {/* {project.isComplete ? <p>Complete</p> : <p>In Progress</p>} */}
+          {project.isDeployed && project.deployedLink.length > 0 && (
+            <Link href={project.deployedLink}>
+              <div className="deployed-link">
+                <p>Deployed</p>
                 <Image
-                  className="technology-image"
-                  src={techToLogo(technology)}
-                  alt={technology}
-                  height="30"
-                  width="30"
-                  data-tooltip-id={technology}
-                  data-tooltip-content={technology}
+                  src={techToLogo(project.hostedOn)}
+                  alt="Deployed"
+                  width="25"
+                  height="25"
                 />
-                <Tooltip id={technology} />
-              </Link>
-            ))}
-          </div>
-
-          <div className="project-links">
-            {/* {project.isComplete ? <p>Complete</p> : <p>In Progress</p>} */}
-            {project.isDeployed && project.deployedLink.length > 0 && (
-              <Link href={project.deployedLink}>
-                <div className="deployed-link">
-                  <p>Deployed</p>
-                  <Image
-                    src={techToLogo(project.hostedOn)}
-                    alt="Deployed"
-                    width="25"
-                    height="25"
-                  />
-                </div>
-              </Link>
-            )}
-            <Link href={project.githubLink}>
-              <div className="github-link">
-                <p>View</p>
-                <Image src="/github.svg" alt="Github" width="25" height="25" />
               </div>
             </Link>
-          </div>
+          )}
+          <Link href={project.githubLink}>
+            <div className="github-link">
+              <p>View</p>
+              <Image src="/github.svg" alt="Github" width="25" height="25" />
+            </div>
+          </Link>
+        </div>
+        <div className="stack-display">
+          {project.stack.map((technology, index) => (
+            <Link href={`/projects/that_use/${technology}`} key={index}>
+              <Image
+                className="technology-image"
+                src={techToLogo(technology)}
+                alt={technology}
+                height="30"
+                width="30"
+                data-tooltip-id={technology}
+                data-tooltip-content={technology}
+              />
+              <Tooltip id={technology} />
+            </Link>
+          ))}
         </div>
       </div>
     </div>
