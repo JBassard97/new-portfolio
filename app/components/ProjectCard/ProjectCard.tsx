@@ -30,18 +30,51 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
   return (
     <div className="project">
-      <Image
-        className="type-icon"
-        src={projectTypeToIcon(project.type)}
-        alt={project.type}
-        data-tooltip-id={project.type}
-        data-tooltip-content={project.type}
-        width="25"
-        height="25"
-      />
-      <Tooltip id={project.type} />
+      <div className="top-right-icons">
+        <Image
+          className="type-icon"
+          src={projectTypeToIcon(project.type)}
+          alt={project.type}
+          data-tooltip-id={`${project.name}_${project.type}`}
+          data-tooltip-content={project.type}
+          data-tooltip-place="left-end"
+          width="25"
+          height="25"
+        />
+        <Tooltip
+          id={`${project.name}_${project.type}`}
+          style={{ opacity: "1", zIndex: "5" }}
+          place="left-end"
+          offset={10}
+        />
 
-      <img className="project-image" src="/charizard.png"></img>
+        <Image
+          className="complete-icon"
+          src={project.isComplete ? "/check.svg" : "/three_dots.svg"}
+          alt={project.isComplete ? "Complete" : "Developing"}
+          data-tooltip-id={
+            project.isComplete
+              ? `${project.name}_complete`
+              : `${project.name}_in_progress`
+          }
+          data-tooltip-content={project.isComplete ? "Complete" : "Developing"}
+          data-tooltip-place="left"
+          width="25"
+          height="25"
+        />
+        <Tooltip
+          id={
+            project.isComplete
+              ? `${project.name}_complete`
+              : `${project.name}_in_progress`
+          }
+          style={{ opacity: "1", zIndex: "5" }}
+          place="left"
+        />
+      </div>
+      <div className="project-image">
+        <img src={project.images[0]}></img>
+      </div>
       <div className="project-data">
         <div className="project-text">
           <Link href={`/projects/${project.name}`}>

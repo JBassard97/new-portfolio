@@ -89,24 +89,20 @@ const GitHubCalendar: React.FC<GitHubCalendarProps> = ({ contributions }) => {
                     style={{ backgroundColor: getColor(day.contributionCount) }}
                     data-tooltip-id={`day-tooltip-${weekIndex}-${dayIndex}`}
                     data-tooltip-content={`${day.date}: ${day.contributionCount} contributions`}
-                  />
+                  >
+                    <Tooltip
+                      key={`tooltip-${weekIndex}-${dayIndex}`}
+                      id={`day-tooltip-${weekIndex}-${dayIndex}`}
+                      place="top"
+                      style={{ opacity: "1", zIndex: "10" }}
+                    />
+                  </div>
                 ))}
               </div>
             ))}
           </div>
         </div>
       </div>
-      {/* Tooltip Element */}
-      {contributions.map((week, weekIndex) =>
-        week.contributionDays.map((day, dayIndex) => (
-          <Tooltip
-            key={`tooltip-${weekIndex}-${dayIndex}`}
-            id={`day-tooltip-${weekIndex}-${dayIndex}`}
-            place="top"
-            className="custom-tooltip"
-          />
-        ))
-      )}
     </div>
   );
 };
