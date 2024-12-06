@@ -23,23 +23,43 @@
 }
 
 .tech-category.excellent {
-  background-color: rgba(0, 0, 255, 0.15);
+  background-color: black;
   border: 2px solid blue;
 }
 
+.tech-category.excellent .tech-item {
+  border: 1px solid blue;
+  box-shadow: 0 0 5px 2px blue;
+}
+
 .tech-category.comfortable {
-  background-color: rgba(0, 128, 0, 0.2);
+  background-color: black;
   border: 2px solid green;
 }
 
+.tech-category.comfortable .tech-item {
+  border: 1px solid green;
+  box-shadow: 0 0 5px 2px green;
+}
+
 .tech-category.familiar {
-  background-color: rgba(255, 255, 0, 0.1);
+  background-color: black;
   border: 2px solid yellow;
 }
 
+.tech-category.familiar .tech-item {
+  border: 1px solid yellow;
+  box-shadow: 0 0 5px 2px yellow;
+}
+
 .tech-category.used_once {
-  background-color: rgba(255, 166, 0, 0.15);
+  background-color: black;
   border: 2px solid orange;
+}
+
+.tech-category.used_once .tech-item {
+  border: 1px solid orange;
+  box-shadow: 0 0 5px 2px orange;
 }
 
 .tech-item {
@@ -55,6 +75,7 @@
   align-items: center;
   justify-content: space-evenly;
   position: relative;
+  transition: all 0.3s ease;
 }
 
 .tech-type-icon {

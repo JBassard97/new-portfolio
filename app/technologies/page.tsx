@@ -86,6 +86,10 @@ export default function Technologies() {
                       tech.type.charAt(0).toUpperCase() + tech.type.slice(1)
                     }
                   />
+                  <Tooltip
+                    id={`tooltip-${tech.type}`}
+                    style={{ zIndex: "5" }}
+                  />
                   <Image
                     className="tech-icon"
                     src={tech.icon ? tech.icon : "/charizard.png"}
@@ -115,10 +119,6 @@ export default function Technologies() {
                       <TechItemButton text="Projects" proficiency="none" />
                     )}
                   </div>
-                  <Tooltip
-                    id={`tooltip-${tech.type}`}
-                    style={{ zIndex: "5" }}
-                  />
                 </div>
               ))}
             </div>
