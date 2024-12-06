@@ -1,7 +1,9 @@
 import { NextResponse } from "next/server";
 import data from "../../projectData.json" with {type: "json"}
 
-export const GET = async (request: Request, { params }: { params: { technology: string } }) => {
+type RouteParams = { params: Promise<{ technology: string }> };
+
+export const GET = async (request: Request, { params }: RouteParams) => {
     const { technology } = await params;
 
     if (!technology) {

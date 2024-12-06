@@ -3,7 +3,7 @@
     {
       "name": "YesChef",
       "githubLink": "https://github.com/JBassard97/YesChef",
-      "images": ["/charizard.png"],
+      "images": ["/projectImages/YesChef.png"],
       "isComplete": true,
       "isDeployed": true,
       "deployedLink": "https://yeschef.onrender.com/",
@@ -28,7 +28,7 @@
     {
       "name": "PollR",
       "githubLink": "https://github.com/JBassard97/PollR?tab=readme-ov-file",
-      "images": ["/charizard.png"],
+      "images": ["/projectImages/PollR_Screenshot.png"],
       "isComplete": true,
       "isDeployed": true,
       "deployedLink": "https://pollr.onrender.com/",
@@ -53,7 +53,7 @@
     {
       "name": "Just_Another_Text_Editor",
       "githubLink": "https://github.com/JBassard97/Browser-Text-Editor",
-      "images": ["/charizard.png"],
+      "images": ["/projectImages/JATE.png"],
       "isComplete": true,
       "isDeployed": true,
       "deployedLink": "https://just-another-text-editor-tq3x.onrender.com",
@@ -78,7 +78,7 @@
     {
       "name": "Book_Search_Engine",
       "githubLink": "https://github.com/JBassard97/Book_Search_Engine?tab=readme-ov-file",
-      "images": ["/charizard.png"],
+      "images": ["/projectImages/bookSearchEngine.png"],
       "isComplete": true,
       "isDeployed": false,
       "deployedLink": "",
@@ -103,7 +103,7 @@
     {
       "name": "Social_Network_API",
       "githubLink": "https://github.com/JBassard97/Social_Networapi",
-      "images": ["/charizard.png"],
+      "images": ["/projectImages/socialnetwork.png"],
       "isComplete": true,
       "isDeployed": false,
       "deployedLink": "",
@@ -142,7 +142,7 @@
     {
       "name": "autoCommit",
       "githubLink": "https://github.com/JBassard97/autoCommit",
-      "images": ["/charizard.png"],
+      "images": ["/projectImages/autocommit.png"],
       "isComplete": true,
       "isDeployed": true,
       "deployedLink": "",
@@ -157,7 +157,7 @@
     {
       "name": "Professional_README_Generator",
       "githubLink": "https://github.com/JBassard97/Professional_README_Generator",
-      "images": ["/charizard.png"],
+      "images": ["/projectImages/readmegen.png"],
       "isComplete": true,
       "isDeployed": false,
       "deployedLink": "",
@@ -183,6 +183,21 @@
       "type": "CLI",
       "hostedOn": "",
       "stack": ["Python"]
+    },
+    {
+      "name": "Code_Quiz",
+      "githubLink": "https://github.com/JBassard97/Code_Quiz?tab=readme-ov-file",
+      "images": ["/projectImages/quiz.png"],
+      "isComplete": true,
+      "isDeployed": true,
+      "deployedLink": "https://jbassard97.github.io/Code_Quiz/",
+      "desc": "Fill In Later",
+      "hasFrontend": true,
+      "hasBackend": false,
+      "isFullStack": false,
+      "type": "Web App",
+      "hostedOn": "GitHub",
+      "stack": ["HTML", "CSS", "JavaScript"]
     }
   ]
 }

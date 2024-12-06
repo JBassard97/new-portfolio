@@ -3,10 +3,10 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
-type RouteParams = { params: { project: string } };
+// type RouteParams = { params: { project: string } };
 
-const SingleProject = ({ params }: RouteParams) => {
-  const [project, setProject] = useState<string | null>(null);
+const SingleProject = ({ params }: any) => {
+  const [project, setProject] = useState<any | null>(null);
 
   useEffect(() => {
     const fetchProjectParam = async () => {

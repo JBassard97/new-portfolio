@@ -8,9 +8,9 @@ import { Project } from "../../../interfaces";
 import ProjectCard from "@/app/components/ProjectCard/ProjectCard";
 import "./that_use.css";
 
-type RouteParams = { params: { technology: string } };
+// type RouteParams = { params: { technology: string } };
 
-const ProjectsThatUse = ({ params }: RouteParams) => {
+const ProjectsThatUse = ({ params }: any) => {
   const [technology, setTechnology] = useState<string | null>(null);
   const [projectsData, setProjectsData] = useState<Project[]>([]);
   const [isLoading, setIsLoading] = useState(true); // Track loading state
