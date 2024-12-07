@@ -20,46 +20,47 @@
   border-radius: 10px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 0.5fr));
+  animation: fadeIn 0.2s ease;
 }
 
-.tech-category.excellent {
-  background-color: black;
-  border: 2px solid blue;
-}
-
+.tech-category.excellent,
 .tech-category.excellent .tech-item {
   border: 1px solid blue;
   box-shadow: 0 0 5px 2px blue;
 }
 
-.tech-category.comfortable {
-  background-color: black;
-  border: 2px solid green;
+.tech-category.excellent .tech-item:hover {
+  box-shadow: 0 0 5px 5px blue;
 }
 
+.tech-category.comfortable,
 .tech-category.comfortable .tech-item {
   border: 1px solid green;
   box-shadow: 0 0 5px 2px green;
 }
 
-.tech-category.familiar {
-  background-color: black;
-  border: 2px solid yellow;
+.tech-category.comfortable .tech-item:hover {
+  box-shadow: 0 0 5px 5px green;
 }
 
+.tech-category.familiar,
 .tech-category.familiar .tech-item {
   border: 1px solid yellow;
   box-shadow: 0 0 5px 2px yellow;
 }
 
-.tech-category.used_once {
-  background-color: black;
-  border: 2px solid orange;
+.tech-category.familiar .tech-item:hover {
+  box-shadow: 0 0 5px 5px yellow;
 }
 
+.tech-category.used_once,
 .tech-category.used_once .tech-item {
   border: 1px solid orange;
   box-shadow: 0 0 5px 2px orange;
+}
+
+.tech-category.used_once .tech-item:hover {
+  box-shadow: 0 0 5px 5px orange;
 }
 
 .tech-item {
@@ -75,7 +76,21 @@
   align-items: center;
   justify-content: space-evenly;
   position: relative;
-  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 0.2s ease-out forwards;
+  transition: scale 0.3s ease, opacity 0.3s ease, box-shadow 0.2s ease;
+  z-index: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .tech-type-icon {

@@ -46,7 +46,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <div className="project">
       <div className="top-right-icons">
-        <Link href={`/projects/labeled_as/${project.type.replace(" ", "_")}`}>
+        <Link
+          href={`/projects/labeled_as/${project.type.replace(" ", "_")}`}
+          style={{ zIndex: 5 }}
+        >
           <Image
             className="type-icon"
             src={projectTypeToIcon(project.type)}
@@ -73,6 +76,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           href={`/projects/labeled_as/${
             project.isComplete ? "Complete" : "In_Progress"
           }`}
+          style={{ zIndex: 5 }}
         >
           <Image
             className="complete-icon"

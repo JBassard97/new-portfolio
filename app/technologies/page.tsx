@@ -71,58 +71,70 @@ export default function Technologies() {
 
       <div className="tech-list">
         {techData &&
-          Object.entries(techData).map(([proficiency, technologies]) => (
-            <div key={proficiency} className={`tech-category ${proficiency}`}>
-              {(technologies as Technology[]).map((tech) => (
-                <div key={tech.name} className="tech-item">
-                  <Image
-                    className="tech-type-icon"
-                    alt="placeholder"
-                    src={techTypeToIcon(tech.type)}
-                    width="20"
-                    height="20"
-                    data-tooltip-id={`tooltip-${tech.type}`}
-                    data-tooltip-content={
-                      tech.type.charAt(0).toUpperCase() + tech.type.slice(1)
-                    }
-                  />
-                  <Tooltip
-                    id={`tooltip-${tech.type}`}
-                    style={{ zIndex: "5" }}
-                  />
-                  <Image
-                    className="tech-icon"
-                    src={tech.icon ? tech.icon : "/charizard.png"}
-                    alt={tech.name}
-                    width={50}
-                    height={50}
-                  />
-                  <div className="tech-text">
-                    <p className="tech-name">{tech.name}</p>
-                    {tech.desc && <p className="tech-desc">{tech.desc}</p>}
-                  </div>
-                  <div className="tech-buttons">
-                    <Link href={tech.docs} target="_blank">
-                      <TechItemButton
-                        text="View Docs"
-                        proficiency={proficiency}
-                      />
-                    </Link>
-                    {tech.hasProjects ? (
-                      <Link href={`/projects/that_use/${tech.name}`}>
+          Object.entries(techData).map(
+            ([proficiency, technologies], proficiencyIndex) => (
+              <div key={proficiency} className={`tech-category ${proficiency}`}>
+                {(technologies as Technology[]).map((tech, techIndex) => (
+                  <div
+                    key={tech.name}
+                    className="tech-item"
+                    style={{
+                      animationDelay: `${
+                        0.5 +
+                        proficiencyIndex * technologies.length +
+                        techIndex * 0.07
+                      }s`,
+                    }}
+                  >
+                    <Image
+                      className="tech-type-icon"
+                      alt="placeholder"
+                      src={techTypeToIcon(tech.type)}
+                      width="20"
+                      height="20"
+                      data-tooltip-id={`tooltip-${tech.name}-${tech.type}`}
+                      data-tooltip-content={
+                        tech.type.charAt(0).toUpperCase() + tech.type.slice(1)
+                      }
+                    />
+                    <Tooltip
+                      id={`tooltip-${tech.name}-${tech.type}`}
+                      style={{ zIndex: 10 }}
+                    />
+                    <Image
+                      className="tech-icon"
+                      src={tech.icon ? tech.icon : "/charizard.png"}
+                      alt={tech.name}
+                      width={50}
+                      height={50}
+                    />
+                    <div className="tech-text">
+                      <p className="tech-name">{tech.name}</p>
+                      {tech.desc && <p className="tech-desc">{tech.desc}</p>}
+                    </div>
+                    <div className="tech-buttons">
+                      <Link href={tech.docs} target="_blank">
                         <TechItemButton
-                          text="Projects"
+                          text="View Docs"
                           proficiency={proficiency}
                         />
                       </Link>
-                    ) : (
-                      <TechItemButton text="Projects" proficiency="none" />
-                    )}
+                      {tech.hasProjects ? (
+                        <Link href={`/projects/that_use/${tech.name}`}>
+                          <TechItemButton
+                            text="Projects"
+                            proficiency={proficiency}
+                          />
+                        </Link>
+                      ) : (
+                        <TechItemButton text="Projects" proficiency="none" />
+                      )}
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
-          ))}
+                ))}
+              </div>
+            )
+          )}
       </div>
     </div>
   );
