@@ -51,7 +51,9 @@ const ProjectsLabeledAs = ({ params }: any) => {
 
   return (
     <div className="projects-labeled-as">
-      <h4 className="line-1">Projects Labeled As</h4>
+      <h4 className="line-1">
+        {projectsData ? projectsData.length : 0} Projects Labeled As
+      </h4>
       {label && <p className="line-2">"{label.replace("_", " ")}"</p>}
       {isLoading ? (
         <p>Loading Projects...</p>

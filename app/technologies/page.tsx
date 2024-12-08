@@ -80,9 +80,7 @@ export default function Technologies() {
                     className="tech-item"
                     style={{
                       animationDelay: `${
-                        0.5 +
-                        proficiencyIndex * technologies.length +
-                        techIndex * 0.07
+                        0.07 * (proficiencyIndex * 10 + techIndex)
                       }s`,
                     }}
                   >

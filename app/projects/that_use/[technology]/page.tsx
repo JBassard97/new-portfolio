@@ -57,7 +57,9 @@ const ProjectsThatUse = ({ params }: any) => {
 
   return (
     <div className="projects-that-use">
-      <h4 className="line-1">Projects That Use</h4>
+      <h4 className="line-1">
+        {projectsData ? projectsData.length : 0} Projects That Use
+      </h4>
       {technology && (
         <div className="line-2">
           <p>{technology}</p>

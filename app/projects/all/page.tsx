@@ -27,7 +27,7 @@ const ProjectsAll = () => {
   }, []);
   return (
     <div className="all-projects">
-      <h1>All Projects</h1>
+      <h1>All Projects ({projectsData ? projectsData.length : 0})</h1>
 
       {projectsData.length > 0 ? (
         <div className="projects-container">
