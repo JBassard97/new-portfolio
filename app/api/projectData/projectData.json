@@ -212,7 +212,7 @@
       "isFullStack": false,
       "type": "CLI",
       "hostedOn": "",
-      "stack": []
+      "stack": ["JavaScript", "NPM", "NodeJS"]
     },
     {
       "name": "autoCommit",
@@ -245,6 +245,21 @@
       "stack": ["JavaScript"]
     },
     {
+      "name": "Next_Hang_Man",
+      "githubLink": "https://github.com/JBassard97/hangMan",
+      "images": ["/projectImages/hangman.png"],
+      "isComplete": true,
+      "isDeployed": true,
+      "deployedLink": "https://nexthangman.netlify.app/",
+      "desc": "Fill In Later",
+      "hasFrontend": true,
+      "hasBackend": false,
+      "isFullStack": false,
+      "type": "Web App",
+      "hostedOn": "Netlify",
+      "stack": ["Next.js", "TypeScript", "Sass", "NPM", "Netlify"]
+    },
+    {
       "name": "Employee_Tracker",
       "githubLink": "https://github.com/JBassard97/Employee_Tracker",
       "images": ["/projectImages/employee.png"],
@@ -253,11 +268,26 @@
       "deployedLink": "",
       "desc": "A Content Management System for everyone on payroll",
       "hasFrontend": false,
-      "hasBackend": true,
+      "hasBackend": false,
       "isFullStack": false,
       "type": "CLI",
       "hostedOn": "",
-      "stack": ["MySQL", "NodeJS"]
+      "stack": ["MySQL", "NodeJS", "JavaScript"]
+    },
+    {
+      "name": "TellMeAbout",
+      "githubLink": "https://github.com/JBassard97/TellMeAbout",
+      "images": ["/projectImages/tellmeabout.png"],
+      "isComplete": true,
+      "isDeployed": true,
+      "deployedLink": "https://www.npmjs.com/package/tellmeabout",
+      "desc": "Plug in any variable or value and automatically infer as much information about it as possible.",
+      "hasFrontend": false,
+      "hasBackend": false,
+      "isFullStack": false,
+      "type": "Other",
+      "hostedOn": "NPM",
+      "stack": ["TypeScript", "NPM"]
     },
     {
       "name": "Work_Day_Scheduler",
@@ -320,6 +350,21 @@
       "stack": ["Handlebars", "MySQL", "JavaScript", "CSS", "Express.js"]
     },
     {
+      "name": "Note_Taker",
+      "githubLink": "https://github.com/JBassard97/Note_Taker",
+      "images": ["/projectImages/notetaker.png"],
+      "isComplete": true,
+      "isDeployed": true,
+      "deployedLink": "note-taker-gynb.onrender.com",
+      "desc": "Quickly jot notes down with this convenient web app.",
+      "hasFrontend": true,
+      "hasBackend": true,
+      "isFullStack": true,
+      "type": "Web App",
+      "hostedOn": "Render",
+      "stack": ["JavaScript", "NodeJS", "HTML", "CSS", "Express.js"]
+    },
+    {
       "name": "Code_Quiz",
       "githubLink": "https://github.com/JBassard97/Code_Quiz?tab=readme-ov-file",
       "images": ["/projectImages/quiz.png"],
@@ -333,6 +378,51 @@
       "type": "Web App",
       "hostedOn": "GitHub",
       "stack": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "name": "Regex_Simplified",
+      "githubLink": "https://github.com/JBassard97/Regex_Simplified",
+      "images": ["/projectImages/regexsimp.png"],
+      "isComplete": true,
+      "isDeployed": true,
+      "deployedLink": "https://gist.github.com/JBassard97/a9cd832b4057a9d25679838264424419",
+      "desc": "A GitHub Gist that helps demystify Regex Patterns in JavaScript.",
+      "hasFrontend": false,
+      "hasBackend": false,
+      "isFullStack": false,
+      "type": "Other",
+      "hostedOn": "GitHub",
+      "stack": ["GitHub"]
+    },
+    {
+      "name": "Portfolio_v1",
+      "githubLink": "https://github.com/JBassard97/J_Acciarito_Portfolio_Page",
+      "images": ["/projectImages/portfolio_v1.png"],
+      "isComplete": true,
+      "isDeployed": true,
+      "deployedLink": "https://jbassard97.github.io/J_Acciarito_Portfolio_Page/",
+      "desc": "Fill In Later",
+      "hasFrontend": true,
+      "hasBackend": false,
+      "isFullStack": false,
+      "type": "Web App",
+      "hostedOn": "GitHub",
+      "stack": ["HTML", "CSS", "JavaScript", "GitHub"]
+    },
+    {
+      "name": "Portfolio_v2",
+      "githubLink": "https://github.com/JBassard97/Portfolio_2024",
+      "images": ["/projectImages/portfolio_v2.png"],
+      "isComplete": true,
+      "isDeployed": true,
+      "deployedLink": "https://jacciarito-portfolio-2024.netlify.app/",
+      "desc": "Fill In Later",
+      "hasFrontend": true,
+      "hasBackend": false,
+      "isFullStack": false,
+      "type": "Web App",
+      "hostedOn": "Netlify",
+      "stack": ["React", "TypeScript", "Sass", "Netlify"]
     }
   ]
 }

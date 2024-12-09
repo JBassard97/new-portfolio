@@ -2,11 +2,14 @@
 
 import React, { useState, useEffect } from "react";
 import ProjectCard from "@/app/components/ProjectCard/ProjectCard";
+import PaginationBar from "@/app/components/PaginationBar/PaginationBar";
 import { Project } from "../../interfaces";
 import "./all.css";
 
 const ProjectsAll = () => {
   const [projectsData, setProjectsData] = useState<Project[]>([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10; // Number of projects to show per page
 
   useEffect(() => {
     const fetchAllProjects = async () => {
@@ -25,16 +28,52 @@ const ProjectsAll = () => {
 
     fetchAllProjects();
   }, []);
+
+  // Calculate data for the current page
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const currentPageData = projectsData.slice(
+    startIndex,
+    startIndex + itemsPerPage
+  );
+
+  // Calculate the total number of pages
+  const totalPages = Math.ceil(projectsData.length / itemsPerPage);
+
   return (
     <div className="all-projects">
-      <h1>All Projects ({projectsData ? projectsData.length : 0})</h1>
+      <h1>All Projects ({projectsData.length})</h1>
 
       {projectsData.length > 0 ? (
-        <div className="projects-container">
-          {projectsData.map((project) => (
-            <ProjectCard key={project.name} project={project} />
-          ))}
-        </div>
+        <>
+          <PaginationBar
+            totalPages={totalPages}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+          />
+          {/* <div className="pagination-bar">
+            {Array.from({ length: totalPages }, (_, i) => (
+              <button
+                key={i}
+                onClick={() => {
+                  setCurrentPage(i + 1);
+                  document;
+                  window.scrollTo(0, 0);
+                  const container = document.querySelector(".all-projects");
+                  console.log(container);
+                }}
+                className={currentPage === i + 1 ? "active" : ""}
+                disabled={currentPage === i + 1}
+              >
+                {i + 1}
+              </button>
+            ))}
+          </div> */}
+          <div className="projects-container">
+            {currentPageData.map((project) => (
+              <ProjectCard key={project.name} project={project} />
+            ))}
+          </div>
+        </>
       ) : (
         <p>Loading projects...</p>
       )}
