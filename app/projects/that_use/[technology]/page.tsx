@@ -6,6 +6,7 @@ import Link from "next/link";
 import techToLogo from "../../../techToLogo";
 import { Project } from "../../../interfaces";
 import ProjectCard from "@/app/components/ProjectCard/ProjectCard";
+import PaginationBar from "@/app/components/PaginationBar/PaginationBar";
 import "./that_use.css";
 
 // type RouteParams = { params: { technology: string } };
@@ -15,6 +16,8 @@ const ProjectsThatUse = ({ params }: any) => {
   const [projectsData, setProjectsData] = useState<Project[]>([]);
   const [isLoading, setIsLoading] = useState(true); // Track loading state
   const [errorMessage, setErrorMessage] = useState<string | null>(null); // Track error state
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
 
   useEffect(() => {
     const fetchTechParam = async () => {
@@ -40,7 +43,6 @@ const ProjectsThatUse = ({ params }: any) => {
           }
 
           const data = await response.json();
-          console.log("Fetched data:", data);
           setProjectsData(data);
           setErrorMessage(null); // Clear any error messages
         } catch (error) {
@@ -54,6 +56,16 @@ const ProjectsThatUse = ({ params }: any) => {
     };
     fetchProjects();
   }, [technology]);
+
+  // Calculate data for the current page
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const currentPageData = projectsData.slice(
+    startIndex,
+    startIndex + itemsPerPage
+  );
+
+  // Calculate the total number of pages
+  const totalPages = Math.ceil(projectsData.length / itemsPerPage);
 
   return (
     <div className="projects-that-use">
@@ -77,7 +89,12 @@ const ProjectsThatUse = ({ params }: any) => {
         <p>{errorMessage}</p>
       ) : projectsData.length > 0 ? (
         <div className="projects-container">
-          {projectsData.map((project) => (
+          <PaginationBar
+            totalPages={totalPages}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+          />
+          {currentPageData.map((project) => (
             <ProjectCard key={project.name} project={project} />
           ))}
         </div>

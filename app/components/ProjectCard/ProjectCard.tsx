@@ -64,11 +64,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <Tooltip
           id={`${project.name}_${project.type}`}
           style={{
-            opacity: 1,
             zIndex: 5,
             backgroundColor: projectTypeToColor(project.type),
           }}
           place="left-end"
+          opacity={1}
           offset={10}
         />
 
@@ -102,11 +102,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               : `${project.name}_in_progress`
           }
           style={{
-            opacity: 1,
             zIndex: 5,
             backgroundColor: project.isComplete ? "#2e8b57" : "#daa520",
           }}
           place="left"
+          opacity={1}
         />
       </div>
       <div className="project-image">
@@ -188,7 +188,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               <Tooltip
                 id={`${project.name}_${technology}`}
                 place="top"
-                style={{ zIndex: 5, opacity: 1 }}
+                style={{ zIndex: 5 }}
+                opacity={1}
               />
             </Link>
           ))}

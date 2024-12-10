@@ -45,30 +45,18 @@ const ProjectsAll = () => {
 
       {projectsData.length > 0 ? (
         <>
-          <PaginationBar
+          {/* <PaginationBar
             totalPages={totalPages}
             currentPage={currentPage}
             setCurrentPage={setCurrentPage}
-          />
-          {/* <div className="pagination-bar">
-            {Array.from({ length: totalPages }, (_, i) => (
-              <button
-                key={i}
-                onClick={() => {
-                  setCurrentPage(i + 1);
-                  document;
-                  window.scrollTo(0, 0);
-                  const container = document.querySelector(".all-projects");
-                  console.log(container);
-                }}
-                className={currentPage === i + 1 ? "active" : ""}
-                disabled={currentPage === i + 1}
-              >
-                {i + 1}
-              </button>
-            ))}
-          </div> */}
+          /> */}
+
           <div className="projects-container">
+            <PaginationBar
+              totalPages={totalPages}
+              currentPage={currentPage}
+              setCurrentPage={setCurrentPage}
+            />
             {currentPageData.map((project) => (
               <ProjectCard key={project.name} project={project} />
             ))}

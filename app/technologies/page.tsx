@@ -98,6 +98,7 @@ export default function Technologies() {
                     <Tooltip
                       id={`tooltip-${tech.name}-${tech.type}`}
                       style={{ zIndex: 10 }}
+                      opacity={1}
                     />
                     <Image
                       className="tech-icon"

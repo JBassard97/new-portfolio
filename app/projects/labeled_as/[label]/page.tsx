@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import ProjectCard from "@/app/components/ProjectCard/ProjectCard";
+import PaginationBar from "@/app/components/PaginationBar/PaginationBar";
 import Link from "next/link";
 import { Project } from "@/app/interfaces";
 import "./labeled_as.css";
@@ -13,6 +14,8 @@ const ProjectsLabeledAs = ({ params }: any) => {
   const [projectsData, setProjectsData] = useState<Project[]>([]);
   const [isLoading, setIsLoading] = useState(true); // Track loading state
   const [errorMessage, setErrorMessage] = useState<string | null>(null); // Track error state
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
 
   useEffect(() => {
     const fetchLabelParam = async () => {
@@ -49,6 +52,16 @@ const ProjectsLabeledAs = ({ params }: any) => {
     fetchProjects();
   }, [label]);
 
+  // Calculate data for the current page
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const currentPageData = projectsData.slice(
+    startIndex,
+    startIndex + itemsPerPage
+  );
+
+  // Calculate the total number of pages
+  const totalPages = Math.ceil(projectsData.length / itemsPerPage);
+
   return (
     <div className="projects-labeled-as">
       <h4 className="line-1">
@@ -61,7 +74,12 @@ const ProjectsLabeledAs = ({ params }: any) => {
         <p>{errorMessage}</p>
       ) : projectsData.length > 0 ? (
         <div className="projects-container">
-          {projectsData.map((project) => (
+          <PaginationBar
+            totalPages={totalPages}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+          />
+          {currentPageData.map((project) => (
             <ProjectCard key={project.name} project={project} />
           ))}
         </div>
