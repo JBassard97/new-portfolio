@@ -22,7 +22,8 @@
         "Render",
         "NPM",
         "Insomnia",
-        "Mongoose"
+        "Mongoose",
+        "Sass"
       ]
     },
     {
@@ -47,7 +48,8 @@
         "Render",
         "NPM",
         "Insomnia",
-        "Mongoose"
+        "Mongoose",
+        "Tailwind"
       ]
     },
     {
@@ -197,7 +199,14 @@
       "isFullStack": true,
       "type": "Web App",
       "hostedOn": "",
-      "stack": ["Handlebars", "MySQL", "JavaScript", "CSS", "Express.js"]
+      "stack": [
+        "Handlebars",
+        "MySQL",
+        "JavaScript",
+        "Tailwind",
+        "Express.js",
+        "NodeJS"
+      ]
     },
     {
       "name": "SVG_Logo_Maker",

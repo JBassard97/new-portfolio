@@ -1,7 +1,8 @@
 .pagination-bar {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
   position: sticky;
@@ -12,4 +13,17 @@
 
 .page-buttons button {
   cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.sort-options span,
+.page-buttons span,
+.items-per-page span {
+  margin-right: 5px;
+}
+
+.sort-options select option,
+.items-per-page select option {
+  text-align: center;
 }
