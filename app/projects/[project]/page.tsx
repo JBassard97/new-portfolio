@@ -2,11 +2,14 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-
+import { Project } from "@/app/interfaces";
+import ProjectCard from "@/app/components/ProjectCard/ProjectCard";
+import "./single_project.css";
 // type RouteParams = { params: { project: string } };
 
 const SingleProject = ({ params }: any) => {
   const [project, setProject] = useState<any | null>(null);
+  const [projectData, setProjectData] = useState<Project | null>(null);
 
   useEffect(() => {
     const fetchProjectParam = async () => {
@@ -16,10 +19,34 @@ const SingleProject = ({ params }: any) => {
     fetchProjectParam();
   }, [params]);
 
+  useEffect(() => {
+    const fetchProjectData = async () => {
+      const response = await fetch(`/api/projectData/singleProject/${project}`);
+      const data = await response.json();
+      console.log(data[0]);
+      setProjectData(data[0]);
+    };
+    if (project) {
+      fetchProjectData();
+    }
+  }, [project]);
+
   return (
     <div className="single-project">
       <Link href="/projects/all">Back to All Projects</Link>
-      <h1>Single Project: {project}</h1>
+      {projectData && (
+        <div>
+          <ProjectCard project={projectData} index={0} />
+          <h2>Tell Me More</h2>
+          {projectData.tellMeMore.map((thought, index) => (
+            <p key={index}>{thought}</p>
+          ))}
+          <h2>What I Learned</h2>
+          {projectData.whatILearned.map((lesson, index) => (
+            <p key={index}>{lesson}</p>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

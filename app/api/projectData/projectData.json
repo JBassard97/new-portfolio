@@ -7,7 +7,7 @@
       "isComplete": true,
       "isDeployed": true,
       "deployedLink": "https://yeschef.onrender.com/",
-      "desc": "Create your team's schedule and share it with them easily with YesChef.",
+      "desc": "Create your team's schedule and share it easily with YesChef!",
       "hasFrontend": true,
       "hasBackend": true,
       "isFullStack": true,
@@ -24,7 +24,9 @@
         "Insomnia",
         "Mongoose",
         "Sass"
-      ]
+      ],
+      "tellMeMore": [""],
+      "whatILearned": [""]
     },
     {
       "name": "PollR",
@@ -50,7 +52,9 @@
         "Insomnia",
         "Mongoose",
         "Tailwind"
-      ]
+      ],
+      "tellMeMore": [""],
+      "whatILearned": [""]
     },
     {
       "name": "Just_Another_Text_Editor",
@@ -59,7 +63,7 @@
       "isComplete": true,
       "isDeployed": true,
       "deployedLink": "https://just-another-text-editor-tq3x.onrender.com",
-      "desc": "A Progressive Web App to dependably write code snippets",
+      "desc": "A Progressive Web App to write code snippets dependably.",
       "hasFrontend": true,
       "hasBackend": true,
       "isFullStack": false,
@@ -75,7 +79,9 @@
         "Render",
         "Postman",
         "NPM"
-      ]
+      ],
+      "tellMeMore": [""],
+      "whatILearned": [""]
     },
     {
       "name": "Brew-Finder",
@@ -84,13 +90,15 @@
       "isComplete": true,
       "isDeployed": true,
       "deployedLink": "https://ant-m84.github.io/Brew-Finder/",
-      "desc": "Find pubs, bars, and breweries nearby or in the town next to yours!",
+      "desc": "Find pubs, bars, and breweries nearby or in a town near you!",
       "hasFrontend": true,
       "hasBackend": false,
       "isFullStack": false,
       "type": "Web App",
       "hostedOn": "GitHub",
-      "stack": ["HTML", "CSS", "JavaScript"]
+      "stack": ["HTML", "CSS", "JavaScript"],
+      "tellMeMore": [""],
+      "whatILearned": [""]
     },
     {
       "name": "Book_Search_Engine",
@@ -99,7 +107,7 @@
       "isComplete": true,
       "isDeployed": false,
       "deployedLink": "",
-      "desc": "Find books with Google's Books API and save them to read later.",
+      "desc": "Find your next reading adventure with Google's Books API.",
       "hasFrontend": true,
       "hasBackend": true,
       "isFullStack": true,
@@ -115,7 +123,9 @@
         "Postman",
         "NPM",
         "Mongoose"
-      ]
+      ],
+      "tellMeMore": [""],
+      "whatILearned": [""]
     },
     {
       "name": "Social_Network_API",
@@ -139,7 +149,9 @@
         "Postman",
         "Mongoose",
         "NPM"
-      ]
+      ],
+      "tellMeMore": [""],
+      "whatILearned": [""]
     },
     {
       "name": "jbassard97nodecolors",
@@ -154,7 +166,9 @@
       "isFullStack": false,
       "type": "Other",
       "hostedOn": "NPM",
-      "stack": ["JavaScript", "NPM"]
+      "stack": ["JavaScript", "NPM"],
+      "tellMeMore": [""],
+      "whatILearned": [""]
     },
     {
       "name": "ButtonSynth",
@@ -169,7 +183,9 @@
       "isFullStack": false,
       "type": "Web App",
       "hostedOn": "GitHub",
-      "stack": ["HTML", "CSS", "JavaScript"]
+      "stack": ["HTML", "CSS", "JavaScript"],
+      "tellMeMore": [""],
+      "whatILearned": [""]
     },
     {
       "name": "DokePex",
@@ -178,13 +194,15 @@
       "isComplete": true,
       "isDeployed": true,
       "deployedLink": "https://dokepex.netlify.app/",
-      "desc": "1 to 1 representation of a device from a beloved franchise",
+      "desc": "1-to-1 representation of a device from a beloved franchise",
       "hasFrontend": true,
       "hasBackend": false,
       "isFullStack": false,
       "type": "Web App",
       "hostedOn": "Netlify",
-      "stack": ["Vue", "TypeScript", "Vite", "NPM", "Netlify"]
+      "stack": ["Vue", "TypeScript", "Vite", "NPM", "Netlify"],
+      "tellMeMore": ["It was fun"],
+      "whatILearned": ["I learned Vue"]
     },
     {
       "name": "Bookshelf",
@@ -206,7 +224,9 @@
         "Tailwind",
         "Express.js",
         "NodeJS"
-      ]
+      ],
+      "tellMeMore": [""],
+      "whatILearned": [""]
     },
     {
       "name": "SVG_Logo_Maker",
@@ -221,7 +241,9 @@
       "isFullStack": false,
       "type": "CLI",
       "hostedOn": "",
-      "stack": ["JavaScript", "NPM", "NodeJS"]
+      "stack": ["JavaScript", "NPM", "NodeJS"],
+      "tellMeMore": [""],
+      "whatILearned": [""]
     },
     {
       "name": "autoCommit",
@@ -236,7 +258,9 @@
       "isFullStack": false,
       "type": "Other",
       "hostedOn": "",
-      "stack": ["GitHub", "JavaScript", "NodeJS", "YAML"]
+      "stack": ["GitHub", "JavaScript", "NodeJS", "YAML"],
+      "tellMeMore": [""],
+      "whatILearned": [""]
     },
     {
       "name": "Professional_README_Generator",
@@ -251,7 +275,9 @@
       "isFullStack": false,
       "type": "CLI",
       "hostedOn": "",
-      "stack": ["JavaScript"]
+      "stack": ["JavaScript"],
+      "tellMeMore": [""],
+      "whatILearned": [""]
     },
     {
       "name": "Next_Hang_Man",
@@ -266,7 +292,9 @@
       "isFullStack": false,
       "type": "Web App",
       "hostedOn": "Netlify",
-      "stack": ["Next.js", "TypeScript", "Sass", "NPM", "Netlify"]
+      "stack": ["Next.js", "TypeScript", "Sass", "NPM", "Netlify"],
+      "tellMeMore": [""],
+      "whatILearned": [""]
     },
     {
       "name": "Employee_Tracker",
@@ -281,7 +309,9 @@
       "isFullStack": false,
       "type": "CLI",
       "hostedOn": "",
-      "stack": ["MySQL", "NodeJS", "JavaScript"]
+      "stack": ["MySQL", "NodeJS", "JavaScript"],
+      "tellMeMore": [""],
+      "whatILearned": [""]
     },
     {
       "name": "TellMeAbout",
@@ -296,7 +326,9 @@
       "isFullStack": false,
       "type": "Other",
       "hostedOn": "NPM",
-      "stack": ["TypeScript", "NPM"]
+      "stack": ["TypeScript", "NPM"],
+      "tellMeMore": [""],
+      "whatILearned": [""]
     },
     {
       "name": "Work_Day_Scheduler",
@@ -311,7 +343,9 @@
       "isFullStack": false,
       "type": "Web App",
       "hostedOn": "GitHub",
-      "stack": ["JQuery", "HTML", "CSS", "JavaScript"]
+      "stack": ["JQuery", "HTML", "CSS", "JavaScript"],
+      "tellMeMore": [""],
+      "whatILearned": [""]
     },
     {
       "name": "5_Day_Weather",
@@ -326,12 +360,14 @@
       "isFullStack": false,
       "type": "Web App",
       "hostedOn": "GitHub",
-      "stack": ["HTML", "CSS", "Bootstrap", "JavaScript"]
+      "stack": ["HTML", "CSS", "Bootstrap", "JavaScript"],
+      "tellMeMore": [""],
+      "whatILearned": [""]
     },
     {
       "name": "PythonTerminalQuest",
       "githubLink": "https://github.com/JBassard97/PythonTerminalQuest",
-      "images": ["/charizard.png"],
+      "images": ["/projectImages/pythonquest.png"],
       "isComplete": false,
       "isDeployed": false,
       "deployedLink": "",
@@ -341,7 +377,9 @@
       "isFullStack": false,
       "type": "CLI",
       "hostedOn": "",
-      "stack": ["Python"]
+      "stack": ["Python"],
+      "tellMeMore": [""],
+      "whatILearned": [""]
     },
     {
       "name": "Code-Corner",
@@ -356,7 +394,9 @@
       "isFullStack": true,
       "type": "Web App",
       "hostedOn": "",
-      "stack": ["Handlebars", "MySQL", "JavaScript", "CSS", "Express.js"]
+      "stack": ["Handlebars", "MySQL", "JavaScript", "CSS", "Express.js"],
+      "tellMeMore": [""],
+      "whatILearned": [""]
     },
     {
       "name": "Note_Taker",
@@ -371,7 +411,9 @@
       "isFullStack": true,
       "type": "Web App",
       "hostedOn": "Render",
-      "stack": ["JavaScript", "NodeJS", "HTML", "CSS", "Express.js"]
+      "stack": ["JavaScript", "NodeJS", "HTML", "CSS", "Express.js"],
+      "tellMeMore": [""],
+      "whatILearned": [""]
     },
     {
       "name": "Code_Quiz",
@@ -386,7 +428,9 @@
       "isFullStack": false,
       "type": "Web App",
       "hostedOn": "GitHub",
-      "stack": ["HTML", "CSS", "JavaScript"]
+      "stack": ["HTML", "CSS", "JavaScript"],
+      "tellMeMore": [""],
+      "whatILearned": [""]
     },
     {
       "name": "Regex_Simplified",
@@ -401,7 +445,9 @@
       "isFullStack": false,
       "type": "Other",
       "hostedOn": "GitHub",
-      "stack": ["GitHub"]
+      "stack": ["GitHub"],
+      "tellMeMore": [""],
+      "whatILearned": [""]
     },
     {
       "name": "Portfolio_v1",
@@ -416,7 +462,9 @@
       "isFullStack": false,
       "type": "Web App",
       "hostedOn": "GitHub",
-      "stack": ["HTML", "CSS", "JavaScript", "GitHub"]
+      "stack": ["HTML", "CSS", "JavaScript", "GitHub"],
+      "tellMeMore": [""],
+      "whatILearned": [""]
     },
     {
       "name": "Portfolio_v2",
@@ -431,7 +479,9 @@
       "isFullStack": false,
       "type": "Web App",
       "hostedOn": "Netlify",
-      "stack": ["React", "TypeScript", "Sass", "Netlify"]
+      "stack": ["React", "TypeScript", "Sass", "Netlify"],
+      "tellMeMore": [""],
+      "whatILearned": [""]
     },
     {
       "name": "Password_Generator",

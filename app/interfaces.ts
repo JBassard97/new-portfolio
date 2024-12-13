@@ -12,4 +12,6 @@ export interface Project {
     type: string;
     hostedOn: string;
     stack: string[];
+    tellMeMore: string[];
+    whatILearned: string[];
 }

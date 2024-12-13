@@ -102,8 +102,8 @@ const ProjectsLabeledAs = ({ params }: any) => {
             setItemsPerPage={setItemsPerPage}
             projectsTotal={projectsData.length}
           />
-          {currentPageData.map((project) => (
-            <ProjectCard key={project.name} project={project} />
+          {currentPageData.map((project, index) => (
+            <ProjectCard key={project.name} project={project} index={index} />
           ))}
         </div>
       ) : (
