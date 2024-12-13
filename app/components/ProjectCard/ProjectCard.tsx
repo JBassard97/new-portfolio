@@ -9,10 +9,11 @@ import "./ProjectCard.css";
 
 interface ProjectCardProps {
   project: Project;
+  index: number;
 }
 
 // Component to be used in /projects/all AND /projects/that_use/[technology]
-const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
   const projectTypeToIcon = (type: string) => {
     switch (type) {
       case "Web App":
@@ -44,7 +45,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   };
 
   return (
-    <div className="project">
+    <div className="project" style={{ animationDelay: `${index * 0.2}s` }}>
       <div className="top-right-icons">
         <Link
           href={`/projects/labeled_as/${project.type.replace(" ", "_")}`}

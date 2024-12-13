@@ -8,13 +8,39 @@
   position: sticky;
   top: 0;
   z-index: 6;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
+  color: lightskyblue;
+  flex-wrap: wrap;
+  font-weight: bold;
+}
+
+select {
+  font-weight: bold;
+  color: lightskyblue;
+  border: 2px solid lightskyblue;
+  background-color: transparent;
+}
+
+option {
+  font-weight: bold;
+  background: black;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .page-buttons button {
+  font-weight: bold;
   cursor: pointer;
   width: 20px;
   height: 20px;
+  color: lightskyblue;
+  background-color: transparent;
+  margin-right: 3px;
+}
+
+.active {
+  border: 1px solid lightskyblue;
 }
 
 .sort-options span,
@@ -23,7 +49,28 @@
   margin-right: 5px;
 }
 
+.sort-options,
+.page-buttons,
+.items-per-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+}
+
 .sort-options select option,
 .items-per-page select option {
   text-align: center;
+}
+
+@media screen and (max-width: 420px) {
+  .sort-options span,
+  .page-buttons span,
+  .items-per-page span {
+    font-size: 12px;
+  }
+
+  .pagination-bar {
+    justify-content: center;
+  }
 }

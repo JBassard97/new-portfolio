@@ -54,7 +54,7 @@ export default function Header() {
       cycleInterval = setInterval(() => {
         i = (i + 1) % tech_logos.length;
         setCurrentLogo(tech_logos[i].name);
-      }, 750);
+      }, 500);
     } else {
       setCurrentLogo("toolbox");
     }

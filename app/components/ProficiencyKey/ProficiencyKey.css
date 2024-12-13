@@ -7,7 +7,7 @@
   padding-top: 1rem;
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); /* Safari */
+  -webkit-backdrop-filter: blur(20px); /* Safari */
   position: sticky;
   top: 0;
   z-index: 1000;
