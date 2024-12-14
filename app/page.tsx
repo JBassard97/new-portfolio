@@ -10,7 +10,7 @@ export default function Home() {
   const videoRef = useRef(null);
 
   useEffect(() => {
-    const videoDuration = 18000; // 18 seconds in milliseconds
+    const videoDuration = 11000; // 11 seconds in milliseconds
     const fadeOutDuration = 1000; // 1 second fade-out effect
 
     const fadeOutTimer = setTimeout(() => {
