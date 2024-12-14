@@ -1,3 +1,21 @@
+.links {
+  margin-bottom: 1rem;
+}
+
+.single-project {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
 .single-project div h2 {
-    text-decoration: underline;
+  text-decoration: underline;
+  margin-left: 1rem;
+  color: lightskyblue;
+}
+
+.info-point {
+  margin: 1rem;
+  font-size: 20px;
 }

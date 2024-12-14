@@ -104,3 +104,18 @@ header ul {
   filter: invert(1);
   box-shadow: 0 0 20px 20px white inset, 0 0 15px 15px white;
 }
+
+.svg-css-animation {
+  width: 34px;
+  height: 30px;
+  path, circle {
+    transition: 1s;
+    transform: translateY(6px);
+  }
+  &:hover {
+    path {
+      transform: translateX(40px);
+      stroke-dashoffset: -13.5;
+    }
+  }
+}

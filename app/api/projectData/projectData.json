@@ -16,17 +16,28 @@
       "stack": [
         "React",
         "Express.js",
+        "JavaScript",
         "MongoDB",
         "NodeJS",
         "GraphQL",
-        "Render",
         "NPM",
-        "Insomnia",
         "Mongoose",
-        "Sass"
+        "Sass",
+        "Apollo",
+        "Render"
       ],
-      "tellMeMore": [""],
-      "whatILearned": [""]
+      "tellMeMore": [
+        "Began development on May 6th (2024), and it was developed for 1 month to be considered an MVP.",
+        "Utilizes the same stack as PollR.",
+        "Created to fascilitate scheduling as I was once looking forward to becomming a General Manager at a pizza shop.",
+        "While I never got the chance to use it in my job, many other General Managers in the company adopted it and still use it regularly. This is because the scheduling funtionality provided to them refused to work, and mine met their needs consistently."
+      ],
+      "whatILearned": [
+        "Custom PDF Creation with Puppeteer.",
+        "Sending Emails with the NodeMailer Library.",
+        "Life Lesson: Account for edge cases. ",
+        "In order add a new employee to your database, you needed their email. In order to send that employee their schedule, you also needed their email. Heck, just to get hired they'd need to provide an email! The truth is, even our bosses lose track of stuff like that, so I learned to account for what to do in case that happens."
+      ]
     },
     {
       "name": "PollR",
@@ -44,17 +55,25 @@
       "stack": [
         "React",
         "Express.js",
+        "JavaScript",
         "MongoDB",
         "NodeJS",
         "GraphQL",
         "Render",
         "NPM",
-        "Insomnia",
+        "Apollo",
         "Mongoose",
         "Tailwind"
       ],
-      "tellMeMore": [""],
-      "whatILearned": [""]
+      "tellMeMore": [
+        "This is our 3rd Capstone Project of Bootcamp, and it was developed for 2 weeks until it was considered an MVP.",
+        "Uses JSON Web Tokens(JWT) to manage authentication.",
+        "Utilizes the same stack as YesChef."
+      ],
+      "whatILearned": [
+        "Life Lesson: Never underestimate your teammates.",
+        "The PollR logo was created by someone on our team that we were reluctant to recruit on account of past laziness. Turns out, he knew a thing or two about creating custom SVG graphics, and the result was amazing."
+      ]
     },
     {
       "name": "Just_Another_Text_Editor",
@@ -80,8 +99,15 @@
         "Postman",
         "NPM"
       ],
-      "tellMeMore": [""],
-      "whatILearned": [""]
+      "tellMeMore": [
+        "This is my Week 19 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP.",
+        "Scores very highly on Google Lighthouse Report.",
+        "Uses a manifest.json file to cache icons store code, becoming installable and usable even offline."
+      ],
+      "whatILearned": [
+        "Life Lesson: Sometimes even the pointless apps turn out to be worth it.",
+        "Working with WebPack and all of its config files are not fun when compared to something that works right out of the box, like Vite. That being said, creating a PWA is a great experience that any developer should try. The fact that my website can also live on my desktop or phone as a native-like app is awesome."
+      ]
     },
     {
       "name": "Brew-Finder",
@@ -97,8 +123,15 @@
       "type": "Web App",
       "hostedOn": "GitHub",
       "stack": ["HTML", "CSS", "JavaScript"],
-      "tellMeMore": [""],
-      "whatILearned": [""]
+      "tellMeMore": [
+        "This is our 1st Capstone Project of Bootcamp, and it was developed for 2 weeks until it was considered an MVP.",
+        "Utilizes the Open-Brewery API for data on nearby spots.",
+        "Utilizes the Geo.js library to accurately get the user's location."
+      ],
+      "whatILearned": [
+        "Life Lesson: Take the lead, but let others have a turn, too.",
+        "Taking all of the creative leadership gets hard. You sift through potential background images and font styles and it gets exhausting, and I'm glad that I had a few extra hands to cover the visual aspect of this project."
+      ]
     },
     {
       "name": "Book_Search_Engine",
@@ -124,8 +157,14 @@
         "NPM",
         "Mongoose"
       ],
-      "tellMeMore": [""],
-      "whatILearned": [""]
+      "tellMeMore": [
+        "This is my Week 21 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP.",
+        "Uses JSON Web Tokens(JWT) to manage authentication.",
+        "My first MERN Stack application!"
+      ],
+      "whatILearned": [
+        "Migrating a full stack app from a RESTful API to a GraphQL API is not easy, but doable if you understand the shape of the data."
+      ]
     },
     {
       "name": "Social_Network_API",
@@ -150,7 +189,9 @@
         "Mongoose",
         "NPM"
       ],
-      "tellMeMore": [""],
+      "tellMeMore": [
+        "This is my Week 18 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP."
+      ],
       "whatILearned": [""]
     },
     {
@@ -184,8 +225,11 @@
       "type": "Web App",
       "hostedOn": "GitHub",
       "stack": ["HTML", "CSS", "JavaScript"],
-      "tellMeMore": [""],
-      "whatILearned": [""]
+      "tellMeMore": [
+        "Began development on December 13th (2023), and it was developed for 3 months until it was considered an MVP.",
+        "The project was picked back up in early June, and functionality for playing chords was implemented."
+      ],
+      "whatILearned": ["Life Lesson: Make something that makes you happy."]
     },
     {
       "name": "DokePex",
@@ -225,7 +269,10 @@
         "Express.js",
         "NodeJS"
       ],
-      "tellMeMore": [""],
+      "tellMeMore": [
+        "This is our 2nd Capstone Project of Bootcamp, and it was developed for 2 weeks until it was considered an MVP.",
+        "Coded using the MVC (Model, View, Controller) paradigm."
+      ],
       "whatILearned": [""]
     },
     {
@@ -242,8 +289,10 @@
       "type": "CLI",
       "hostedOn": "",
       "stack": ["JavaScript", "NPM", "NodeJS"],
-      "tellMeMore": [""],
-      "whatILearned": [""]
+      "tellMeMore": [
+        "This is my Week 10 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP."
+      ],
+      "whatILearned": ["Object Oriented Programming in JavaScript"]
     },
     {
       "name": "autoCommit",
@@ -259,8 +308,14 @@
       "type": "Other",
       "hostedOn": "",
       "stack": ["GitHub", "JavaScript", "NodeJS", "YAML"],
-      "tellMeMore": [""],
-      "whatILearned": [""]
+      "tellMeMore": [
+        "Began development on June 27th (2024), and it was developed for 3.5 months until it was considered an MVP.",
+        "Initially worked locally using Window's Task Scheduler to run the script. This was only successful if my laptop was open specifically when it was scheduled to work, so I utilized a cron job within Github Actions to have it fire as often as I'd like."
+      ],
+      "whatILearned": [
+        "Life Lesson: Sometimes it's fun to do bad things.",
+        "Is it wrong to have a project that pads your commit history like this? Heck no. Especially not when I learn something valuable from it, like how to use an integral part of GitHub's robust line of pipelines."
+      ]
     },
     {
       "name": "Professional_README_Generator",
@@ -276,7 +331,9 @@
       "type": "CLI",
       "hostedOn": "",
       "stack": ["JavaScript"],
-      "tellMeMore": [""],
+      "tellMeMore": [
+        "This is my Week 9 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP."
+      ],
       "whatILearned": [""]
     },
     {
@@ -310,7 +367,9 @@
       "type": "CLI",
       "hostedOn": "",
       "stack": ["MySQL", "NodeJS", "JavaScript"],
-      "tellMeMore": [""],
+      "tellMeMore": [
+        "This is my Week 12 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP."
+      ],
       "whatILearned": [""]
     },
     {
@@ -327,8 +386,13 @@
       "type": "Other",
       "hostedOn": "NPM",
       "stack": ["TypeScript", "NPM"],
-      "tellMeMore": [""],
-      "whatILearned": [""]
+      "tellMeMore": [
+        "Created to knock the rust off of my JavaScript foundations and remind myself of all the methods used for various data types."
+      ],
+      "whatILearned": [
+        "Life Lesson: No one cares about NPM packages with minimal utility.",
+        "It's not bad to create a library that focuses on one small thing, but don't expect too much attention for it."
+      ]
     },
     {
       "name": "Work_Day_Scheduler",
@@ -343,9 +407,17 @@
       "isFullStack": false,
       "type": "Web App",
       "hostedOn": "GitHub",
-      "stack": ["JQuery", "HTML", "CSS", "JavaScript"],
-      "tellMeMore": [""],
-      "whatILearned": [""]
+      "stack": ["JQuery", "Bootstrap", "HTML", "CSS", "JavaScript"],
+      "tellMeMore": [
+        "This is my Week 5 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP.",
+        "Utilizes Day.js (Date and Time Library) for real-time updates.",
+        "Caches your appointments in localStorage."
+      ],
+      "whatILearned": [
+        "JQuery, CDN, Bootstrap",
+        "Life Lesson: Take pride in what you make.",
+        "The starter code for this project had very minimal styling. Implementing various themes for each quarter of the workday was beyond the scope of the assignment, but I'm glad to at least make it look good and make it mine."
+      ]
     },
     {
       "name": "5_Day_Weather",
@@ -361,8 +433,13 @@
       "type": "Web App",
       "hostedOn": "GitHub",
       "stack": ["HTML", "CSS", "Bootstrap", "JavaScript"],
-      "tellMeMore": [""],
-      "whatILearned": [""]
+      "tellMeMore": [
+        "This is my Week 6 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP."
+      ],
+      "whatILearned": [
+        "Third-Party APIs, Open-Weather API, Fetch, Promises",
+        "Life Lesson: Sometimes your app works on desktop browser but not on a mobile one, and that's okay if the app isn't a big deal."
+      ]
     },
     {
       "name": "PythonTerminalQuest",
@@ -378,8 +455,17 @@
       "type": "CLI",
       "hostedOn": "",
       "stack": ["Python"],
-      "tellMeMore": [""],
-      "whatILearned": [""]
+      "tellMeMore": [
+        "Began development on September 8th (2024), and it is still in progress.",
+        "This project should be completed around June of 2025.",
+        "Utilizes PyGame for audio control.",
+        "Utilizes the Keyboard library for typing events."
+      ],
+      "whatILearned": [
+        "Using PIP to install and manage dependencies.",
+        "Life Lesson: Don't bite off more than you can chew.",
+        "Everyone dreams of making a video game. That might sound silly, but it's an awesome goal to accomplish as a programmer. I certainly didn't realize how much thought goes into the story-telling aspect of one, and that is this project's only hangup."
+      ]
     },
     {
       "name": "Code-Corner",
@@ -395,7 +481,10 @@
       "type": "Web App",
       "hostedOn": "",
       "stack": ["Handlebars", "MySQL", "JavaScript", "CSS", "Express.js"],
-      "tellMeMore": [""],
+      "tellMeMore": [
+        "This is my Week 14 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP.",
+        "Coded using the MVC (Model, View, Controller) paradigm."
+      ],
       "whatILearned": [""]
     },
     {
@@ -412,7 +501,9 @@
       "type": "Web App",
       "hostedOn": "Render",
       "stack": ["JavaScript", "NodeJS", "HTML", "CSS", "Express.js"],
-      "tellMeMore": [""],
+      "tellMeMore": [
+        "This is my Week 11 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP."
+      ],
       "whatILearned": [""]
     },
     {
@@ -429,7 +520,9 @@
       "type": "Web App",
       "hostedOn": "GitHub",
       "stack": ["HTML", "CSS", "JavaScript"],
-      "tellMeMore": [""],
+      "tellMeMore": [
+        "This is my Week 4 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP."
+      ],
       "whatILearned": [""]
     },
     {
@@ -446,7 +539,9 @@
       "type": "Other",
       "hostedOn": "GitHub",
       "stack": ["GitHub"],
-      "tellMeMore": [""],
+      "tellMeMore": [
+        "This is my Week 17 Project for Bootcamp, written for 1 week until it was considered an MVP."
+      ],
       "whatILearned": [""]
     },
     {
@@ -462,9 +557,13 @@
       "isFullStack": false,
       "type": "Web App",
       "hostedOn": "GitHub",
-      "stack": ["HTML", "CSS", "JavaScript", "GitHub"],
-      "tellMeMore": [""],
-      "whatILearned": [""]
+      "stack": ["HTML", "CSS", "GitHub"],
+      "tellMeMore": [
+        "This is my Week 2 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP."
+      ],
+      "whatILearned": [
+        "CSS Resets, Selectors, Pseudo-Classes, Pseudo-Elements, and Variables"
+      ]
     },
     {
       "name": "Portfolio_v2",
@@ -480,8 +579,13 @@
       "type": "Web App",
       "hostedOn": "Netlify",
       "stack": ["React", "TypeScript", "Sass", "Netlify"],
-      "tellMeMore": [""],
-      "whatILearned": [""]
+      "tellMeMore": [
+        "This is my Week 20 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP."
+      ],
+      "whatILearned": [
+        "Utilizes React Router for page navigation.",
+        "Utilizes Typescript for full type safety."
+      ]
     },
     {
       "name": "Password_Generator",
@@ -496,7 +600,11 @@
       "isFullStack": false,
       "type": "Web App",
       "hostedOn": "GitHub",
-      "stack": ["HTML", "CSS", "JavaScript"]
+      "stack": ["HTML", "CSS", "JavaScript"],
+      "tellMeMore": [
+        "This is my Week 3 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP."
+      ],
+      "whatILearned": ["Arrays, Functions, Objects, and Window functions."]
     }
   ]
 }

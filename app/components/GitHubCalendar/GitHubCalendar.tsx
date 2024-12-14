@@ -94,7 +94,8 @@ const GitHubCalendar: React.FC<GitHubCalendarProps> = ({ contributions }) => {
                       key={`tooltip-${weekIndex}-${dayIndex}`}
                       id={`day-tooltip-${weekIndex}-${dayIndex}`}
                       place="top"
-                      style={{ opacity: "1", zIndex: "10" }}
+                      style={{ zIndex: 10 }}
+                      opacity={1}
                     />
                   </div>
                 ))}

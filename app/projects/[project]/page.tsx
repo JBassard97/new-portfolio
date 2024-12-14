@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Project } from "@/app/interfaces";
 import ProjectCard from "@/app/components/ProjectCard/ProjectCard";
+import { infoToLife } from "./infoToLife";
 import "./single_project.css";
 // type RouteParams = { params: { project: string } };
 
@@ -33,17 +34,27 @@ const SingleProject = ({ params }: any) => {
 
   return (
     <div className="single-project">
-      <Link href="/projects/all">Back to All Projects</Link>
+      <div className="links">
+        <Link href="/projects/all">Back to All Projects</Link>
+      </div>
       {projectData && (
         <div>
           <ProjectCard project={projectData} index={0} />
           <h2>Tell Me More</h2>
           {projectData.tellMeMore.map((thought, index) => (
-            <p key={index}>{thought}</p>
+            <p
+              className="info-point"
+              key={index}
+              dangerouslySetInnerHTML={{ __html: infoToLife(thought) }}
+            />
           ))}
           <h2>What I Learned</h2>
           {projectData.whatILearned.map((lesson, index) => (
-            <p key={index}>{lesson}</p>
+            <p
+              className="info-point"
+              key={index}
+              dangerouslySetInnerHTML={{ __html: infoToLife(lesson) }}
+            />
           ))}
         </div>
       )}
