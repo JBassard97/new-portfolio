@@ -6,6 +6,7 @@ import { Project } from "../../interfaces";
 import techToLogo from "../../techToLogo";
 // import StackDisplay from "../StackDisplay/StackDisplay";
 import "./ProjectCard.css";
+import ParallaxCard from "../Parallaxcard/ParallaxCard";
 
 interface ProjectCardProps {
   project: Project;
@@ -111,7 +112,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         />
       </div>
       <div className="project-image">
-        <img src={project.images[0]}></img>
+        {/* <img src={project.images[0]}></img> */}
+        <ParallaxCard image={project.images[0]} />
       </div>
       <div className="project-data">
         <div className="project-text">
