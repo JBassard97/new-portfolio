@@ -5,33 +5,50 @@ import Link from "next/link";
 import "./home.css";
 
 export default function Home() {
-  const [showVideo, setShowVideo] = useState(true);
+  // Initialize state based on localStorage
+  const [showVideo, setShowVideo] = useState(() => {
+    const hasSeenIntro = localStorage.getItem("hasSeenIntro");
+    return !hasSeenIntro; // Show video if `hasSeenIntro` is not set
+  });
   const [videoFading, setVideoFading] = useState(false);
-  const videoRef = useRef(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    const videoDuration = 11000; // 11 seconds in milliseconds
-    const fadeOutDuration = 1000; // 1 second fade-out effect
+    if (showVideo) {
+      // localStorage.setItem("hasSeenIntro", "true");
 
-    const fadeOutTimer = setTimeout(() => {
-      setVideoFading(true);
-    }, videoDuration - fadeOutDuration);
+      const videoDuration = 11000; // 11 seconds in milliseconds
+      const fadeOutDuration = 1000; // 1 second fade-out effect
 
-    const removeVideoTimer = setTimeout(() => {
-      setShowVideo(false);
-    }, videoDuration);
+      const fadeOutTimer = setTimeout(() => {
+        setVideoFading(true);
+      }, videoDuration - fadeOutDuration);
 
-    return () => {
-      clearTimeout(fadeOutTimer);
-      clearTimeout(removeVideoTimer);
-    };
-  }, []);
+      const removeVideoTimer = setTimeout(() => {
+        setShowVideo(false);
+      }, videoDuration);
+
+      return () => {
+        clearTimeout(fadeOutTimer);
+        clearTimeout(removeVideoTimer);
+      };
+    }
+  }, [showVideo]);
 
   const stopVideo = () => {
     setVideoFading(true);
     setTimeout(() => {
       setShowVideo(false);
     }, 1000); // Wait for the fade-out to complete
+  };
+
+  const startVideo = () => {
+    if (videoRef.current) {
+      videoRef.current.currentTime = 0; // Restart video from the beginning
+      videoRef.current.play(); // Play the video
+    }
+    setShowVideo(true); // Show the video container
+    setVideoFading(false); // Remove any fading state};
   };
 
   return (
@@ -54,24 +71,21 @@ export default function Home() {
               Your browser does not support the video tag.
             </video>
             <div className="stop-button" onClick={stopVideo}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="24"
-                height="24"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                 <path d="M6 6h6v12H6zM12 6h6v12h-6z" />
               </svg>
             </div>
           </div>
         )}
       </div>
-      {!showVideo && (
-        <div>
-          <h1>Hi, welcome to the homepage!</h1>
-          {/* Rest of your page content */}
+      <div>
+        <h1>Hi, welcome to the homepage!</h1>
+        <div className="start-button" onClick={startVideo}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+            <path d="M8 5v14l11-7z" />{" "}
+          </svg>
         </div>
-      )}
+      </div>
     </>
   );
 }
