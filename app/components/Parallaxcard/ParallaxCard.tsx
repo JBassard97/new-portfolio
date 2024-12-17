@@ -53,7 +53,11 @@ const ParallaxCard: React.FC<ParallaxCardProps> = ({
       className="card rounded"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      style={{ backgroundImage: `url(${image})`, width: `${widthAndHeight}px`, height: `${widthAndHeight}px` }}
+      style={{
+        backgroundImage: `url(${image})`,
+        width: `${widthAndHeight}px`,
+        height: `${widthAndHeight}px`,
+      }}
     ></div>
   );
 };

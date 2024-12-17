@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { Tooltip } from "react-tooltip";
 import "./home.css";
 
 export default function Home() {
@@ -15,7 +16,7 @@ export default function Home() {
 
   useEffect(() => {
     if (showVideo) {
-      // localStorage.setItem("hasSeenIntro", "true");
+      localStorage.setItem("hasSeenIntro", "true");
 
       const videoDuration = 11000; // 11 seconds in milliseconds
       const fadeOutDuration = 1000; // 1 second fade-out effect
@@ -36,6 +37,11 @@ export default function Home() {
   }, [showVideo]);
 
   const stopVideo = () => {
+    const stopButton: any = document.querySelector(".stop-button");
+    if (stopButton) {
+      stopButton.style.display = "none";
+    }
+
     setVideoFading(true);
     setTimeout(() => {
       setShowVideo(false);
@@ -70,21 +76,37 @@ export default function Home() {
               <source src="/portfolio_start.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <div className="stop-button" onClick={stopVideo}>
+            <div
+              className="stop-button"
+              onClick={stopVideo}
+              data-tooltip-id="stop-intro"
+              data-tooltip-content="Stop Intro"
+            >
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                 <path d="M6 6h6v12H6zM12 6h6v12h-6z" />
               </svg>
             </div>
+            <Tooltip
+              id="stop-intro"
+              opacity={1}
+              style={{ background: "maroon" }}
+            />
           </div>
         )}
       </div>
-      <div>
+      <div className="home-page">
         <h1>Hi, welcome to the homepage!</h1>
-        <div className="start-button" onClick={startVideo}>
+        <div
+          className="start-button"
+          onClick={startVideo}
+          data-tooltip-id="start-intro"
+          data-tooltip-content="Play Intro"
+        >
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
             <path d="M8 5v14l11-7z" />{" "}
           </svg>
         </div>
+        <Tooltip id="start-intro" opacity={1} style={{ background: "darkblue" }} />
       </div>
     </>
   );

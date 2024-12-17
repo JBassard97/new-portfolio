@@ -3,7 +3,7 @@
   border-radius: 10px;
   display: flex;
   flex-direction: row;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   margin-top: 1rem;
   position: relative;
   width: 100%;
@@ -232,12 +232,13 @@
 }
 
 /* Small Screens */
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 640px) {
   .project {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
   }
 
   .project-image {
@@ -257,6 +258,41 @@
     padding-left: 1rem;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
+  }
+
+  .github-link,
+  .deployed-link {
+    font-size: 15px;
+    width: 100px;
+    height: 50px;
+  }
+
+  .github-link:after,
+  .deployed-link:after {
+    top: 2px;
+    left: 2px;
+    width: 95%;
+    height: 89%;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .backend,
+  .frontend,
+  .fullstack,
+  .other {
+    width: 64px;
+    height: 50px;
+  }
+
+  .backend:after,
+  .frontend:after,
+  .fullstack:after,
+  .other:after {
+    top: 2px;
+    left: 2px;
+    width: 91%;
+    height: 89%;
   }
 }
 
@@ -307,9 +343,8 @@
   }
 
   .technology-image {
-    transform: scale(1.3);
-    margin-right: 10px;
-    margin-left: 10px;
+    transform: scale(1.2);
+    margin: 10px;
   }
 
   .technology-image:hover {
