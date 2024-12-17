@@ -480,7 +480,14 @@
       "isFullStack": true,
       "type": "Web App",
       "hostedOn": "",
-      "stack": ["Handlebars", "MySQL", "JavaScript", "CSS", "Express.js"],
+      "stack": [
+        "Handlebars",
+        "MySQL",
+        "JavaScript",
+        "CSS",
+        "Express.js",
+        "NodeJS"
+      ],
       "tellMeMore": [
         "This is my Week 14 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP.",
         "Coded using the MVC (Model, View, Controller) paradigm."

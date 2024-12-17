@@ -67,7 +67,7 @@ export default function Header() {
   return (
     <header>
       <ul>
-        <li className="nav-item">
+        <li className="nav-item home">
           <Link href="/">
             <Image src={house} alt="Home" />
           </Link>

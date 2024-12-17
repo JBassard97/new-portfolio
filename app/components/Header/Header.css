@@ -89,6 +89,32 @@ header ul {
   animation-delay: 0.6s;
 }
 
+.nav-item.home a img {
+  transition: all 1s ease;
+  z-index: 10;
+}
+
+.nav-item.home a:hover,
+.nav-item.home a img:hover {
+  animation: jumpAndSpin 0.5s;
+  rotate: y 180deg;
+}
+
+@keyframes jumpAndSpin {
+  0% {
+    transform: translateY(0px);
+  }
+  33% {
+    transform: translateY(-3px);
+  }
+  66% {
+    transform: translateY(4px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 .icon-container {
   background-size: cover;
   background-position: center;
@@ -108,7 +134,8 @@ header ul {
 .svg-css-animation {
   width: 34px;
   height: 30px;
-  path, circle {
+  path,
+  circle {
     transition: 1s;
     transform: translateY(6px);
   }

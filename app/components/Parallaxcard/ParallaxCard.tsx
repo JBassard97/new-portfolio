@@ -1,13 +1,17 @@
-"use client"
+"use client";
 
 import React, { useRef } from "react";
 import "./ParallaxCard.css";
 
 interface ParallaxCardProps {
   image: string; // The image to display
+  widthAndHeight: number;
 }
 
-const ParallaxCard: React.FC<ParallaxCardProps> = ({ image }) => {
+const ParallaxCard: React.FC<ParallaxCardProps> = ({
+  image,
+  widthAndHeight,
+}) => {
   const cardRef = useRef<HTMLDivElement | null>(null);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -49,7 +53,7 @@ const ParallaxCard: React.FC<ParallaxCardProps> = ({ image }) => {
       className="card rounded"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      style={{ backgroundImage: `url(${image})` }}
+      style={{ backgroundImage: `url(${image})`, width: `${widthAndHeight}px`, height: `${widthAndHeight}px` }}
     ></div>
   );
 };

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import "./technologies.css";
 import ProficiencyKey from "../components/ProficiencyKey/ProficiencyKey";
 import TechItemButton from "../components/TechItemButton/TechItemButton";
+import ParallaxCard from "../components/Parallaxcard/ParallaxCard";
 import Link from "next/link";
 import Image from "next/image";
 import { Tooltip } from "react-tooltip";

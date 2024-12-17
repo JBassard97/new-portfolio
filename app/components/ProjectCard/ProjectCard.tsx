@@ -113,7 +113,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
       </div>
       <div className="project-image">
         {/* <img src={project.images[0]}></img> */}
-        <ParallaxCard image={project.images[0]} />
+        <ParallaxCard image={project.images[0]} widthAndHeight={250} />
       </div>
       <div className="project-data">
         <div className="project-text">

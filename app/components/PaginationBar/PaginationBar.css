@@ -9,16 +9,16 @@
   top: 0;
   z-index: 6;
   backdrop-filter: blur(20px);
-  color: lightskyblue;
+  color: white;
   flex-wrap: wrap;
   font-weight: bold;
 }
 
 select {
   font-weight: bold;
-  color: lightskyblue;
-  border: 2px solid lightskyblue;
-  background-color: transparent;
+  color: white;
+  background: black;
+  border-radius: 5px;
 }
 
 option {
@@ -29,18 +29,23 @@ option {
   -moz-appearance: none;
 }
 
+select option:hover {
+  background: red;
+}
+
 .page-buttons button {
   font-weight: bold;
   cursor: pointer;
   width: 20px;
   height: 20px;
-  color: lightskyblue;
+  color: white;
   background-color: transparent;
   margin-right: 3px;
+  border-radius: 5px;
 }
 
 .active {
-  border: 1px solid lightskyblue;
+  border: 1px solid white;
 }
 
 .sort-options span,
