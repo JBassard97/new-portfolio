@@ -8,9 +8,16 @@ import CommitKey from "../components/CommitKey/CommitKey";
 // import Loading from "../components/Loading/Loading";
 import "./github-page.css";
 
+interface RepositoryContribution {
+  name: string;
+  url: string;
+  commitCount: number;
+}
+
 interface ContributionDay {
   contributionCount: number;
   date: string;
+  repositories: RepositoryContribution[];
 }
 
 interface ContributionWeek {
@@ -25,6 +32,18 @@ interface ContributionData {
         totalContributions: number;
         longestStreak: number;
       };
+      commitContributionsByRepository: {
+        repository: {
+          name: string;
+          url: string;
+        };
+        contributions: {
+          nodes: {
+            occurredAt: string;
+            commitCount: number;
+          }[];
+        };
+      }[];
     };
     repositories: { totalCount: number };
   };
@@ -39,13 +58,38 @@ const GitHub: React.FC = () => {
   );
 
   const contributions =
-    data?.user.contributionsCollection.contributionCalendar.weeks || [];
+    data?.user.contributionsCollection.contributionCalendar.weeks.map(
+      (week) => ({
+        ...week,
+        contributionDays: week.contributionDays.map((day) => ({
+          ...day,
+          repositories:
+            data?.user.contributionsCollection.commitContributionsByRepository.flatMap(
+              (repo) =>
+                repo.contributions.nodes
+                  .filter((contribution) =>
+                    contribution.occurredAt.startsWith(day.date)
+                  )
+                  .map((contribution) => ({
+                    name: repo.repository.name,
+                    url: repo.repository.url,
+                    commitCount: contribution.commitCount,
+                  }))
+            ) || [],
+        })),
+      })
+    ) || [];
+
+  // const contributions =
+  //   data?.user.contributionsCollection.contributionCalendar.weeks || [];
   const contributionTotal =
     data?.user.contributionsCollection.contributionCalendar
       .totalContributions || 0;
   const longestStreak =
     data?.user.contributionsCollection.contributionCalendar.longestStreak || 0;
   const repositoryTotal = data?.user.repositories.totalCount || 0;
+
+  console.log(data);
 
   return (
     <div className="github-page">

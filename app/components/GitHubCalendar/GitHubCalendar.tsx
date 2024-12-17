@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo } from "react";
+import React, { useState, useMemo } from "react";
 import { Tooltip } from "react-tooltip";
 import Loading from "../Loading/Loading";
 import "./GitHubCalendar.css";
@@ -8,6 +8,11 @@ import "./GitHubCalendar.css";
 interface ContributionDay {
   contributionCount: number;
   date: string;
+  repositories: {
+    name: string;
+    url: string;
+    commitCount: number;
+  }[];
 }
 
 interface ContributionWeek {
@@ -19,6 +24,7 @@ interface GitHubCalendarProps {
 }
 
 const GitHubCalendar: React.FC<GitHubCalendarProps> = ({ contributions }) => {
+  const [selectedDay, setSelectedDay] = useState<any | null>(null);
   const getColor = useMemo(
     () =>
       (contributionCount: number): string => {
@@ -41,8 +47,6 @@ const GitHubCalendar: React.FC<GitHubCalendarProps> = ({ contributions }) => {
         allMonths.push(monthName);
       }
     });
-    // const firstMonth = allMonths[0];
-    // allMonths.push(firstMonth);
     return allMonths;
   }, [contributions]);
 
@@ -88,12 +92,33 @@ const GitHubCalendar: React.FC<GitHubCalendarProps> = ({ contributions }) => {
                     className="day"
                     style={{ backgroundColor: getColor(day.contributionCount) }}
                     data-tooltip-id={`day-tooltip-${weekIndex}-${dayIndex}`}
-                    data-tooltip-content={`${day.date}: ${day.contributionCount} contributions`}
+                    data-tooltip-html={`<strong style="text-decoration: underline">${
+                      day.date
+                    }:</strong><br />
+                    ${
+                      day.contributionCount > 0
+                        ? `<strong><span style="color: ${getColor(
+                            day.contributionCount
+                          )}">Contributions: ${
+                            day.contributionCount
+                          }</span></strong><br />`
+                        : "No Contributions<br />"
+                    }
+                    ${
+                      day.repositories.length > 0
+                        ? day.repositories
+                            .map(
+                              (repo) =>
+                                `<a href="${repo.url}" target="_blank">${repo.name}</a> (${repo.commitCount} commits)`
+                            )
+                            .join("<br />")
+                        : ""
+                    }`}
                   >
                     <Tooltip
                       key={`tooltip-${weekIndex}-${dayIndex}`}
                       id={`day-tooltip-${weekIndex}-${dayIndex}`}
-                      place="top"
+                      place="bottom"
                       style={{ zIndex: 10 }}
                       opacity={1}
                     />

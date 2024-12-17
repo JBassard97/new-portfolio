@@ -5,12 +5,12 @@ import "./ParallaxCard.css";
 
 interface ParallaxCardProps {
   image: string; // The image to display
-  widthAndHeight: number;
+  // widthAndHeight: number;
 }
 
 const ParallaxCard: React.FC<ParallaxCardProps> = ({
   image,
-  widthAndHeight,
+  // widthAndHeight,
 }) => {
   const cardRef = useRef<HTMLDivElement | null>(null);
 
@@ -55,8 +55,8 @@ const ParallaxCard: React.FC<ParallaxCardProps> = ({
       onMouseLeave={handleMouseLeave}
       style={{
         backgroundImage: `url(${image})`,
-        width: `${widthAndHeight}px`,
-        height: `${widthAndHeight}px`,
+        // width: `${widthAndHeight}px`,
+        // height: `${widthAndHeight}px`,
       }}
     ></div>
   );

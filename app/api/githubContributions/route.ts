@@ -5,24 +5,37 @@ export async function GET() {
     const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 
     const query = `
-        query ($username: String!) {
-            user(login: $username) {
-                contributionsCollection {
-                    contributionCalendar {
-                        totalContributions
-                        weeks {
-                            contributionDays {
-                                contributionCount
-                                date
-                            }
-                        }
+     query ($username: String!) {
+    user(login: $username) {
+        contributionsCollection {
+            contributionCalendar {
+                totalContributions
+                weeks {
+                    contributionDays {
+                        contributionCount
+                        date
                     }
                 }
-                repositories(first: 100) {
-                    totalCount
+            }
+            commitContributionsByRepository(maxRepositories: 100) {
+                repository {
+                    name
+                    url
+                }
+                contributions(first: 100) {
+                    nodes {
+                        occurredAt
+                        commitCount
+                    }
                 }
             }
         }
+        repositories(first: 100) {
+            totalCount
+        }
+    }
+}
+
     `;
 
     try {

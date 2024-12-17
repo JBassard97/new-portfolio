@@ -6,6 +6,8 @@
   transform: rotateX(0) rotateY(0);
   transform-style: preserve-3d;
   transition: transform 0.1s ease;
+  width: 500px;
+  height: 500px;
 }
 
 .card.rounded {
@@ -16,8 +18,15 @@
   transition: transform 0.5s ease-in-out;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .card {
-    scale: 0.9;
+    width: 300px;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .card {
+    width: 200px;
+    height: 200px;
   }
 }
