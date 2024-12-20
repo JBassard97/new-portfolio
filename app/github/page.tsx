@@ -12,12 +12,14 @@ interface RepositoryContribution {
   name: string;
   url: string;
   commitCount: number;
+  commitMessages: string[];
 }
 
 interface SelectedRepo {
   name: string;
   url: string;
   commitCount: number;
+  commitMessages: string[];
 }
 
 interface ContributionDay {
@@ -42,6 +44,16 @@ interface ContributionData {
         repository: {
           name: string;
           url: string;
+          defaultBranchRef: {
+            target: {
+              history: {
+                nodes: {
+                  message: string;
+                  committedDate: string;
+                }[];
+              };
+            };
+          };
         };
         contributions: {
           nodes: {
@@ -71,6 +83,8 @@ const GitHub: React.FC = () => {
     fetcher
   );
 
+  console.log(data);
+
   useEffect(() => {
     if (selectedRepos) {
       console.log(selectedRepos);
@@ -94,6 +108,15 @@ const GitHub: React.FC = () => {
                     name: repo.repository.name,
                     url: repo.repository.url,
                     commitCount: contribution.commitCount,
+                    commitMessages:
+                      repo.repository.defaultBranchRef?.target.history.nodes
+                        .filter((node) => {
+                          // Extract the date portion (everything before 'T') from committedDate
+                          const commitDate = node.committedDate.split("T")[0];
+                          // Compare the extracted date with the selected day.date
+                          return commitDate === day.date;
+                        })
+                        .map((node) => node.message) || [],
                   }))
             ) || [],
         })),
@@ -137,7 +160,15 @@ const GitHub: React.FC = () => {
           {selectedRepos &&
             selectedRepos.map((repo, index) => (
               <div key={index}>
-                <p>{repo.name} {repo.commitCount}</p>
+                <a href={repo.url}>
+                  <p>
+                    {repo.name} ({repo.commitCount} commit
+                    {repo.commitCount === 1 ? "" : "s"})
+                  </p>
+                </a>
+                {repo.commitMessages.map((message, index) => (
+                  <p key={index}>- {message}</p>
+                ))}
               </div>
             ))}
         </div>
