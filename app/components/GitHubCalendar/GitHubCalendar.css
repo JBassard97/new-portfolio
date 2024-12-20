@@ -7,10 +7,8 @@
   overflow-x: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  /* border: 1px solid white; */
   display: flex;
-  padding-top: 1rem;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem;
 }
 
 .contribution-bar-wrapper::-webkit-scrollbar {

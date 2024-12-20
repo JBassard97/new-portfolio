@@ -1,7 +1,7 @@
 "use client";
 
 import useSWR from "swr";
-// import Link from "next/link";
+import React, { useEffect, useState } from "react";
 import GitHubCalendar from "../components/GitHubCalendar/GitHubCalendar";
 import GitHubStatBar from "../components/GitHubStatBar/GitHubStatBar";
 import CommitKey from "../components/CommitKey/CommitKey";
@@ -9,6 +9,12 @@ import CommitKey from "../components/CommitKey/CommitKey";
 import "./github-page.css";
 
 interface RepositoryContribution {
+  name: string;
+  url: string;
+  commitCount: number;
+}
+
+interface SelectedRepo {
   name: string;
   url: string;
   commitCount: number;
@@ -41,9 +47,6 @@ interface ContributionData {
           nodes: {
             occurredAt: string;
             commitCount: number;
-            commit?: {
-              message: string;
-            };
           }[];
         };
       }[];
@@ -55,12 +58,24 @@ interface ContributionData {
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 const GitHub: React.FC = () => {
+  const [selectedDate, setSelectedDate] = useState<string | null>(null);
+  const [selectedCommitCount, setSelectedCommitCount] = useState<number | null>(
+    null
+  );
+  const [selectedRepos, setSelectedRepos] = useState<SelectedRepo[] | null>(
+    null
+  );
+
   const { data, error, isLoading } = useSWR<ContributionData>(
     "/api/githubContributions",
     fetcher
   );
 
-  console.log(data);
+  useEffect(() => {
+    if (selectedRepos) {
+      console.log(selectedRepos);
+    }
+  }, [selectedRepos]);
 
   const contributions =
     data?.user.contributionsCollection.contributionCalendar.weeks.map(
@@ -79,7 +94,6 @@ const GitHub: React.FC = () => {
                     name: repo.repository.name,
                     url: repo.repository.url,
                     commitCount: contribution.commitCount,
-                    message: contribution.commit?.message || "No message", // Include commit message
                   }))
             ) || [],
         })),
@@ -103,13 +117,31 @@ const GitHub: React.FC = () => {
           longestStreak={longestStreak}
         />
         <CommitKey />
-        <GitHubCalendar contributions={contributions} />
-        <div>
-          {!isLoading && (
-            <p className="centered-grey">(Click a day for more info)</p>
-          )}
-        </div>
+        <GitHubCalendar
+          contributions={contributions}
+          setSelectedDate={setSelectedDate}
+          setSelectedCommitCount={setSelectedCommitCount}
+          setSelectedRepos={setSelectedRepos}
+        />
+        {!isLoading && !selectedDate && (
+          <p className="centered-grey">(Click a day for more info)</p>
+        )}
       </div>
+      {selectedDate && (
+        <div className="day-info">
+          <p>{selectedDate}</p>
+          <p>
+            {selectedCommitCount} Contribution
+            {selectedCommitCount === 1 ? "" : "s"}
+          </p>
+          {selectedRepos &&
+            selectedRepos.map((repo, index) => (
+              <div key={index}>
+                <p>{repo.name} {repo.commitCount}</p>
+              </div>
+            ))}
+        </div>
+      )}
     </div>
   );
 };

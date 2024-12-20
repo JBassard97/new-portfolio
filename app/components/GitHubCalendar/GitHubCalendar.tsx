@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { Tooltip } from "react-tooltip";
 import Loading from "../Loading/Loading";
 import "./GitHubCalendar.css";
@@ -21,10 +21,17 @@ interface ContributionWeek {
 
 interface GitHubCalendarProps {
   contributions: ContributionWeek[];
+  setSelectedDate: (date: string | null) => void;
+  setSelectedCommitCount: (count: number | null) => void;
+  setSelectedRepos: (repos: any | null) => void;
 }
 
-const GitHubCalendar: React.FC<GitHubCalendarProps> = ({ contributions }) => {
-  const [selectedDay, setSelectedDay] = useState<any | null>(null);
+const GitHubCalendar: React.FC<GitHubCalendarProps> = ({
+  contributions,
+  setSelectedDate,
+  setSelectedCommitCount,
+  setSelectedRepos,
+}) => {
   const getColor = useMemo(
     () =>
       (contributionCount: number): string => {
@@ -88,10 +95,16 @@ const GitHubCalendar: React.FC<GitHubCalendarProps> = ({ contributions }) => {
               <div key={weekIndex} className="week">
                 {week.contributionDays.map((day, dayIndex) => (
                   <div
+                    onClick={() => {
+                      setSelectedDate(day.date);
+                      setSelectedCommitCount(day.contributionCount);
+                      setSelectedRepos(day.repositories);
+                    }}
                     key={dayIndex}
                     className="day"
                     style={{ backgroundColor: getColor(day.contributionCount) }}
                     data-tooltip-id={`day-tooltip-${weekIndex}-${dayIndex}`}
+                    // ! Tooltip HTML
                     data-tooltip-html={`<strong style="text-decoration: underline">${
                       day.date
                     }</strong><br />
@@ -116,12 +129,13 @@ const GitHubCalendar: React.FC<GitHubCalendarProps> = ({ contributions }) => {
                             .join("<br />")
                         : ""
                     }`}
+                    // ! End Tooltip HTML
                   >
                     <Tooltip
                       key={`tooltip-${weekIndex}-${dayIndex}`}
                       id={`day-tooltip-${weekIndex}-${dayIndex}`}
                       place="bottom"
-                      style={{ zIndex: 10, background: "#161b21" }}
+                      style={{ zIndex: 20, background: "#161b21" }}
                       opacity={1}
                     />
                   </div>
