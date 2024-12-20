@@ -28,7 +28,7 @@ const GitHubCalendar: React.FC<GitHubCalendarProps> = ({ contributions }) => {
   const getColor = useMemo(
     () =>
       (contributionCount: number): string => {
-        if (contributionCount === 0) return "#161b21";
+        if (contributionCount === 0) return "#161b21"; // Near-Black
         if (contributionCount <= 5) return "#006e30";
         if (contributionCount <= 10) return "#25a642";
         return "#32d553";
@@ -94,14 +94,10 @@ const GitHubCalendar: React.FC<GitHubCalendarProps> = ({ contributions }) => {
                     data-tooltip-id={`day-tooltip-${weekIndex}-${dayIndex}`}
                     data-tooltip-html={`<strong style="text-decoration: underline">${
                       day.date
-                    }:</strong><br />
+                    }</strong><br />
                     ${
                       day.contributionCount > 0
-                        ? `<strong><span style="color: ${getColor(
-                            day.contributionCount
-                          )}">Contributions: ${
-                            day.contributionCount
-                          }</span></strong><br />`
+                        ? `<strong><span style="color: ${day.contributionCount}; font-size: 20px;">Contributions: ${day.contributionCount}</span></strong><br />`
                         : "No Contributions<br />"
                     }
                     ${
@@ -109,7 +105,13 @@ const GitHubCalendar: React.FC<GitHubCalendarProps> = ({ contributions }) => {
                         ? day.repositories
                             .map(
                               (repo) =>
-                                `<a href="${repo.url}" target="_blank">${repo.name}</a> (${repo.commitCount} commits)`
+                                `<a href="${
+                                  repo.url
+                                }" target="_blank" style="font-size: 15px; color:${getColor(
+                                  repo.commitCount
+                                )}">${repo.name}</a> (${
+                                  repo.commitCount
+                                } commits)`
                             )
                             .join("<br />")
                         : ""
@@ -119,7 +121,7 @@ const GitHubCalendar: React.FC<GitHubCalendarProps> = ({ contributions }) => {
                       key={`tooltip-${weekIndex}-${dayIndex}`}
                       id={`day-tooltip-${weekIndex}-${dayIndex}`}
                       place="bottom"
-                      style={{ zIndex: 10 }}
+                      style={{ zIndex: 10, background: "#161b21" }}
                       opacity={1}
                     />
                   </div>

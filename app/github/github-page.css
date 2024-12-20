@@ -10,3 +10,8 @@
   width: 100%;
   /* border: 1px solid white; */
 }
+
+.centered-grey {
+  color: grey;
+  text-align: center;
+}

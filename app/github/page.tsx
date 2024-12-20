@@ -41,6 +41,9 @@ interface ContributionData {
           nodes: {
             occurredAt: string;
             commitCount: number;
+            commit?: {
+              message: string;
+            };
           }[];
         };
       }[];
@@ -56,6 +59,8 @@ const GitHub: React.FC = () => {
     "/api/githubContributions",
     fetcher
   );
+
+  console.log(data);
 
   const contributions =
     data?.user.contributionsCollection.contributionCalendar.weeks.map(
@@ -74,22 +79,19 @@ const GitHub: React.FC = () => {
                     name: repo.repository.name,
                     url: repo.repository.url,
                     commitCount: contribution.commitCount,
+                    message: contribution.commit?.message || "No message", // Include commit message
                   }))
             ) || [],
         })),
       })
     ) || [];
 
-  // const contributions =
-  //   data?.user.contributionsCollection.contributionCalendar.weeks || [];
   const contributionTotal =
     data?.user.contributionsCollection.contributionCalendar
       .totalContributions || 0;
   const longestStreak =
     data?.user.contributionsCollection.contributionCalendar.longestStreak || 0;
   const repositoryTotal = data?.user.repositories.totalCount || 0;
-
-  console.log(data);
 
   return (
     <div className="github-page">
@@ -102,6 +104,11 @@ const GitHub: React.FC = () => {
         />
         <CommitKey />
         <GitHubCalendar contributions={contributions} />
+        <div>
+          {!isLoading && (
+            <p className="centered-grey">(Click a day for more info)</p>
+          )}
+        </div>
       </div>
     </div>
   );
