@@ -1,7 +1,7 @@
 "use client";
 
 import useSWR from "swr";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import GitHubCalendar from "../components/GitHubCalendar/GitHubCalendar";
 import GitHubStatBar from "../components/GitHubStatBar/GitHubStatBar";
 import CommitKey from "../components/CommitKey/CommitKey";
@@ -130,6 +130,17 @@ const GitHub: React.FC = () => {
     data?.user.contributionsCollection.contributionCalendar.longestStreak || 0;
   const repositoryTotal = data?.user.repositories.totalCount || 0;
 
+  const getColor = useMemo(
+    () =>
+      (contributionCount: number): string => {
+        if (contributionCount === 0) return "#161b21"; // Near-Black
+        if (contributionCount <= 5) return "#006e30";
+        if (contributionCount <= 10) return "#25a642";
+        return "#32d553";
+      },
+    []
+  );
+
   return (
     <div className="github-page">
       <h4 className="underline">JBassard97's GitHub</h4>
@@ -152,23 +163,26 @@ const GitHub: React.FC = () => {
       </div>
       {selectedDate && (
         <div className="day-info">
-          <p>{selectedDate}</p>
-          <p>
+          <p className="day-display">{selectedDate}</p>
+          <p className="total-commits">
             {selectedCommitCount} Contribution
             {selectedCommitCount === 1 ? "" : "s"}
           </p>
           {selectedRepos &&
             selectedRepos.map((repo, index) => (
-              <div key={index}>
-                <a href={repo.url}>
-                  <p>
+              <div key={index} className="selected-repos">
+                <p style={{ color: getColor(repo.commitCount) }}>
+                  <a href={repo.url} target="_blank" className="repo-name">
                     {repo.name} ({repo.commitCount} commit
                     {repo.commitCount === 1 ? "" : "s"})
-                  </p>
-                </a>
-                {repo.commitMessages.map((message, index) => (
-                  <p key={index}>- {message}</p>
-                ))}
+                  </a>
+                </p>
+
+                <ul>
+                  {repo.commitMessages.map((message, index) => (
+                    <li key={index}>{message}</li>
+                  ))}
+                </ul>
               </div>
             ))}
         </div>

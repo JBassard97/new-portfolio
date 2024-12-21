@@ -15,3 +15,42 @@
   color: grey;
   text-align: center;
 }
+
+.day-info {
+  width: 100%;
+  padding: 1.5rem;
+  margin-bottom: 2rem; /*Good*/
+}
+
+.day-info .day-display {
+  font-size: 1.8rem;
+  text-decoration: underline;
+  color: rgba(245, 245, 245, 0.651);
+}
+
+.total-commits {
+  color: grey;
+  font-size: 1.5rem;
+  line-height: 0.6;
+  margin-bottom: 1rem;
+}
+
+.selected-repos {
+  border: 2px solid rgba(128, 128, 128, 0.368);
+  padding: 0.7rem;
+  border-radius: 10px;
+  background: #161b21;
+  margin-top: 0.25rem;
+  margin-bottom: 0.7rem;
+}
+
+.repo-name {
+  width: fit-content;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.day-info ul {
+  margin-left: 2rem;
+  color: lightgrey;
+}
