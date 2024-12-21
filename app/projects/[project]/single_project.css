@@ -7,6 +7,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  margin: 1rem;
+
 }
 
 .single-project div h2 {
