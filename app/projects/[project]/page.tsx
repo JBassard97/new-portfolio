@@ -40,22 +40,30 @@ const SingleProject = ({ params }: any) => {
       {projectData && (
         <div>
           <ProjectCard project={projectData} index={0} />
-          <h2>Tell Me More</h2>
-          {projectData.tellMeMore.map((thought, index) => (
-            <p
-              className="info-point"
-              key={index}
-              dangerouslySetInnerHTML={{ __html: infoToLife(thought) }}
-            />
-          ))}
-          <h2>What I Learned</h2>
-          {projectData.whatILearned.map((lesson, index) => (
-            <p
-              className="info-point"
-              key={index}
-              dangerouslySetInnerHTML={{ __html: infoToLife(lesson) }}
-            />
-          ))}
+          <div className="section">
+            <h2>Tell Me More</h2>
+            <ul>
+              {projectData.tellMeMore.map((thought, index) => (
+                <li
+                  className="info-point"
+                  key={index}
+                  dangerouslySetInnerHTML={{ __html: infoToLife(thought) }}
+                />
+              ))}
+            </ul>
+          </div>
+          <div className="section">
+            <h2>What I Learned</h2>
+            <ul>
+              {projectData.whatILearned.map((lesson, index) => (
+                <li
+                  className="info-point"
+                  key={index}
+                  dangerouslySetInnerHTML={{ __html: infoToLife(lesson) }}
+                />
+              ))}
+            </ul>
+          </div>
         </div>
       )}
     </div>

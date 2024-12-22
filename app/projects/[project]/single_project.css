@@ -8,16 +8,24 @@
   flex-direction: column;
   justify-content: space-evenly;
   margin: 1rem;
-
 }
 
 .single-project div h2 {
   text-decoration: underline;
-  margin-left: 1rem;
-  color: lightskyblue;
+  margin-bottom: 5px;
 }
 
 .info-point {
-  margin: 1rem;
-  font-size: 20px;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+  color: rgb(172, 172, 172);
+}
+
+.section {
+  border: 1px solid rgba(128, 128, 128, 0.8);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }

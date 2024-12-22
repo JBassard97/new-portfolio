@@ -32,6 +32,8 @@ const GitHubCalendar: React.FC<GitHubCalendarProps> = ({
   setSelectedCommitCount,
   setSelectedRepos,
 }) => {
+  const [selectedDay, setSelectedDay] = useState<string | null>(null);
+
   const getColor = useMemo(
     () =>
       (contributionCount: number): string => {
@@ -99,10 +101,16 @@ const GitHubCalendar: React.FC<GitHubCalendarProps> = ({
                       setSelectedDate(day.date);
                       setSelectedCommitCount(day.contributionCount);
                       setSelectedRepos(day.repositories);
+                      setSelectedDay(day.date);
                     }}
                     key={dayIndex}
-                    className="day"
-                    style={{ backgroundColor: getColor(day.contributionCount) }}
+                    className={`day ${
+                      selectedDay === day.date ? "selected-day" : ""
+                    }`}
+                    style={{
+                      backgroundColor: getColor(day.contributionCount),
+                      border: selectedDay === day.date ? "1px solid white" : "",
+                    }}
                     data-tooltip-id={`day-tooltip-${weekIndex}-${dayIndex}`}
                     // ! Tooltip HTML
                     data-tooltip-html={`<strong style="text-decoration: underline">${

@@ -72,12 +72,10 @@
   margin: 2px;
   border-radius: 3px;
   cursor: pointer;
-  /* animation: slideInFromBottom 0.2s ease-in-out forwards; */
+  transition: border 0.1s ease-in-out;
 }
 
-/* .day:hover {
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.422);
-} */
+
 
 /* ! Animations */
 

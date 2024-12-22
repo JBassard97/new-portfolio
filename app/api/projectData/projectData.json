@@ -24,17 +24,18 @@
         "Mongoose",
         "Sass",
         "Apollo",
-        "Render"
+        "Render",
+        "Vite"
       ],
       "tellMeMore": [
         "Began development on May 6th (2024), and it was developed for 1 month to be considered an MVP.",
-        "Utilizes the same stack as PollR.",
+        "Utilizes the same stack as <span style='color:lightblue; text-decoration:underline'><a href='/projects/PollR'>PollR</a></span>.",
         "Created to fascilitate scheduling as I was once looking forward to becomming a General Manager at a pizza shop.",
         "While I never got the chance to use it in my job, many other General Managers in the company adopted it and still use it regularly. This is because the scheduling funtionality provided to them refused to work, and mine met their needs consistently."
       ],
       "whatILearned": [
-        "Custom PDF Creation with Puppeteer.",
-        "Sending Emails with the NodeMailer Library.",
+        "Custom PDF Creation with <span style='color:lightblue'>Puppeteer</span>.",
+        "Sending Emails with the <span style='color:lightblue'>NodeMailer</span> library.",
         "Life Lesson: Account for edge cases. ",
         "In order add a new employee to your database, you needed their email. In order to send that employee their schedule, you also needed their email. Heck, just to get hired they'd need to provide an email! The truth is, even our bosses lose track of stuff like that, so I learned to account for what to do in case that happens."
       ]
@@ -63,12 +64,13 @@
         "NPM",
         "Apollo",
         "Mongoose",
-        "Tailwind"
+        "Tailwind",
+        "Vite"
       ],
       "tellMeMore": [
         "This is our 3rd Capstone Project of Bootcamp, and it was developed for 2 weeks until it was considered an MVP.",
-        "Uses JSON Web Tokens(JWT) to manage authentication.",
-        "Utilizes the same stack as YesChef."
+        "Uses <span style='color:lightblue'>JSON Web Tokens(JWT)</span> to manage authentication.",
+        "Utilizes the same stack as <span style='color:lightblue; text-decoration:underline'><a href='/projects/YesChef'>YesChef</a></span>."
       ],
       "whatILearned": [
         "Life Lesson: Never underestimate your teammates.",
@@ -101,10 +103,12 @@
       ],
       "tellMeMore": [
         "This is my Week 19 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP.",
-        "Scores very highly on Google Lighthouse Report.",
+        "Scores very highly on <span style='color:lightblue'>Google Lighthouse Report</span>.",
         "Uses a manifest.json file to cache icons store code, becoming installable and usable even offline."
       ],
       "whatILearned": [
+        "Precaching assets using <span style='color:lightblue'>web service workers</span>.",
+        "Storing data in <span style='color:lightblue'>IndexedDB</span>, and using localStorage as a fallback.",
         "Life Lesson: Sometimes even the pointless apps turn out to be worth it.",
         "Working with WebPack and all of its config files are not fun when compared to something that works right out of the box, like Vite. That being said, creating a PWA is a great experience that any developer should try. The fact that my website can also live on my desktop or phone as a native-like app is awesome."
       ]
@@ -125,11 +129,12 @@
       "stack": ["HTML", "CSS", "JavaScript"],
       "tellMeMore": [
         "This is our 1st Capstone Project of Bootcamp, and it was developed for 2 weeks until it was considered an MVP.",
-        "Utilizes the Open-Brewery API for data on nearby spots.",
-        "Utilizes the Geo.js library to accurately get the user's location."
+        "<span style='color:lightblue; text-decoration:underline'><a href='https://www.openbrewerydb.org/' target='_blank'>Open-Brewery API</a></span> provides data on nearby spots.",
+        "The <span style='color: lightblue; text-decoration:underline'><a href='https://www.geojs.io/' target='_blank'>Geo.js<a/></span> library accurately gets the user's location.",
+        "The <span style='color:lightblue; text-decoration:underline'><a href='https://clearbit.com/logo' target='_blank'>Clearbit Logo API</a></span> retrieves high-quality company logos and icons."
       ],
       "whatILearned": [
-        "Life Lesson: Take the lead, but let others have a turn, too.",
+        "Life Lesson: Be a leader, but let others have a turn, too.",
         "Taking all of the creative leadership gets hard. You sift through potential background images and font styles and it gets exhausting, and I'm glad that I had a few extra hands to cover the visual aspect of this project."
       ]
     },
@@ -163,12 +168,12 @@
         "My first MERN Stack application!"
       ],
       "whatILearned": [
-        "Migrating a full stack app from a RESTful API to a GraphQL API is not easy, but doable if you understand the shape of the data."
+        "Migrating a full stack app from a RESTful API to a GraphQL API."
       ]
     },
     {
       "name": "Social_Network_API",
-      "githubLink": "https://github.com/JBassard97/Social_Networapi",
+      "githubLink": "https://github.com/JBassard97/Social_Network_api",
       "images": ["/projectImages/socialnetwork.png"],
       "isComplete": true,
       "isDeployed": false,
@@ -192,7 +197,10 @@
       "tellMeMore": [
         "This is my Week 18 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP."
       ],
-      "whatILearned": [""]
+      "whatILearned": [
+        "Creating virtual fields to perform and display agregate functions.",
+        "Using the Mongoose ODM to interop with MongoDB."
+      ]
     },
     {
       "name": "jbassard97nodecolors",
@@ -201,15 +209,22 @@
       "isComplete": true,
       "isDeployed": true,
       "deployedLink": "https://www.npmjs.com/package/jbassard97nodecolors",
-      "desc": "An npm module to easily colorize terminal output.",
+      "desc": "An NPM module to easily colorize terminal output.",
       "hasFrontend": false,
       "hasBackend": false,
       "isFullStack": false,
       "type": "Other",
       "hostedOn": "NPM",
       "stack": ["JavaScript", "NPM"],
-      "tellMeMore": [""],
-      "whatILearned": [""]
+      "tellMeMore": [
+        "My first NPM Module!",
+        "Contains 100% JavaScript.",
+        "Carries zero dependencies."
+      ],
+      "whatILearned": [
+        "Life Lesson: It's ok if your little NPM package doesn't turn heads.",
+        "This package isn't particularly popular in the community, but it certainly plays a role spicing up many of my projects."
+      ]
     },
     {
       "name": "ButtonSynth",
@@ -229,7 +244,11 @@
         "Began development on December 13th (2023), and it was developed for 3 months until it was considered an MVP.",
         "The project was picked back up in early June, and functionality for playing chords was implemented."
       ],
-      "whatILearned": ["Life Lesson: Make something that makes you happy."]
+      "whatILearned": [
+        "Creating custom event listeners to handle multiple touch inputs at once.",
+        "Playing made-from-scratch audio using the Web Audio API.",
+        "Life Lesson: Make something that makes you happy."
+      ]
     },
     {
       "name": "DokePex",
@@ -245,8 +264,16 @@
       "type": "Web App",
       "hostedOn": "Netlify",
       "stack": ["Vue", "TypeScript", "Vite", "NPM", "Netlify"],
-      "tellMeMore": ["It was fun"],
-      "whatILearned": ["I learned Vue"]
+      "tellMeMore": [
+        "My first project completed after Bootcamp.",
+        "Uses the Pokemon API for data, icons, and audio files.",
+        "Rich audio elements for every monster's cries.",
+        "(Press A for an easter egg!)"
+      ],
+      "whatILearned": [
+        "Creating a frontend app with Vue, in a setting where I'd typically reach for React.",
+        "Life Lesson: Try everything at least once, but stick to your favorites."
+      ]
     },
     {
       "name": "Bookshelf",
@@ -271,9 +298,15 @@
       ],
       "tellMeMore": [
         "This is our 2nd Capstone Project of Bootcamp, and it was developed for 2 weeks until it was considered an MVP.",
-        "Coded using the MVC (Model, View, Controller) paradigm."
+        "Coded using the MVC (Model, View, Controller) paradigm.",
+        "Uses the OpenLibrary API for data and images for each book."
       ],
-      "whatILearned": [""]
+      "whatILearned": [
+        "Chaining API calls without sacrificing performance.",
+        "Deploying a full-stack app on Heroku, utilizing the JawsDB service.",
+        "Life Lesson: If something stops being worth paying for, stop paying for it.",
+        "Our Bootcamp program provided us with enough Heroku credits to freely deploy on the site for the duration of the course. However, these credits eventually ran out, and I started seeing little $5 charges each month. Nipping that in the bud, I've learned the value of finding free options."
+      ]
     },
     {
       "name": "SVG_Logo_Maker",
@@ -290,9 +323,13 @@
       "hostedOn": "",
       "stack": ["JavaScript", "NPM", "NodeJS"],
       "tellMeMore": [
-        "This is my Week 10 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP."
+        "This is my Week 10 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP.",
+        "Conversing with the user through the Inquirer package."
       ],
-      "whatILearned": ["Object Oriented Programming in JavaScript"]
+      "whatILearned": [
+        "Object Oriented Programming in JavaScript.",
+        "Using the fs module for dynamic file creation."
+      ]
     },
     {
       "name": "autoCommit",
@@ -332,9 +369,11 @@
       "hostedOn": "",
       "stack": ["JavaScript"],
       "tellMeMore": [
-        "This is my Week 9 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP."
+        "This is my Week 9 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP.",
+        "Most of my README's are made through this CLI app.",
+        "Similar stack and methods used in a private project used to aid in job-applying: Cover_Letter_Generator."
       ],
-      "whatILearned": [""]
+      "whatILearned": ["Gained a greater familiarity with Markdown language."]
     },
     {
       "name": "Next_Hang_Man",
@@ -350,8 +389,15 @@
       "type": "Web App",
       "hostedOn": "Netlify",
       "stack": ["Next.js", "TypeScript", "Sass", "NPM", "Netlify"],
-      "tellMeMore": [""],
-      "whatILearned": [""]
+      "tellMeMore": [
+        "Created to solve 2 problems: I wanted to learn Next.js, and I wanted to cure boredom.",
+        "Can be played either by using the on-screen keyboard component or a physical keyboard",
+        "Uses the <span style='color:lightblue'><a href='https://random-word-api.vercel.app/' target='_blank'>Random Word Generator API</a></span>, which allows you to choose the length of returned words.",
+        "Heavily inspired by <span style='color:lightblue'><a href='https://www.nytimes.com/games/wordle/index.html' target='_blank'>Wordle</a></span>."
+      ],
+      "whatILearned": [
+        "The Next.js and many of it's features, including the file-based routing system (which I love), server components, and framework specific tools."
+      ]
     },
     {
       "name": "Employee_Tracker",
@@ -549,7 +595,7 @@
       "tellMeMore": [
         "This is my Week 17 Project for Bootcamp, written for 1 week until it was considered an MVP."
       ],
-      "whatILearned": [""]
+      "whatILearned": ["How to create a Regex Pattern from scratch"]
     },
     {
       "name": "Portfolio_v1",
@@ -611,7 +657,7 @@
       "tellMeMore": [
         "This is my Week 3 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP."
       ],
-      "whatILearned": ["Arrays, Functions, Objects, and Window functions."]
+      "whatILearned": ["Arrays, Functions, Objects, and Window object."]
     }
   ]
 }

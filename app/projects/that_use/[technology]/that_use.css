@@ -5,6 +5,11 @@
   align-items: center;
 }
 
+.line-1 {
+  line-height: 0.3;
+  margin-top: 1rem;
+}
+
 .line-2 {
   font-size: 30px;
   display: flex;

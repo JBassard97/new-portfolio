@@ -36,10 +36,10 @@
 }
 
 .selected-repos {
-  border: 2px solid rgba(128, 128, 128, 0.368);
+  border: 2px solid rgba(128, 128, 128, 0.8);
   padding: 0.7rem;
   border-radius: 10px;
-  background: #161b21;
+  background: #161b21ad;
   margin-top: 0.25rem;
   margin-bottom: 0.7rem;
 }
