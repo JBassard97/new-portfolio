@@ -104,7 +104,7 @@
       "tellMeMore": [
         "This is my Week 19 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP.",
         "Scores very highly on <span style='color:lightblue'>Google Lighthouse Report</span>.",
-        "Uses a manifest.json file to cache icons store code, becoming installable and usable even offline."
+        "Uses a <span style='color:lightblue'>manifest.json</span> file to cache icons store code, becoming <span style='color:lightblue'>installable</span> and usable even offline."
       ],
       "whatILearned": [
         "Precaching assets using <span style='color:lightblue'>web service workers</span>.",
@@ -164,11 +164,11 @@
       ],
       "tellMeMore": [
         "This is my Week 21 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP.",
-        "Uses JSON Web Tokens(JWT) to manage authentication.",
-        "My first MERN Stack application!"
+        "Uses <span style='color:lightblue'>JSON Web Tokens(JWT)</span> to manage authentication.",
+        "My first <span style='color:lightblue'>MERN Stack</span> application!"
       ],
       "whatILearned": [
-        "Migrating a full stack app from a RESTful API to a GraphQL API."
+        "Migrating a full stack app from a <span style='color:lightblue'>RESTful API</span> to a <span style='color:lightblue'>GraphQL API</span>."
       ]
     },
     {
@@ -199,7 +199,7 @@
       ],
       "whatILearned": [
         "Creating virtual fields to perform and display agregate functions.",
-        "Using the Mongoose ODM to interop with MongoDB."
+        "Using the <span style='color:lightblue'>Mongoose ODM</span> to interop with <span style='color:lightblue'>MongoDB</span>."
       ]
     },
     {
@@ -242,11 +242,11 @@
       "stack": ["HTML", "CSS", "JavaScript"],
       "tellMeMore": [
         "Began development on December 13th (2023), and it was developed for 3 months until it was considered an MVP.",
-        "The project was picked back up in early June, and functionality for playing chords was implemented."
+        "The project was picked back up in early June, and functionality for <span style='color:lightblue'>playing chords</span> was implemented."
       ],
       "whatILearned": [
-        "Creating custom event listeners to handle multiple touch inputs at once.",
-        "Playing made-from-scratch audio using the Web Audio API.",
+        "Creating <span style='color:lightblue'>custom event listeners</span> to handle multiple touch inputs at once.",
+        "Playing made-from-scratch audio using the <span style='color: lightblue'>Web Audio API</span>.",
         "Life Lesson: Make something that makes you happy."
       ]
     },
@@ -271,7 +271,7 @@
         "(Press A for an easter egg!)"
       ],
       "whatILearned": [
-        "Creating a frontend app with Vue, in a setting where I'd typically reach for React.",
+        "Creating a frontend app with <span style='color:lightblue'>Vue</span>, in a setting where I'd typically reach for <span style='color:lightblue'>React</span>.",
         "Life Lesson: Try everything at least once, but stick to your favorites."
       ]
     },
@@ -298,12 +298,12 @@
       ],
       "tellMeMore": [
         "This is our 2nd Capstone Project of Bootcamp, and it was developed for 2 weeks until it was considered an MVP.",
-        "Coded using the MVC (Model, View, Controller) paradigm.",
-        "Uses the OpenLibrary API for data and images for each book."
+        "Coded using the <span style='color:lightblue'>MVC (Model, View, Controller)</span> paradigm.",
+        "Uses the <span style='color:lightblue'>OpenLibrary API</span> for data and images for each book."
       ],
       "whatILearned": [
-        "Chaining API calls without sacrificing performance.",
-        "Deploying a full-stack app on Heroku, utilizing the JawsDB service.",
+        "<span style='color:lightblue'>Chaining API calls</span> without sacrificing performance.",
+        "Deploying a full-stack app on <span style='color:lightblue'>Heroku</span>, utilizing the <span style='color:lightblue'>JawsDB</span> service.",
         "Life Lesson: If something stops being worth paying for, stop paying for it.",
         "Our Bootcamp program provided us with enough Heroku credits to freely deploy on the site for the duration of the course. However, these credits eventually ran out, and I started seeing little $5 charges each month. Nipping that in the bud, I've learned the value of finding free options."
       ]
@@ -324,11 +324,11 @@
       "stack": ["JavaScript", "NPM", "NodeJS"],
       "tellMeMore": [
         "This is my Week 10 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP.",
-        "Conversing with the user through the Inquirer package."
+        "Conversing with the user through the <span style='color:lightblue'>Inquirer</span> package."
       ],
       "whatILearned": [
-        "Object Oriented Programming in JavaScript.",
-        "Using the fs module for dynamic file creation."
+        "<span style='color:lightblue'>Object Oriented Programming</span> in JavaScript.",
+        "Using the <span style='color:lightblue'>fs module</span> for dynamic file creation."
       ]
     },
     {
@@ -347,11 +347,11 @@
       "stack": ["GitHub", "JavaScript", "NodeJS", "YAML"],
       "tellMeMore": [
         "Began development on June 27th (2024), and it was developed for 3.5 months until it was considered an MVP.",
-        "Initially worked locally using Window's Task Scheduler to run the script. This was only successful if my laptop was open specifically when it was scheduled to work, so I utilized a cron job within Github Actions to have it fire as often as I'd like."
+        "Initially worked locally using <span style='color:lightblue'>Window's Task Scheduler</span> to run the script. This was only successful if my laptop was open specifically when it was scheduled to work, so I utilized a cron job within <span style='color:lightblue'>Github Actions</span> to have it fire as often as I'd like."
       ],
       "whatILearned": [
         "Life Lesson: Sometimes it's fun to do bad things.",
-        "Is it wrong to have a project that pads your commit history like this? Heck no. Especially not when I learn something valuable from it, like how to use an integral part of GitHub's robust line of pipelines."
+        "Is it wrong to have a project that pads your commit history like this? <span style='color:red'>Heck no.</span> Especially not when I learn something valuable from it, like how to use an integral part of GitHub's robust line of pipelines."
       ]
     },
     {
@@ -371,9 +371,12 @@
       "tellMeMore": [
         "This is my Week 9 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP.",
         "Most of my README's are made through this CLI app.",
-        "Similar stack and methods used in a private project used to aid in job-applying: Cover_Letter_Generator."
+        "Similar stack and methods used in a private project used to aid in job-applying: <span style='color:lightblue'>Cover_Letter_Generator</span>."
       ],
-      "whatILearned": ["Gained a greater familiarity with Markdown language."]
+      "whatILearned": [
+        "Gained a greater familiarity with <span style='color:lightblue'>Markdown</span> language.",
+        "Collecting user inputs with the <span style='color:lightblue'>Inquirer</span> package."
+      ]
     },
     {
       "name": "Next_Hang_Man",
@@ -416,7 +419,9 @@
       "tellMeMore": [
         "This is my Week 12 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP."
       ],
-      "whatILearned": [""]
+      "whatILearned": [
+        "Writing complex <span style='color:lightblue'>SQL</span> queries and performing <span style='color:lightblue'>CRUD</span> operations on database tables."
+      ]
     },
     {
       "name": "TellMeAbout",
@@ -456,8 +461,8 @@
       "stack": ["JQuery", "Bootstrap", "HTML", "CSS", "JavaScript"],
       "tellMeMore": [
         "This is my Week 5 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP.",
-        "Utilizes Day.js (Date and Time Library) for real-time updates.",
-        "Caches your appointments in localStorage."
+        "Utilizes <span style='color:lightblue'>Day.js (Date and Time Library)</span> for real-time updates.",
+        "Caches your appointments in <span style='color:lightblue'>localStorage</span>."
       ],
       "whatILearned": [
         "JQuery, CDN, Bootstrap",
@@ -503,14 +508,14 @@
       "stack": ["Python"],
       "tellMeMore": [
         "Began development on September 8th (2024), and it is still in progress.",
-        "This project should be completed around June of 2025.",
-        "Utilizes PyGame for audio control.",
-        "Utilizes the Keyboard library for typing events."
+        "This project is projected be completed around June of 2025.",
+        "Utilizes <span style='color:lightblue'>PyGame</span> for audio control.",
+        "Utilizes the <span style='color:lightblue'>Keyboard</span> library for typing events."
       ],
       "whatILearned": [
-        "Using PIP to install and manage dependencies.",
+        "Using <span style='color:lightblue'>PIP</span> to install and manage dependencies.",
         "Life Lesson: Don't bite off more than you can chew.",
-        "Everyone dreams of making a video game. That might sound silly, but it's an awesome goal to accomplish as a programmer. I certainly didn't realize how much thought goes into the story-telling aspect of one, and that is this project's only hangup."
+        "Everyone dreams of making a video game. That might sound silly, but it's an awesome goal to accomplish as a programmer. I certainly didn't realize how much thought goes into the story-telling aspect of one, and that is this project's only hangup. "
       ]
     },
     {
@@ -536,7 +541,7 @@
       ],
       "tellMeMore": [
         "This is my Week 14 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP.",
-        "Coded using the MVC (Model, View, Controller) paradigm."
+        "Coded using the <span style='color:lightblue'>MVC (Model, View, Controller)</span> paradigm."
       ],
       "whatILearned": [""]
     },
@@ -557,7 +562,9 @@
       "tellMeMore": [
         "This is my Week 11 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP."
       ],
-      "whatILearned": [""]
+      "whatILearned": [
+        "Creating servers with the <span style='color:lightblue'>Express.js</span> web framework."
+      ]
     },
     {
       "name": "Code_Quiz",
@@ -576,7 +583,10 @@
       "tellMeMore": [
         "This is my Week 4 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP."
       ],
-      "whatILearned": [""]
+      "whatILearned": [
+        "Dynamically creating an placing elements through <span style='color:lightblue'>DOM Manipulation</span> in vanilla JavaScript.",
+        "Storing data in the browser using the <span style='color:lightblue'>localStorage</span> functions <span style='color:lightblue'>setItem()</span> and <span style='color:lightblue'>getItem()</span>."
+      ]
     },
     {
       "name": "Regex_Simplified",
@@ -595,7 +605,10 @@
       "tellMeMore": [
         "This is my Week 17 Project for Bootcamp, written for 1 week until it was considered an MVP."
       ],
-      "whatILearned": ["How to create a Regex Pattern from scratch"]
+      "whatILearned": [
+        "How to create a <span style='color:lightblue'>Regex Pattern</span> from scratch",
+        "Creating written articles and deploying them as <span style='color:lightblue'>GitHub Gists</span>."
+      ]
     },
     {
       "name": "Portfolio_v1",
@@ -615,7 +628,7 @@
         "This is my Week 2 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP."
       ],
       "whatILearned": [
-        "CSS Resets, Selectors, Pseudo-Classes, Pseudo-Elements, and Variables"
+        "<span style='color:lightblue'>CSS Resets, Selectors, Pseudo-Classes, Pseudo-Elements, and Variables</span>"
       ]
     },
     {
@@ -636,8 +649,8 @@
         "This is my Week 20 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP."
       ],
       "whatILearned": [
-        "Utilizes React Router for page navigation.",
-        "Utilizes Typescript for full type safety."
+        "Utilizes <span style='color:lightblue'>React Router</span> for page navigation.",
+        "Utilizes <span style='color:lightblue'>Typescript</span> for full type safety."
       ]
     },
     {
@@ -657,7 +670,9 @@
       "tellMeMore": [
         "This is my Week 3 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP."
       ],
-      "whatILearned": ["Arrays, Functions, Objects, and Window object."]
+      "whatILearned": [
+        "<span style='color:lightblue'>Arrays, Functions, Objects, and the Window object<span style='color:lightblue'>."
+      ]
     }
   ]
 }
