@@ -21,7 +21,7 @@ const Journeys = () => {
         });
       },
       {
-        threshold: 0.50, // Trigger when 25% of the node is visible
+        threshold: 0.5, // Trigger when 25% of the node is visible
       }
     );
 
@@ -42,10 +42,12 @@ const Journeys = () => {
         {Array.from({ length: numberOfNodes }, (_, i) => {
           const spacing = 250;
           const top = i * spacing;
-          const left = Math.sin(i * 0.5) * 50 + 50;
 
           const nextTop = (i + 1) * spacing;
-          const nextLeft = Math.sin((i + 1) * 0.5) * 50 + 50;
+          const left = parseFloat((Math.sin(i * 0.5) * 50 + 50).toFixed(5));
+          const nextLeft = parseFloat(
+            (Math.sin((i + 1) * 0.5) * 50 + 50).toFixed(5)
+          );
 
           const deltaX = nextLeft - left;
           const deltaY = nextTop - top;
