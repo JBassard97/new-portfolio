@@ -1,18 +1,19 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import Link from "next/link";
 import { Tooltip } from "react-tooltip";
 import "./home.css";
 
 export default function Home() {
-  // Initialize state based on localStorage
-  const [showVideo, setShowVideo] = useState(() => {
-    const hasSeenIntro = localStorage.getItem("hasSeenIntro");
-    return !hasSeenIntro; // Show video if `hasSeenIntro` is not set
-  });
+  const [showVideo, setShowVideo] = useState(false);
   const [videoFading, setVideoFading] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    // Access `localStorage` only on the client
+    const hasSeenIntro = localStorage.getItem("hasSeenIntro");
+    setShowVideo(!hasSeenIntro); // Show video if `hasSeenIntro` is not set
+  }, []);
 
   useEffect(() => {
     if (showVideo) {
@@ -54,7 +55,7 @@ export default function Home() {
       videoRef.current.play(); // Play the video
     }
     setShowVideo(true); // Show the video container
-    setVideoFading(false); // Remove any fading state};
+    setVideoFading(false); // Remove any fading state
   };
 
   return (
@@ -106,7 +107,11 @@ export default function Home() {
             <path d="M8 5v14l11-7z" />{" "}
           </svg>
         </div>
-        <Tooltip id="start-intro" opacity={1} style={{ background: "darkblue" }} />
+        <Tooltip
+          id="start-intro"
+          opacity={1}
+          style={{ background: "darkblue" }}
+        />
       </div>
     </>
   );

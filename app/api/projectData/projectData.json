@@ -61,6 +61,7 @@
         "NodeJS",
         "GraphQL",
         "Render",
+        "Figma",
         "NPM",
         "Apollo",
         "Mongoose",
@@ -126,7 +127,7 @@
       "isFullStack": false,
       "type": "Web App",
       "hostedOn": "GitHub",
-      "stack": ["HTML", "CSS", "JavaScript"],
+      "stack": ["HTML", "CSS", "JavaScript", "Figma"],
       "tellMeMore": [
         "This is our 1st Capstone Project of Bootcamp, and it was developed for 2 weeks until it was considered an MVP.",
         "<span style='color:lightblue; text-decoration:underline'><a href='https://www.openbrewerydb.org/' target='_blank'>Open-Brewery API</a></span> provides data on nearby spots.",
@@ -292,6 +293,7 @@
         "Handlebars",
         "MySQL",
         "JavaScript",
+        "Figma",
         "Tailwind",
         "Express.js",
         "NodeJS"

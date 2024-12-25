@@ -50,7 +50,7 @@ const ParallaxCard: React.FC<ParallaxCardProps> = ({
   return (
     <div
       ref={cardRef}
-      className="card rounded"
+      className="card"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{
