@@ -11,6 +11,11 @@ interface Month {
 
 const Journeys = () => {
   const [timelineData, setTimelineData] = useState<Month[] | null>(null);
+  const [selectedText, setSelectedText] = useState<string | null>(null);
+  // Track which elements are in view
+  const [visibleElements, setVisibleElements] = useState<Set<string>>(
+    new Set()
+  );
 
   useEffect(() => {
     const fetchTimelineData = async () => {
@@ -20,9 +25,7 @@ const Journeys = () => {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        console.log(data);
 
-        // Expecting the data to be an array
         if (Array.isArray(data)) {
           setTimelineData(data);
         } else {
@@ -36,72 +39,95 @@ const Journeys = () => {
     fetchTimelineData();
   }, []);
 
-  // Refs for the nodes and time labels
   const nodeRefs = useRef<(HTMLDivElement | null)[]>([]);
   const timeLabelRefs = useRef<(HTMLParagraphElement | null)[]>([]);
+  const markRefs = useRef<(HTMLDivElement | null)[][]>([]);
+
+  const handleSelection = (text: string) => {
+    setSelectedText((prev) => (prev === text ? null : text));
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          console.log(
-            "Observed:",
-            entry.target,
-            "Intersecting:",
-            entry.isIntersecting
-          );
-          if (entry.isIntersecting) {
-            if (entry.target.classList.contains("node")) {
-              entry.target.classList.add("scaled");
-            } else if (entry.target.classList.contains("time-label")) {
-              entry.target.classList.add("visible");
+          const id = entry.target.getAttribute("data-id");
+          if (!id) return;
+
+          setVisibleElements((prev) => {
+            const newSet = new Set(prev);
+            if (entry.isIntersecting) {
+              newSet.add(id);
+            } else {
+              newSet.delete(id);
             }
-          } else {
-            if (entry.target.classList.contains("node")) {
-              entry.target.classList.remove("scaled");
-            } else if (entry.target.classList.contains("time-label")) {
-              entry.target.classList.remove("visible");
-            }
-          }
+            return newSet;
+          });
         });
       },
       {
-        threshold: 0.2, // Lower threshold for more sensitivity
+        threshold: 0.2,
       }
     );
 
     // Observe nodes
-    nodeRefs.current.forEach((node) => {
-      if (node) observer.observe(node);
+    nodeRefs.current.forEach((node, index) => {
+      if (node) {
+        node.setAttribute("data-id", `node-${index}`);
+        observer.observe(node);
+      }
     });
 
     // Observe time labels
-    timeLabelRefs.current.forEach((label) => {
-      if (label) observer.observe(label);
+    timeLabelRefs.current.forEach((label, index) => {
+      if (label) {
+        label.setAttribute("data-id", `label-${index}`);
+        observer.observe(label);
+      }
     });
 
-    return () => {
-      nodeRefs.current.forEach((node) => {
-        if (node) observer.unobserve(node);
+    // Observe marks
+    markRefs.current.forEach((monthMarks, monthIndex) => {
+      monthMarks.forEach((mark, markIndex) => {
+        if (mark) {
+          mark.setAttribute("data-id", `mark-${monthIndex}-${markIndex}`);
+          observer.observe(mark);
+        }
       });
-      timeLabelRefs.current.forEach((label) => {
-        if (label) observer.unobserve(label);
-      });
-    };
+    });
+
+    return () => observer.disconnect();
   }, [timelineData]);
+
+  const getElementClasses = (
+    baseClass: string,
+    elementId: string,
+    isSelected: boolean
+  ) => {
+    const classes = [baseClass];
+
+    if (visibleElements.has(elementId)) {
+      if (baseClass === "node") classes.push("scaled");
+      if (baseClass === "mark") classes.push("mark-scaled");
+      if (baseClass === "time-label") classes.push("visible");
+    }
+
+    if (isSelected) classes.push("selected");
+
+    return classes.join(" ");
+  };
 
   return (
     <div className="journeys-page">
       {timelineData && timelineData.length > 0 ? (
         <div className="timeline">
           {timelineData.map((month, i) => {
-            const spacing = 300;
+            const spacing = 350;
             const top = i * spacing;
-
             const nextTop = (i + 1) * spacing;
-            const left = parseFloat((Math.sin(i * 0.5) * 50 + 50).toFixed(5));
+            const left = parseFloat((Math.sin(i * 0.5) * 25 + 50).toFixed(5));
             const nextLeft = parseFloat(
-              (Math.sin((i + 1) * 0.5) * 50 + 50).toFixed(5)
+              (Math.sin((i + 1) * 0.5) * 25 + 50).toFixed(5)
             );
 
             const deltaX = nextLeft - left;
@@ -119,8 +145,12 @@ const Journeys = () => {
                   ref={(el) => {
                     nodeRefs.current[i] = el;
                   }}
-                  className="node"
-                  title={month.main_event}
+                  className={getElementClasses(
+                    "node",
+                    `node-${i}`,
+                    selectedText === month.main_event
+                  )}
+                  onClick={() => handleSelection(month.main_event)}
                 ></div>
                 {i < timelineData.length - 1 && (
                   <div
@@ -134,15 +164,31 @@ const Journeys = () => {
                       ref={(el) => {
                         timeLabelRefs.current[i] = el;
                       }}
-                      className="time-label"
+                      className={getElementClasses(
+                        "time-label",
+                        `label-${i}`,
+                        false
+                      )}
                     >
                       {month.dateString}
                     </p>
                     <div className="marks">
                       {month.logs.map((log, index) => (
-                        <div key={index} className="mark" title={log}>
-                          {" "}
-                        </div>
+                        <div
+                          key={index}
+                          ref={(el) => {
+                            if (!markRefs.current[i]) {
+                              markRefs.current[i] = [];
+                            }
+                            markRefs.current[i][index] = el;
+                          }}
+                          className={getElementClasses(
+                            "mark",
+                            `mark-${i}-${index}`,
+                            log === selectedText
+                          )}
+                          onClick={() => handleSelection(log)}
+                        ></div>
                       ))}
                     </div>
                   </div>
@@ -154,6 +200,10 @@ const Journeys = () => {
       ) : (
         <p>Loading</p>
       )}
+
+      <div className={`selected-text ${selectedText ? "visible" : ""}`}>
+        {selectedText && <p>{selectedText}</p>}
+      </div>
     </div>
   );
 };
