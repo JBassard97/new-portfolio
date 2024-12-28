@@ -17,11 +17,9 @@ export default function Header() {
 
   const tech_logos = [
     { name: "react", url: "/react_svg.svg" },
-    { name: "vue", url: "/vue.svg" },
+    { name: "typescript", url: "/typescript.svg" },
     { name: "next", url: "/next-js.svg" },
-    { name: "svelte", url: "/svelte.svg" },
     { name: "node", url: "/node.svg" },
-    { name: "python", url: "/python.svg" },
   ];
 
   // Preload images on component mount

@@ -58,8 +58,10 @@
 }
 
 .time-label {
-  padding-left: 1.3rem;
-  padding-top: 1.3rem;
+  position: absolute;
+  padding-top: 1.4rem;
+  /* margin-top: 1rem; */
+  left: -30px;
   color: grey;
   font-style: italic;
   font-weight: bold;
@@ -72,11 +74,12 @@
   opacity: 1; /* Fully visible when in view */
 }
 
+
 .marks {
   display: flex;
   /* border: 1px solid pink; */
   justify-content: space-evenly;
-  transform: translateY(-55px);
+  transform: translateY(-14px);
 }
 
 .mark {
@@ -141,3 +144,5 @@
   opacity: 1;
   transform: translateX(0px);
 }
+
+

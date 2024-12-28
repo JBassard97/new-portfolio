@@ -137,13 +137,17 @@ const GitHubCalendar: React.FC<GitHubCalendarProps> = ({
                             .join("<br />")
                         : ""
                     }`}
+
                     // ! End Tooltip HTML
                   >
                     <Tooltip
                       key={`tooltip-${weekIndex}-${dayIndex}`}
                       id={`day-tooltip-${weekIndex}-${dayIndex}`}
-                      place="bottom"
-                      style={{ zIndex: 20, background: "#161b21" }}
+                      place="right"
+                      style={{
+                        zIndex: 2,
+                        background: "#161b21",
+                      }}
                       opacity={1}
                     />
                   </div>

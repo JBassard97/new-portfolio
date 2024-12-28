@@ -28,6 +28,11 @@
   opacity: 0;
 }
 
+.react-tooltip {
+  position: fixed;
+  z-index: 999999 !important;
+}
+
 .day-labels {
   display: flex;
   flex-direction: column;
@@ -36,12 +41,18 @@
   font-weight: bold;
   text-align: center;
   color: gray;
-  z-index: 10;
+  z-index: 0;
   backdrop-filter: blur(10px);
   position: sticky;
   left: 0;
   padding-left: 0.2rem;
   padding-right: 0.2rem;
+}
+
+@media screen and (max-width: 1045px) {
+  .day-labels {
+    z-index: 1;
+  }
 }
 
 .day-label {
@@ -56,6 +67,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .row {
@@ -80,6 +93,7 @@
   border-radius: 3px;
   cursor: pointer;
   transition: border 0.1s ease-in-out;
+  /* z-index: -1; */
 }
 
 /* ! Animations */

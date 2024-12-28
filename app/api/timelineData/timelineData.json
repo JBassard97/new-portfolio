@@ -6,7 +6,7 @@
       "peanut",
       "apple",
       "banana",
-      "What does a fourth one look like?",
+      "<a href='/technologies'>tech</a>",
       "and a fifth?"
     ]
   },
@@ -87,7 +87,7 @@
   },
   {
     "dateString": "September 2023",
-    "main_event": "j",
-    "logs": ["lol"]
+    "main_event": "<h2>Bootcamp Begins</h2>",
+    "logs": ["No logs will show for here"]
   }
 ]

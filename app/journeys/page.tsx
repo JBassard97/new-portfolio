@@ -11,7 +11,9 @@ interface Month {
 
 const Journeys = () => {
   const [timelineData, setTimelineData] = useState<Month[] | null>(null);
-  const [selectedText, setSelectedText] = useState<string | null>(null);
+  const [selectedText, setSelectedText] = useState<string | TrustedHTML | null>(
+    null
+  );
   // Track which elements are in view
   const [visibleElements, setVisibleElements] = useState<Set<string>>(
     new Set()
@@ -202,7 +204,9 @@ const Journeys = () => {
       )}
 
       <div className={`selected-text ${selectedText ? "visible" : ""}`}>
-        {selectedText && <p>{selectedText}</p>}
+        {selectedText && (
+          <p dangerouslySetInnerHTML={{ __html: selectedText as string }}></p>
+        )}
       </div>
     </div>
   );

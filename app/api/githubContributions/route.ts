@@ -177,7 +177,7 @@ export async function GET() {
         // Attach calculated value to the response
         data.user.contributionsCollection.contributionCalendar.longestStreak = longestStreak;
 
-        console.log(data);
+        // console.log(data);
 
         return NextResponse.json(data, {
             headers: { "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=60" },

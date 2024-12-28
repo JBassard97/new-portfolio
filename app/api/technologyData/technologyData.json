@@ -267,7 +267,7 @@
         "name": "WordPress",
         "docs": "https://wordpress.org/documentation/",
         "icon": "/wordpress.svg",
-        "hasProjects": true,
+        "hasProjects": false,
         "type": "framework",
         "desc": "CMS For Web Content"
       },
