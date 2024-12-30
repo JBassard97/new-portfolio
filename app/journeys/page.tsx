@@ -14,10 +14,10 @@ const Journeys = () => {
   const [selectedText, setSelectedText] = useState<string | TrustedHTML | null>(
     null
   );
-  // Track which elements are in view
   const [visibleElements, setVisibleElements] = useState<Set<string>>(
     new Set()
   );
+  const [isFadingOut, setIsFadingOut] = useState(false);
 
   useEffect(() => {
     const fetchTimelineData = async () => {
@@ -45,9 +45,18 @@ const Journeys = () => {
   const timeLabelRefs = useRef<(HTMLParagraphElement | null)[]>([]);
   const markRefs = useRef<(HTMLDivElement | null)[][]>([]);
 
-  const handleSelection = (text: string) => {
-    setSelectedText((prev) => (prev === text ? null : text));
-  };
+ const handleSelection = (text: string) => {
+   if (selectedText === text) {
+     setIsFadingOut(true); // Start fading out
+     setTimeout(() => {
+       setSelectedText(null); // Clear text after fade-out
+       setIsFadingOut(false); // Reset fade-out state
+     }, 100); // Adjust timeout to match the fade-out duration in CSS
+   } else {
+     setSelectedText(text); // Update text immediately for selection
+     setIsFadingOut(false); // Ensure fade-out is reset
+   }
+ };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -72,7 +81,6 @@ const Journeys = () => {
       }
     );
 
-    // Observe nodes
     nodeRefs.current.forEach((node, index) => {
       if (node) {
         node.setAttribute("data-id", `node-${index}`);
@@ -80,7 +88,6 @@ const Journeys = () => {
       }
     });
 
-    // Observe time labels
     timeLabelRefs.current.forEach((label, index) => {
       if (label) {
         label.setAttribute("data-id", `label-${index}`);
@@ -88,7 +95,6 @@ const Journeys = () => {
       }
     });
 
-    // Observe marks
     markRefs.current.forEach((monthMarks, monthIndex) => {
       monthMarks.forEach((mark, markIndex) => {
         if (mark) {
@@ -202,10 +208,15 @@ const Journeys = () => {
       ) : (
         <p>Loading</p>
       )}
-
-      <div className={`selected-text ${selectedText ? "visible" : ""}`}>
+      <div
+        className={`selected-text-container ${selectedText ? "visible" : ""} ${
+          isFadingOut ? "fade-out" : ""
+        }`}
+      >
         {selectedText && (
-          <p dangerouslySetInnerHTML={{ __html: selectedText as string }}></p>
+          <div className={`selected-text `}>
+            <p dangerouslySetInnerHTML={{ __html: selectedText as string }}></p>
+          </div>
         )}
       </div>
     </div>

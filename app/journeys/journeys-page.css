@@ -74,7 +74,6 @@
   opacity: 1; /* Fully visible when in view */
 }
 
-
 .marks {
   display: flex;
   /* border: 1px solid pink; */
@@ -125,24 +124,34 @@
   scale: 1.1;
 }
 
-.selected-text {
+.selected-text-container {
   width: 55%;
   height: fit-content;
-  border: 1px solid rgba(0, 255, 247, 0.5);
   position: sticky;
   top: 2rem;
+  opacity: 0;
+  transform: translateX(2rem);
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.selected-text {
+  width: 100%;
+  height: fit-content;
+  border: 1px solid rgba(0, 255, 247, 0.5);
+  box-shadow: 0 0 5px 1px rgba(0, 255, 247, 0.6);
   z-index: 1000;
   padding: 1rem;
   border-radius: 20px;
   text-align: center;
-  opacity: 0;
-  transition: all 0.3s ease;
-  transform: translateX(1rem);
 }
 
-.selected-text.visible {
+.selected-text-container.visible {
   opacity: 1;
   transform: translateX(0px);
 }
 
-
+.selected-text-container.fade-out {
+  opacity: 0;
+  transform: translateX(2rem);
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Ensure 0.5s matches the timeout */
+}
