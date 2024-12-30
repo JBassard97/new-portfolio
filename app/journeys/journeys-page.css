@@ -76,7 +76,7 @@
 
 .marks {
   display: flex;
-  /* border: 1px solid pink; */
+  flex-direction: row-reverse;
   justify-content: space-evenly;
   transform: translateY(-14px);
 }
@@ -137,12 +137,64 @@
 .selected-text {
   width: 100%;
   height: fit-content;
+  max-height: 80vh;
   border: 1px solid rgba(0, 255, 247, 0.5);
   box-shadow: 0 0 5px 1px rgba(0, 255, 247, 0.6);
   z-index: 1000;
   padding: 1rem;
   border-radius: 20px;
   text-align: center;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.selected-text p {
+  color: rgb(148, 147, 147);
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.selected-text img {
+  width: 100%;
+  min-height: 5rem;
+  margin-top: 0.5rem;
+  max-height: 20rem;
+}
+
+.selected-text ul {
+  /* list-style: none; */
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 0.5rem;
+  color: lightblue;
+}
+
+.selected-text ul li {
+  text-align: start;
+}
+
+.selected-text h2 {
+  line-height: 10px;
+  margin-top: 0.5rem;
+}
+
+.selected-text .header-desc {
+  border-top: 1px solid white;
+  color: white;
+  width: 100%;
+  padding-left: auto;
+  text-align: center;
+  line-height: 15px;
+  font-style: italic;
+}
+
+.selected-text p a {
+  color: lightblue;
+  text-decoration: underline;
 }
 
 .selected-text-container.visible {

@@ -45,18 +45,18 @@ const Journeys = () => {
   const timeLabelRefs = useRef<(HTMLParagraphElement | null)[]>([]);
   const markRefs = useRef<(HTMLDivElement | null)[][]>([]);
 
- const handleSelection = (text: string) => {
-   if (selectedText === text) {
-     setIsFadingOut(true); // Start fading out
-     setTimeout(() => {
-       setSelectedText(null); // Clear text after fade-out
-       setIsFadingOut(false); // Reset fade-out state
-     }, 100); // Adjust timeout to match the fade-out duration in CSS
-   } else {
-     setSelectedText(text); // Update text immediately for selection
-     setIsFadingOut(false); // Ensure fade-out is reset
-   }
- };
+  const handleSelection = (text: string) => {
+    if (selectedText === text) {
+      setIsFadingOut(true); // Start fading out
+      setTimeout(() => {
+        setSelectedText(null); // Clear text after fade-out
+        setIsFadingOut(false); // Reset fade-out state
+      }, 100); // Adjust timeout to match the fade-out duration in CSS
+    } else {
+      setSelectedText(text); // Update text immediately for selection
+      setIsFadingOut(false); // Ensure fade-out is reset
+    }
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -214,9 +214,10 @@ const Journeys = () => {
         }`}
       >
         {selectedText && (
-          <div className={`selected-text `}>
-            <p dangerouslySetInnerHTML={{ __html: selectedText as string }}></p>
-          </div>
+          <div
+            className={`selected-text `}
+            dangerouslySetInnerHTML={{ __html: selectedText as string }}
+          ></div>
         )}
       </div>
     </div>

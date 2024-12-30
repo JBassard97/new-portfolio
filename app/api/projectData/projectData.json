@@ -545,7 +545,10 @@
         "This is my Week 14 Project for Bootcamp, and it was developed for 1 week until it was considered an MVP.",
         "Coded using the <span style='color:lightblue'>MVC (Model, View, Controller)</span> paradigm."
       ],
-      "whatILearned": [""]
+      "whatILearned": [
+        "How to create a <span style='color:lightblue'>Blog/Social Media Site</span> completely from scratch.",
+        "How to connect to an external <span style='color:lightblue'>MySQL</span> database and interop with it using <span style='color:lightblue'>Sequelize ORM</span>"
+      ]
     },
     {
       "name": "Note_Taker",

@@ -43,51 +43,86 @@
   {
     "dateString": "June 2024",
     "main_event": "fil",
-    "logs": ["fuck"]
+    "logs": [
+      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>",
+      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>",
+      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>"
+    ]
   },
   {
     "dateString": "May 2024",
     "main_event": "fi",
-    "logs": ["me"]
+    "logs": [
+      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>",
+      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>",
+      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>"
+    ]
   },
   {
     "dateString": "April 2024",
     "main_event": "f",
-    "logs": ["for"]
+    "logs": [
+      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>",
+      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>",
+      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>"
+    ]
   },
   {
     "dateString": "March 2024",
     "main_event": "a",
-    "logs": ["trying"]
+    "logs": [
+      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>",
+      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>",
+      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>"
+    ]
   },
   {
     "dateString": "February 2024",
     "main_event": "s",
-    "logs": ["to"]
+    "logs": [
+      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>",
+      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>",
+      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>"
+    ]
   },
   {
     "dateString": "January 2024",
     "main_event": "d",
-    "logs": ["speed"]
+    "logs": [
+      "<h2>Bootcamp Week 12</h2><p class='header-desc'>SQL</p><img src='/projectImages/employee.png'/><p>We covered the following topics in depth:</p><ul><li>Intro to MySQL</li><li>Node.js</li><li>Big Data</li></ul><p>This week's project was to create a content management system (CMS) in the form of a command-line application. This app manages a company's employee database, using Node.js, Inquirer, and MySQL.</p><p><a href='/projects/Employee_Tracker'>View my Project Here</a></p>",
+      "<h2>Bootcamp Week 13</h2><p class='header-desc'>Object-Relational Mapping (ORM)</p><img src='/projectImages/ecom.png'/><p>We covered the following topics in depth:</p><ul><li>Object-Relational Mapping (ORM)</li><li>Authentication</li><li>Relationships with Sequelize</li></ul><p>This week's project was to create the backend for an e-commerce site. It used an Express.js API and was configured to interact with a MySQL database through Sequelize ORM.</p>",
+      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>"
+    ]
   },
   {
     "dateString": "December 2023",
-    "main_event": "f",
-    "logs": ["run"]
+    "main_event": "<h2>Bootcamp Week 11</h2><p class='header-desc'>Express.js</p><img src='/projectImages/notetaker.png'/><p>We covered the following topics in depth:</p><ul><li>Express.js Setup and Methods</li><li>POST Requests and Persistent Data</li><li>Modular Routing, Custom Middleware, and Deployment</li></ul><p>This week's project was to create the backend for an application called Note Taker. This application used an Express.js back end and wrote and read note data from a local JSON file.</p><p><a href='/projects/Note_Taker'>View my Project Here</a></p>",
+    "logs": [
+      "<h2>Bootcamp Week 9</h2><p class='header-desc'>Node.js</p><img src='/projectImages/readmegen.png'/><p>We covered the following topics in depth:</p><ul><li>ES6</li><li>Node.js</li><li>Advanced ES6</li></ul><p>This week's project was to create a command-line application that dynamically creates a professional README.md file from user input using the <span style='color:lightblue'>Inquirer</span> package.</p><p>From this project forward, all project READMEs were to provide a tutorial video of the application in use.</p><p><a href='/projects/Professional_README_Generator'>View my Project Here</a></p>",
+      "<h2>Bootcamp Week 10</h2><p class='header-desc'>Object-Oriented Programming (OOP)</p><img src='/projectImages/svgmaker.png'/><p>We covered the following topics in depth:</p><ul><li>Object-Orieted Programming (OOP)</li><li>Test-Driven Development</li><li>Promises</li></ul><p>This week's project was to create a command-line application that takes in user input to generate a logo and save it as an SVG file.</p><p><a href='/projects/SVG_Logo_Maker'>View my Project Here</a></p>",
+      "<h2>Thanksgiving Break</h2>"
+    ]
   },
   {
     "dateString": "November 2023",
-    "main_event": "g",
-    "logs": ["web"]
+    "main_event": "<h2>Bootcamp Project 1</h2><p class='header-desc'>Interactive Front-End Project</p><img src='/projectImages/brew-finder-application.jpg'/><p>We were given total control to create whatever we wanted, and everyone on the team had one thing in common: enjoying alcohol.</p><p>The following conditions were to be met in this project's MVP:</p><ul><li>Use a CSS framework other than Bootstrap (we opted for Bulma)</li><li>Deploy to GitHub Pages</li><li>Have a Clean and Responsive UI</li><li>Include at Least One Modal</li><li>Do Not Rely on Native Browser Alert, Confirm, or Prompt Functionality</li><li>Use at Least Two Server-Side APIs</li><li>Have a Clean Repository that meets quality coding standards, with a High Quality README including screenshots and a link to the deployed application.</li></ul><p>This was the first collaborative project of our Bootcamp, and it was a great experience. Learning how to mesh with others' styles and workflows was very interesting, and it taught me a lot about my own. I also quickly became a Git Master through this project, as the number of PRs and Merges was insane.</p><p>Every class for the two weeks this project was being developed consisted of being separated into our groups, holding a quick SCRUM meeting, splitting up and assigning tasks to each teammate, and simply working together to create it.</p><p><a href='/projects/Brew-Finder'>View our Project Here</a></p>",
+    "logs": [
+      "<h2>Bootcamp Week 5</h2><p class='header-desc'>Third-Party APIs</p><img src='/projectImages/workday.png'/><p>We covered the following topics in depth:</p><ul><li>Intro to jQuery</li><li>CSS Frameworks with Bootstrap and Google Fonts</li><li>jQuery UI and Day.js</li></ul><p>This week's project was to create a calendar application that covers a typical 9-5 workday.</p><p>It performs changes to the DOM every hour with the Day.js time library.</p><p><a href='projects/Work_Day_Scheduler'>View my Project Here</a></p>",
+      "<h2>Bootcamp Week 6</h2><p class='header-desc'>Server-Side APIs</p><img src='/projectImages/weather.png'/><p>We covered the following topics in depth:</p><ul><li>Intro to Fetch</li><li>Requests Made From The Client Side</li><li>Fetch Continued and Review of Git Collaboration Techniques</li></ul><p>This week's project was to create a Weather Dashboard that gives the 5 Day Forecast. This interface used the <span style='color:lightblue'>OpenWeather API</span> and used localStorage to store persistent data.<p><a href='/projects/5_Day_Weather'>View my Project Here</a></p>"
+    ]
   },
   {
     "dateString": "October 2023",
-    "main_event": "h",
-    "logs": ["dev"]
+    "main_event": "<h2>Bootcamp Week 4</h2><p class='header-desc'>Web APIs</p><img src='/projectImages/quiz.png'/><p>We covered the following topics in depth:</p><ul><li>Intro to Web APIs</li><li>Events</li><li>Client-Side Storage</li></ul><p>This week's project was to create a timed, multiple-choice question quiz on JavaScript. At the end of the quiz, the user can view their high score later by setting it into localStorage.</p><p><a href='/projects/Code_Quiz'>View my Project Here</a></p>",
+    "logs": [
+      "<h2>Bootcamp Week 1</h2><p class='header-desc'>HTML, CSS, and Git</p><p>We covered the following topics in depth:</p><ul><li>Command Line and Git</li><li>Intro to HTML and CSS</li><li>CSS Layouts and the Box Model</li></ul><p>This week's challenge was to refactor a business landing page so that it meets accessibility guidlines.</p><p>This was accomplished using semantic HTML elements and providing assets with descriptive alts and aria-labels.</p><p>We were also tasked with debugging hyperlinks, and lastly deploying the site on GitHub Pages.</p>",
+      "<h2>Bootcamp Week 2</h2><p class='header-desc'>Advanced CSS</p><img src='/projectImages/portfolio_v1.png'/><p>We covered the following topics in depth:</p><ul><li>Responsive Design</li><li>Pseudo Classes, Pseudo Elements, and CSS Resets</li><li>CSS Selectors and Variables</li></ul><p>This week's challenge was to create a Professional Portfolio from scratch, using flexbox, media queries, and variables.</p><p><a href='/projects/Portfolio_v1'>View my Project Here</a></p>",
+      "<h2>Bootcamp Week 3</h2><p class='header-desc'>JavaScript</p><img src='/projectImages/passwordgen.png'/><p>We covered the following topics in depth:</p><ul><li>Intro to JavaScript</li><li>Arrays and Functions</li><li>Objects</li></ul><p>This week's project was to create a Password Generator, powered by JavaScript and used with the window's confirm and prompt methods.</p><p><a href='projects/Password_Generator'>View my Project Here.</a></p>"
+    ]
   },
   {
     "dateString": "September 2023",
-    "main_event": "<h2>Bootcamp Begins</h2>",
+    "main_event": "<h2>Bootcamp Begins</h2><img src='/unc-logo.svg'/><p>At the beginning of September, I enrolled in the intensive <span style='color:lightblue'>Full Stack Coding Bootcamp with UNC Chapel Hill</span>.</p><p>It was a 100% online experience that lasted for 6 months, consisting of 3-hour sessions over Zoom every Monday, Tuesday, and Thursday night. This scheduling allowed me to continue working my day job comfortably.</p><p>The accelerated curriculum isn't for the faint of heart (not to mention the price), but it proved to be an invaluable program that was critical to my development as a programmer.</p>",
     "logs": ["No logs will show for here"]
   }
 ]
