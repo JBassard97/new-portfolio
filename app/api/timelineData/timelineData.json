@@ -2,96 +2,87 @@
   {
     "dateString": "Now",
     "main_event": "fuck me",
-    "logs": [
-      "peanut",
-      "apple",
-      "banana",
-      "<a href='/technologies'>tech</a>",
-      "and a fifth?"
-    ]
+    "logs": []
   },
   {
     "dateString": "December 2024",
     "main_event": "fill later",
-    "logs": ["hohoho", "event1", "event2"]
+    "logs": [
+      "<h2>Created autoCommit</h2><p class='header-desc'>An Experiment With GitHub Actions</p><img src='/projectImages/autocommit.png'/><p><a href='/projects/autoCommit'>View my Project Here</a></p>"
+    ]
   },
   {
     "dateString": "November 2024",
     "main_event": "fill my ass",
-    "logs": ["ok"]
+    "logs": []
   },
   {
     "dateString": "October 2024",
-    "main_event": "fill lat",
-    "logs": ["something", "blow my load"]
+    "main_event": "<h2>Began Developing PythonTerminalQuest</h2><p class='header-desc'>A Game for your Terminal With a Rivetting Story</p><img src='/projectImages/pythonquest.png'/><p><a href='/projects/PythonTerminalQuest'>View my Project Here</a></p>",
+    "logs": []
   },
   {
     "dateString": "September 2024",
     "main_event": "fill la",
-    "logs": ["different"]
+    "logs": []
   },
   {
     "dateString": "August 2024",
-    "main_event": "fill l",
-    "logs": ["i"]
+    "main_event": "<h2>Created TellMeAbout</h2><p class='header-desc'>An NPM Package That Tells You Everything About A Value</p><p><a href='https://github.com/JBassard97/TellMeAbout'>View my Project Here</a></p>",
+    "logs": ["<h2>Learned the Basics of Java</h2>"]
   },
   {
     "dateString": "July 2024",
-    "main_event": "fill ",
-    "logs": ["guess"]
+    "main_event": "<h2>The Bad Month</h2><p>I'm goint to level with you: July of 2024 was not a good month for me.</p><p>This is made clear by my lack of <a href='/github'>contributions</a> for July</p><p>I had recently lost my day job, and was scrambling to find a new one that met the previous one's pay.</p><p>Additionally, this month was the two year anniversary of my mother's passing, which certainly didn't help.</p>",
+    "logs": []
   },
   {
     "dateString": "June 2024",
-    "main_event": "fil",
+    "main_event": "<h2>Created booklist</h2><p class='header-desc'>A React App to Help My Wife Keep Track of Doctoral Readings</p><p><a href='https://github.com/JBassard97/booklist' target='_blank'>View my Project Here</a></p>",
     "logs": [
-      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>",
-      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>",
-      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>"
+      "<h2>Created ButtonSynth</h2><p class='header-desc'>The Instrument That Goes With You</p><img src='/projectImages/synth.png'/><p><a href='/projects/ButtonSynth'>View my Project Here</a></p>"
     ]
   },
   {
     "dateString": "May 2024",
     "main_event": "fi",
     "logs": [
-      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>",
-      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>",
-      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>"
+      "<h2>Created Cover_Letter_Generator</h2><p class='header-desc'>The Tool I Use for Tailoring Cover Letters</p><p><a href='https://github.com/JBassard97/Cover_Letter_Generator'>View my Project Here</a></p>"
     ]
   },
   {
     "dateString": "April 2024",
-    "main_event": "f",
+    "main_event": "<h2>Created Next_Hang_Man</h2><p class='header-desc'>A Game That Works Your Brain</p><img src='/projectImages/hangman.png'/><p><a href='/projects/Next_Hang_Man'>View my Project Here</a></p>",
     "logs": [
-      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>",
-      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>",
-      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>"
+      "<h2>Bootcamp Project 3</h2><p class='header-desc'>Interactive MERN Stack Single-Page Application</p><img src='/projectImages/PollR_Screenshot.png'/><p>The following conditions were to be met in this project's MVP:</p><ul><li>Use React for the Front End</li><li>Use GraphQL with a Node.js and Express.js server.</li><li>Use queries and mutations for retrieving, adding, updating, and deleting data.</li><li>Be deployed using Render (with data).</li><li>Include authentication (JWT).</li><li>Have a polished, responsive, interactive UI.</li></ul><p><a href='/projects/PollR'>View our Project Here</a></p>",
+      "<h2>Created DokePex</h2><p class='header-desc'>An Homage to a Childhood Classic</p><img src='/projectImages/dokepex.png'/><p><a href='/projects/DokePex'>View my Project Here</a></p>"
     ]
   },
   {
     "dateString": "March 2024",
-    "main_event": "a",
+    "main_event": "<h2>Bootcamp Week 22</h2><p class='header-desc'>State</p><p>We covered the following topics in depth:</p><ul><li>Intro to State</li><li>MERN Review</li><li>MERN and Redux</li></ul>",
     "logs": [
-      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>",
-      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>",
-      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>"
+      "<h2>Bootcamp Week 19</h2><p class='header-desc'>Progressive Web Applications (PWA)</p><img src='/projectImages/JATE.png'/><p>We covered the following topics in depth:</p><ul><li>Webpage Performance and Webpack</li><li>Intro to Workbox, Caching, and Service Workers</li><li>IndexedDB and PWAs</li></ul><p>This week's project was to create a text editor that runs in the browser. Meeting the criteria of a PWA, it was to become installable and provide a native-like experience, and even function offline using a number of data persistence techniques.</p><p><a href='/projects/Just_Another_Text_Editor'>View my Project Here</a></p>",
+      "<h2>Bootcamp Week 20</h2><p class='header-desc'>React</p><img src='/projectImages/portfolio_v2.png'/><p>We covered the following topics in depth:</p><ul><li>Intro to React</li><li>Events, Forms, Fetching Data, and React Hooks</li><li>Conditional Rendering, React Router, and Component Testing</li></ul><p>This week's project was to create a new portfolio site to better display the array of projects under our belts.</p><p><a href='/projects/Portfolio_v2'>View my Project Here</a></p>",
+      "<h2>Bootcamp Week 21</h2><p class='header-desc'>MERN</p><img src='/projectImages/bookSearchEngine.png'/><p>We covered the following topics in depth:</p><ul><li>GraphQL</li><li>Integrating the Front-End</li><li>JSON Web Tokens (JWT)</li></ul><p>This week's project was to take an already-functioning application fit with a RESTful API and refactor it to use a GraphQL API built with Apollo Server.</p><p><a href='/projects/Book_Search_Engine'>View my Project Here</a></p>"
     ]
   },
   {
     "dateString": "February 2024",
-    "main_event": "s",
+    "main_event": "<h2>Bootcamp Week 18</h2><p class='header-desc'>NoSQL</p><img src='/projectImages/socialnetwork.png'/><p>We covered the following topics in depth:</p><ul><li>MongoDB</li><li>Intro to Mongoose</li><li>Advanced Mongoose</li></ul><p>This week's project was to create a Social Network API for a web app that would allow users to share thoughts, post reactions, and create friend lists.</p><p><a href='/projects/Social_Network_API'>View my Project Here</a></p>",
     "logs": [
-      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>",
-      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>",
-      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>"
+      "<h2>Created jbassard97nodecolors</h2><p class='header-desc'>A Utility Library for Styling Terminal Strings</p><img src='/projectImages/nodecolors.png'/><p><a href='/projects/jbassard97nodecolors'>View my Project Here</a></p>",
+      "<h2>Bootcamp Project 2</h2><p class='header-desc'>Interactive Full-Stack Project</p><img src='/projectImages/bookshelf.png'/><p>The following conditions were to be met in this project's MVP:</p><ul><li>Use Node.js and Express.js to create a RESTful API.</li><li>Use Handlebars.js as the templating engine.</li><li>Use MySQL and Sequelize ORM for the database.</li><li>Be deployed using Heroku (with data).</li><li>Have a polished, responsive, interactive UI.</li><li>Have a folder structure that meets the MVC paradigm.</li><li>Include authentication (express-session and cookies).</li></ul><p><a href='/projects/Bookshelf'>View our Project Here</a></p>",
+      "<h2>Bootcamp Week 17</h2><p class='header-desc'>Computer Science for JavaScript</p><img src='/projectImages/regexsimp.png'/><p>We covered the following topics in depth:</p><ul><li>How Does JavaScript Execute?</li><li>Functional Programming in JavaScript</li><li>Algorithms, Recursion, and the Technical Interview</li></ul><p>This week's project was to write a tutorial that breaks down a Regular Expression Pattern of our choosing.</p><p>This tutorial was to be written entirely in markdown, as it was to be published as a GitHub Gist.</p><p>I chose the pattern for matching an Email address: <span style='color:lightblue'>/^([a-z0-9_.-]+)@([da-z.-]+).([a-z.]{2,6})$/</span></p><p><a href='projects/Regex_Simplified'>View my Project Here</a></p>"
     ]
   },
   {
     "dateString": "January 2024",
-    "main_event": "d",
+    "main_event": "<h2>Bootcamp Week 14</h2><p class='header-desc'>Model-View-Controller (MVC)</p><img src='/projectImages/codeCorner.png'/><p>We covered the following topics in depth:</p><ul><li>Handlebars.js Template Engine</li><li>Cookies, Sessions, and Authentication</li><li>Interactions between the Model, View, and Controller.</li></ul><p>This week's project was to create a Tech Blog from scratch, where users can publish blog posts and comment on other posts as well.</p><p><a href='/projects/Code-Corner'>View my Project Here</a></p>",
     "logs": [
       "<h2>Bootcamp Week 12</h2><p class='header-desc'>SQL</p><img src='/projectImages/employee.png'/><p>We covered the following topics in depth:</p><ul><li>Intro to MySQL</li><li>Node.js</li><li>Big Data</li></ul><p>This week's project was to create a content management system (CMS) in the form of a command-line application. This app manages a company's employee database, using Node.js, Inquirer, and MySQL.</p><p><a href='/projects/Employee_Tracker'>View my Project Here</a></p>",
       "<h2>Bootcamp Week 13</h2><p class='header-desc'>Object-Relational Mapping (ORM)</p><img src='/projectImages/ecom.png'/><p>We covered the following topics in depth:</p><ul><li>Object-Relational Mapping (ORM)</li><li>Authentication</li><li>Relationships with Sequelize</li></ul><p>This week's project was to create the backend for an e-commerce site. It used an Express.js API and was configured to interact with a MySQL database through Sequelize ORM.</p>",
-      "<h2>Bootcamp Week 3</h2><p class='header-desc'></p><img src='/projectImages/FILLTHISIN.png'/><p>We covered the following topics in depth:</p><ul><li></li><li></li><li></li></ul><p>This week's project was</p>"
+      "<h2>Christmas Break</h2>"
     ]
   },
   {
