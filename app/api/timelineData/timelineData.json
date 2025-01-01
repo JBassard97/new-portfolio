@@ -1,19 +1,19 @@
 [
   {
-    "dateString": "Now",
-    "main_event": "fuck me",
+    "dateString": "Right Now",
+    "main_event": "<h2>Continuing to Grow and Market Myself</h2>",
     "logs": []
   },
   {
     "dateString": "December 2024",
-    "main_event": "fill later",
+    "main_event": "<h2>Created new-portfolio</h2><p class='header-desc'>You're Here!</p>",
     "logs": [
       "<h2>Created autoCommit</h2><p class='header-desc'>An Experiment With GitHub Actions</p><img src='/projectImages/autocommit.png'/><p><a href='/projects/autoCommit'>View my Project Here</a></p>"
     ]
   },
   {
     "dateString": "November 2024",
-    "main_event": "fill my ass",
+    "main_event": "<h2>Learned the Basics of C++</h2><img src='/cplusplus.svg'/>",
     "logs": []
   },
   {
@@ -23,22 +23,25 @@
   },
   {
     "dateString": "September 2024",
-    "main_event": "fill la",
-    "logs": []
+    "main_event": "<h2>Began working on Cool2Code</h2><p class='header-desc'>A YouTube Channel Focused on Teaching Web Development</p><img src='/cool2code.png'/>",
+    "logs": ["<h2>Learned the Basics of C</h2><img src='/c.svg'/>"]
   },
   {
     "dateString": "August 2024",
     "main_event": "<h2>Created TellMeAbout</h2><p class='header-desc'>An NPM Package That Tells You Everything About A Value</p><p><a href='https://github.com/JBassard97/TellMeAbout'>View my Project Here</a></p>",
-    "logs": ["<h2>Learned the Basics of Java</h2>"]
+    "logs": ["<h2>Learned the Basics of Java</h2><img src='/java.svg'/>"]
   },
   {
     "dateString": "July 2024",
     "main_event": "<h2>The Bad Month</h2><p>I'm goint to level with you: July of 2024 was not a good month for me.</p><p>This is made clear by my lack of <a href='/github'>contributions</a> for July</p><p>I had recently lost my day job, and was scrambling to find a new one that met the previous one's pay.</p><p>Additionally, this month was the two year anniversary of my mother's passing, which certainly didn't help.</p>",
-    "logs": []
+    "logs": [
+      "<h2>Created YesChef</h2><p class='header-desc'>The Only Scheduling App You'll Ever Need For Your Business</p><img src='/projectImages/YesChef.png'/><p><a href='/projects/YesChef'>View my Project Here</a></p>",
+      "<h2>Learned the Basics of Svelte</h2><img src='/svelte.svg'/>"
+    ]
   },
   {
     "dateString": "June 2024",
-    "main_event": "<h2>Created booklist</h2><p class='header-desc'>A React App to Help My Wife Keep Track of Doctoral Readings</p><p><a href='https://github.com/JBassard97/booklist' target='_blank'>View my Project Here</a></p>",
+    "main_event": "<h2>Created booklist</h2><p class='header-desc'>A React App to Help a Doctoral Student Keep Track of Her Books</p><p><a href='https://github.com/JBassard97/booklist' target='_blank'>View my Project Here</a></p>",
     "logs": [
       "<h2>Created ButtonSynth</h2><p class='header-desc'>The Instrument That Goes With You</p><img src='/projectImages/synth.png'/><p><a href='/projects/ButtonSynth'>View my Project Here</a></p>"
     ]
@@ -55,7 +58,8 @@
     "main_event": "<h2>Created Next_Hang_Man</h2><p class='header-desc'>A Game That Works Your Brain</p><img src='/projectImages/hangman.png'/><p><a href='/projects/Next_Hang_Man'>View my Project Here</a></p>",
     "logs": [
       "<h2>Bootcamp Project 3</h2><p class='header-desc'>Interactive MERN Stack Single-Page Application</p><img src='/projectImages/PollR_Screenshot.png'/><p>The following conditions were to be met in this project's MVP:</p><ul><li>Use React for the Front End</li><li>Use GraphQL with a Node.js and Express.js server.</li><li>Use queries and mutations for retrieving, adding, updating, and deleting data.</li><li>Be deployed using Render (with data).</li><li>Include authentication (JWT).</li><li>Have a polished, responsive, interactive UI.</li></ul><p><a href='/projects/PollR'>View our Project Here</a></p>",
-      "<h2>Created DokePex</h2><p class='header-desc'>An Homage to a Childhood Classic</p><img src='/projectImages/dokepex.png'/><p><a href='/projects/DokePex'>View my Project Here</a></p>"
+      "<h2>Created DokePex</h2><p class='header-desc'>An Homage to a Childhood Classic</p><img src='/projectImages/dokepex.png'/><p><a href='/projects/DokePex'>View my Project Here</a></p>",
+      "<h2>Learned the Basics of PHP</h2><img src='/php.svg'/>"
     ]
   },
   {

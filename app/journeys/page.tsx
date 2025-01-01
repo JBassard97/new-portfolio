@@ -46,15 +46,33 @@ const Journeys = () => {
   const markRefs = useRef<(HTMLDivElement | null)[][]>([]);
 
   const handleSelection = (text: string) => {
+    const container = document.querySelector(".selected-text-container");
+
+    // Temporarily remove the class to force re-trigger animation
+    if (container && container instanceof HTMLElement) {
+      container.classList.remove("visible", "fade-out");
+      // Trigger reflow (forces browser to reset animation)
+      void container.offsetWidth;
+    }
+
     if (selectedText === text) {
       setIsFadingOut(true); // Start fading out
       setTimeout(() => {
         setSelectedText(null); // Clear text after fade-out
         setIsFadingOut(false); // Reset fade-out state
-      }, 100); // Adjust timeout to match the fade-out duration in CSS
+      }, 250); // Match the fade-out duration in CSS
     } else {
-      setSelectedText(text); // Update text immediately for selection
-      setIsFadingOut(false); // Ensure fade-out is reset
+      setIsFadingOut(true); // Start fading out of current text
+      setTimeout(() => {
+        setSelectedText(text); // Change content after fade-out
+        setIsFadingOut(false); // Reset fade-out state
+      }, 250); // Delay update to match fade-out duration
+    }
+
+    if (container) {
+      setTimeout(() => {
+        container.classList.add("visible");
+      }, 250); // Add back the class after a brief delay
     }
   };
 

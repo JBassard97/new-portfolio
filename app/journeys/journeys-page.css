@@ -157,6 +157,7 @@
 
 .selected-text img {
   width: 100%;
+  max-width: 18rem;
   min-height: 5rem;
   margin-top: 0.5rem;
   max-height: 20rem;
@@ -178,7 +179,7 @@
 }
 
 .selected-text h2 {
-  line-height: 10px;
+  line-height: 20px;
   margin-top: 0.5rem;
 }
 
@@ -205,5 +206,5 @@
 .selected-text-container.fade-out {
   opacity: 0;
   transform: translateX(2rem);
-  transition: opacity 0.3s ease, transform 0.3s ease; /* Ensure 0.5s matches the timeout */
+  transition: opacity 0.4s ease, transform 0.4s ease; /* Ensure 0.5s matches the timeout */
 }
