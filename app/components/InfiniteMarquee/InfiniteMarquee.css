@@ -3,11 +3,10 @@
   position: relative;
   width: 100%;
   height: fit-content;
-  border: 1px solid aqua;
+  border: 1px solid grey;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 10px 0;
 }
 
 .marquee-content {
@@ -17,14 +16,30 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  /* border: 1px solid red; */
 }
 
-.marquee-content span {
-  padding: 5px;
+.marquee-content div {
+  padding: 10px 5px;
   font-size: 18px;
-  display: inline-block;
-  border: 1px solid salmon;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid salmon; */
   height: 70px;
   min-width: 200px;
   text-wrap: wrap;
 }
+
+.marquee-content div a {
+    border: 1px solid blue;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .marquee-content div a:hover {
+    
+} */

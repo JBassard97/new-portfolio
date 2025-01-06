@@ -97,22 +97,54 @@ const InfiniteMarquee: React.FC<MarqueeProps> = ({
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <span>Welcome to my homepage! 🌟</span>
-        <span>Check out the latest updates! 🚀</span>
-        <span>Exciting projects and more! 🎨</span>
-        <span>The fourth one</span>
-        <span>Oh and a fifth one</span>
-        <span>A sixth one for good measure</span>
-        <span>span</span>
-        <span>another</span>
-        <span>please</span>
-        <span>dammit</span>
-        <span>2 more</span>
-        <span>fuck</span>
-        <span>Bro another one??</span>
-        <span>how</span>
-        <span>Many</span>
-        <span>do</span>
+        <div>
+          <a href="/projects/all">Welcome to my homepage! 🌟</a>
+        </div>
+        <div>
+          <a href="/projects/all">Check out the latest updates! 🚀</a>
+        </div>
+        <div>
+          <a href="/projects/all">Exciting projects and more! 🎨</a>
+        </div>
+        <div>
+          <a href="/projects/all">The fourth one</a>
+        </div>
+        <div>
+          <a href="/projects/all">Oh and a fifth one</a>
+        </div>
+        <div>
+          <a href="/projects/all">A sixth one for good measure</a>
+        </div>
+        <div>
+          <a href="/projects/all">div</a>
+        </div>
+        <div>
+          <a href="/projects/all">another</a>
+        </div>
+        <div>
+          <a href="/projects/all">please</a>
+        </div>
+        <div>
+          <a href="/projects/all">dammit</a>
+        </div>
+        <div>
+          <a href="/projects/all">2 more</a>
+        </div>
+        <div>
+          <a href="/projects/all">fuck</a>
+        </div>
+        <div>
+          <a href="/projects/all">Bro</a>
+        </div>
+        <div>
+          <a href="/projects/all">how</a>
+        </div>
+        <div>
+          <a href="/projects/all">Many</a>
+        </div>
+        <div>
+          <a href="/projects/all">do</a>
+        </div>
       </div>
     </div>
   );
