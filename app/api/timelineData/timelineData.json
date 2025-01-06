@@ -48,17 +48,17 @@
   },
   {
     "dateString": "May 2024",
-    "main_event": "fi",
+    "main_event": "<h2>Created Next_Hang_Man</h2><p class='header-desc'>A Game That Works Your Brain</p><img src='/projectImages/hangman.png'/><p><a href='/projects/Next_Hang_Man'>View my Project Here</a></p>",
     "logs": [
       "<h2>Created Cover_Letter_Generator</h2><p class='header-desc'>The Tool I Use for Tailoring Cover Letters</p><p><a href='https://github.com/JBassard97/Cover_Letter_Generator'>View my Project Here</a></p>"
     ]
   },
   {
     "dateString": "April 2024",
-    "main_event": "<h2>Created Next_Hang_Man</h2><p class='header-desc'>A Game That Works Your Brain</p><img src='/projectImages/hangman.png'/><p><a href='/projects/Next_Hang_Man'>View my Project Here</a></p>",
+    "main_event": "<h2>Created DokePex</h2><p class='header-desc'>An Homage to a Childhood Classic</p><img src='/projectImages/dokepex.png'/><p><a href='/projects/DokePex'>View my Project Here</a></p>",
+
     "logs": [
       "<h2>Bootcamp Project 3</h2><p class='header-desc'>Interactive MERN Stack Single-Page Application</p><img src='/projectImages/PollR_Screenshot.png'/><p>The following conditions were to be met in this project's MVP:</p><ul><li>Use React for the Front End</li><li>Use GraphQL with a Node.js and Express.js server.</li><li>Use queries and mutations for retrieving, adding, updating, and deleting data.</li><li>Be deployed using Render (with data).</li><li>Include authentication (JWT).</li><li>Have a polished, responsive, interactive UI.</li></ul><p><a href='/projects/PollR'>View our Project Here</a></p>",
-      "<h2>Created DokePex</h2><p class='header-desc'>An Homage to a Childhood Classic</p><img src='/projectImages/dokepex.png'/><p><a href='/projects/DokePex'>View my Project Here</a></p>",
       "<h2>Learned the Basics of PHP</h2><img src='/php.svg'/>"
     ]
   },
@@ -118,6 +118,6 @@
   {
     "dateString": "September 2023",
     "main_event": "<h2>Bootcamp Begins</h2><img src='/unc-logo.svg'/><p>At the beginning of September, I enrolled in the intensive <span style='color:lightblue'>Full Stack Coding Bootcamp with UNC Chapel Hill</span>.</p><p>It was a 100% online experience that lasted for 6 months, consisting of 3-hour sessions over Zoom every Monday, Tuesday, and Thursday night. This scheduling allowed me to continue working my day job comfortably.</p><p>The accelerated curriculum isn't for the faint of heart (not to mention the price), but it proved to be an invaluable program that was critical to my development as a programmer.</p>",
-    "logs": ["No logs will show for here"]
+    "logs": []
   }
 ]

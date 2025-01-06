@@ -146,6 +146,11 @@
   text-align: center;
   overflow-y: scroll;
   scrollbar-width: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.selected-text:hover {
+  box-shadow: 0 0 10px 5px rgba(0, 255, 247, 0.5);
 }
 
 .selected-text p {

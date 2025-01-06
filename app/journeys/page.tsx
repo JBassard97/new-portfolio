@@ -178,47 +178,46 @@ const Journeys = () => {
                   )}
                   onClick={() => handleSelection(month.main_event)}
                 ></div>
-                {i < timelineData.length - 1 && (
-                  <div
-                    className="line"
-                    style={{
-                      width: `${length}px`,
-                      transform: `rotate(${angle}deg)`,
+                {/* {i < timelineData.length - 1 && ( */}
+                <div
+                  className="line"
+                  style={{
+                    width: `${length}px`,
+                    transform: `rotate(${angle}deg)`,
+                  }}
+                >
+                  <p
+                    ref={(el) => {
+                      timeLabelRefs.current[i] = el;
                     }}
+                    className={getElementClasses(
+                      "time-label",
+                      `label-${i}`,
+                      false
+                    )}
                   >
-                    <p
-                      ref={(el) => {
-                        timeLabelRefs.current[i] = el;
-                      }}
-                      className={getElementClasses(
-                        "time-label",
-                        `label-${i}`,
-                        false
-                      )}
-                    >
-                      {month.dateString}
-                    </p>
-                    <div className="marks">
-                      {month.logs.map((log, index) => (
-                        <div
-                          key={index}
-                          ref={(el) => {
-                            if (!markRefs.current[i]) {
-                              markRefs.current[i] = [];
-                            }
-                            markRefs.current[i][index] = el;
-                          }}
-                          className={getElementClasses(
-                            "mark",
-                            `mark-${i}-${index}`,
-                            log === selectedText
-                          )}
-                          onClick={() => handleSelection(log)}
-                        ></div>
-                      ))}
-                    </div>
+                    {month.dateString}
+                  </p>
+                  <div className="marks">
+                    {month.logs.map((log, index) => (
+                      <div
+                        key={index}
+                        ref={(el) => {
+                          if (!markRefs.current[i]) {
+                            markRefs.current[i] = [];
+                          }
+                          markRefs.current[i][index] = el;
+                        }}
+                        className={getElementClasses(
+                          "mark",
+                          `mark-${i}-${index}`,
+                          log === selectedText
+                        )}
+                        onClick={() => handleSelection(log)}
+                      ></div>
+                    ))}
                   </div>
-                )}
+                </div>
               </div>
             );
           })}

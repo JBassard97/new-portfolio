@@ -55,5 +55,6 @@
 /* ----------------- */
 
 .home-page {
-  background: red;
+  height: fit-content;
 }
+

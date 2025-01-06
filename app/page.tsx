@@ -2,12 +2,37 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { Tooltip } from "react-tooltip";
+import InfiniteMarquee from "./components/InfiniteMarquee/InfiniteMarquee";
 import "./home.css";
 
 export default function Home() {
   const [showVideo, setShowVideo] = useState(false);
   const [videoFading, setVideoFading] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const marqueeRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const marquee = marqueeRef.current;
+    if (!marquee) return;
+
+    const marqueeItems = Array.from(marquee.children) as HTMLElement[];
+    const totalWidth = marqueeItems.reduce(
+      (acc, item) => acc + item.offsetWidth,
+      0
+    );
+    let currentPosition = 0;
+
+    const step = () => {
+      currentPosition -= 1; // Adjust speed here
+      if (Math.abs(currentPosition) >= totalWidth) {
+        currentPosition = 0; // Reset position seamlessly
+      }
+      marquee.style.transform = `translateX(${currentPosition}px)`;
+      requestAnimationFrame(step);
+    };
+
+    step();
+  }, []);
 
   useEffect(() => {
     // Access `localStorage` only on the client
@@ -95,8 +120,12 @@ export default function Home() {
           </div>
         )}
       </div>
+
+      {/* ------------------------------ */}
+
       <div className="home-page">
-        <h1>Hi, welcome to the homepage!</h1>
+        <InfiniteMarquee speed="fast" />
+
         <div
           className="start-button"
           onClick={startVideo}
@@ -104,7 +133,7 @@ export default function Home() {
           data-tooltip-content="Play Intro"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-            <path d="M8 5v14l11-7z" />{" "}
+            <path d="M8 5v14l11-7z" />
           </svg>
         </div>
         <Tooltip

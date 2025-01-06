@@ -1,0 +1,25 @@
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  border: 1px solid aqua;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.marquee-content {
+  display: flex;
+  position: relative;
+  white-space: nowrap;
+}
+
+.marquee-content span {
+  padding: 5px;
+  font-size: 18px;
+  display: inline-block;
+  border: 1px solid salmon;
+  /* margin-right: 0.5rem; */
+}
