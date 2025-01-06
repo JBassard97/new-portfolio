@@ -32,7 +32,6 @@
 }
 
 .marquee-content div a {
-    border: 1px solid blue;
     height: 100%;
     width: 100%;
     display: flex;
@@ -40,6 +39,6 @@
     align-items: center;
 }
 
-/* .marquee-content div a:hover {
-    
-} */
+.look-up-to .marquee-content div a {
+  border: 1.5px solid red;
+}

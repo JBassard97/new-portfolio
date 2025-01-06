@@ -3,9 +3,15 @@ import "./InfiniteMarquee.css";
 
 type Speed = "slow" | "normal" | "fast" | number;
 
+interface Children {
+  Text: string;
+  Link: string;
+}
+
 interface MarqueeProps {
   speed?: Speed;
   className?: string;
+  children: Children[];
 }
 
 const SPEED_MAP = {
@@ -17,6 +23,7 @@ const SPEED_MAP = {
 const InfiniteMarquee: React.FC<MarqueeProps> = ({
   speed = "normal",
   className = "",
+  children = [],
 }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const contentRef = useRef<HTMLDivElement | null>(null);
@@ -52,18 +59,22 @@ const InfiniteMarquee: React.FC<MarqueeProps> = ({
 
           // Check if we need to reset
           const firstItem = itemsRef.current[0];
-          const firstItemWidth = firstItem.offsetWidth;
 
-          if (Math.abs(positionRef.current) >= firstItemWidth) {
-            // Move first item to the end
-            const shiftedItem = itemsRef.current.shift();
-            if (shiftedItem) {
-              itemsRef.current.push(shiftedItem);
-              content.appendChild(shiftedItem);
+          if (firstItem) {
+            // Add a safety check
+            const firstItemWidth = firstItem.offsetWidth;
 
-              // Reset position by the width of the moved item
-              positionRef.current += firstItemWidth;
-              content.style.transform = `translateX(${positionRef.current}px)`;
+            if (Math.abs(positionRef.current) >= firstItemWidth) {
+              // Move first item to the end
+              const shiftedItem = itemsRef.current.shift();
+              if (shiftedItem) {
+                itemsRef.current.push(shiftedItem);
+                content.appendChild(shiftedItem);
+
+                // Reset position by the width of the moved item
+                positionRef.current += firstItemWidth;
+                content.style.transform = `translateX(${positionRef.current}px)`;
+              }
             }
           }
         }
@@ -97,54 +108,15 @@ const InfiniteMarquee: React.FC<MarqueeProps> = ({
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <div>
-          <a href="/projects/all">Welcome to my homepage! 🌟</a>
-        </div>
-        <div>
-          <a href="/projects/all">Check out the latest updates! 🚀</a>
-        </div>
-        <div>
-          <a href="/projects/all">Exciting projects and more! 🎨</a>
-        </div>
-        <div>
-          <a href="/projects/all">The fourth one</a>
-        </div>
-        <div>
-          <a href="/projects/all">Oh and a fifth one</a>
-        </div>
-        <div>
-          <a href="/projects/all">A sixth one for good measure</a>
-        </div>
-        <div>
-          <a href="/projects/all">div</a>
-        </div>
-        <div>
-          <a href="/projects/all">another</a>
-        </div>
-        <div>
-          <a href="/projects/all">please</a>
-        </div>
-        <div>
-          <a href="/projects/all">dammit</a>
-        </div>
-        <div>
-          <a href="/projects/all">2 more</a>
-        </div>
-        <div>
-          <a href="/projects/all">fuck</a>
-        </div>
-        <div>
-          <a href="/projects/all">Bro</a>
-        </div>
-        <div>
-          <a href="/projects/all">how</a>
-        </div>
-        <div>
-          <a href="/projects/all">Many</a>
-        </div>
-        <div>
-          <a href="/projects/all">do</a>
-        </div>
+        {children.length === 0 ? (
+          <div>No items to display</div>
+        ) : (
+          children.map((child, index) => (
+            <div key={index}>
+              <a href={child.Link}>{child.Text}</a>
+            </div>
+          ))
+        )}
       </div>
     </div>
   );

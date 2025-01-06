@@ -5,11 +5,37 @@ import { Tooltip } from "react-tooltip";
 import InfiniteMarquee from "./components/InfiniteMarquee/InfiniteMarquee";
 import "./home.css";
 
+interface HomePageData {
+  PeopleILookUpTo: {
+    Text: string;
+    Link: string;
+  }[];
+}
+
 export default function Home() {
   const [showVideo, setShowVideo] = useState(false);
   const [videoFading, setVideoFading] = useState(false);
+  const [homepageData, setHomepageData] = useState<HomePageData | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const marqueeRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const fetchHomepageData = async () => {
+      try {
+        const response = await fetch("/api/homepageData");
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        console.log("Homepage Data: ", data);
+        setHomepageData(data);
+      } catch (error) {
+        console.error("Error fetching homepage data");
+      }
+    };
+
+    fetchHomepageData();
+  }, []);
 
   useEffect(() => {
     const marquee = marqueeRef.current;
@@ -124,7 +150,16 @@ export default function Home() {
       {/* ------------------------------ */}
 
       <div className="home-page">
-        <InfiniteMarquee speed="normal"/>
+        {homepageData && (
+          <div>
+            <h3>People I Look Up To</h3>
+            <InfiniteMarquee
+              speed={"normal"}
+              className="look-up-to"
+              children={homepageData.PeopleILookUpTo}
+            />
+          </div>
+        )}
 
         <div
           className="start-button"

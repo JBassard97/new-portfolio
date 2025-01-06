@@ -59,3 +59,8 @@
   height: fit-content;
 }
 
+.home-page h3 {
+  text-align: center;
+  margin: 5px 0;
+  text-decoration: underline;
+}

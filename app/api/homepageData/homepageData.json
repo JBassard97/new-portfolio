@@ -1,5 +1,11 @@
 {
-  "TellMeAbout": ["Work Experience", "Qualifications"],
-  "HowDoYouFeelAbout": [],
-  "WhatAreYourFavoriteTechnologies": []
+  "PeopleILookUpTo": [
+    { "Text": "A Person 1", "Link": "/projects/all" },
+    { "Text": "A Person 2", "Link": "/projects/all" },
+    { "Text": "A Person 3", "Link": "/projects/all" },
+    { "Text": "A Person 4", "Link": "/projects/all" },
+    { "Text": "A Person 5", "Link": "/projects/all" },
+    { "Text": "A Person 6", "Link": "/projects/all" },
+    { "Text": "A Person 7", "Link": "/projects/all" }
+  ]
 }
