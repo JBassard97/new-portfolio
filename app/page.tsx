@@ -124,7 +124,7 @@ export default function Home() {
       {/* ------------------------------ */}
 
       <div className="home-page">
-        <InfiniteMarquee speed="fast" />
+        <InfiniteMarquee speed="normal"/>
 
         <div
           className="start-button"
