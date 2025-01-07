@@ -5,11 +5,14 @@ import { Tooltip } from "react-tooltip";
 import InfiniteMarquee from "./components/InfiniteMarquee/InfiniteMarquee";
 import "./home.css";
 
+interface ItemBlock {
+  Text: string;
+  Link: string;
+}
+
 interface HomePageData {
-  PeopleILookUpTo: {
-    Text: string;
-    Link: string;
-  }[];
+  PeopleILookUpTo: ItemBlock[];
+  MyFavoriteProjects: ItemBlock[];
 }
 
 export default function Home() {
@@ -18,6 +21,7 @@ export default function Home() {
   const [homepageData, setHomepageData] = useState<HomePageData | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const marqueeRef = useRef<HTMLDivElement>(null);
+  const fieldRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const fetchHomepageData = async () => {
@@ -61,7 +65,6 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    // Access `localStorage` only on the client
     const hasSeenIntro = localStorage.getItem("hasSeenIntro");
     setShowVideo(!hasSeenIntro); // Show video if `hasSeenIntro` is not set
   }, []);
@@ -109,6 +112,59 @@ export default function Home() {
     setVideoFading(false); // Remove any fading state
   };
 
+  const getRandColor = () =>
+    `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  const getWidth = () =>
+    window.innerWidth ||
+    document.documentElement.clientWidth ||
+    document.body.clientWidth;
+  const getHeight = () =>
+    window.innerHeight ||
+    document.documentElement.clientHeight ||
+    document.body.clientHeight;
+  const randomInteger = (min: number, max: number) =>
+    Math.floor(min + Math.random() * (max - min + 1));
+  const getRandLeft = () => randomInteger(0, getWidth());
+  const getRandTop = () => randomInteger(0, getHeight());
+
+  const createCircle = () => {
+    const circle = document.createElement("div");
+    circle.classList.add("circle");
+
+    const animationDuration = randomInteger(5000, 30000);
+    const left = getRandLeft();
+    const top = getRandTop();
+    const size = randomInteger(20, 200);
+    const shadow = randomInteger(20, 60);
+    const borderWidth = randomInteger(1, 3);
+
+    // Generate random style
+    circle.style.left = `${left}px`;
+    circle.style.top = `${top}px`;
+    circle.style.animationDuration = `${animationDuration / 1000}s`;
+    circle.style.animationName = `move${randomInteger(1, 8)}`;
+    circle.style.borderColor = getRandColor();
+    circle.style.width = `${size}px`;
+    circle.style.height = `${size}px`;
+    circle.style.borderRadius = `${size}px`;
+    circle.style.boxShadow = `0 0 ${shadow}px ${getRandColor()}`;
+    circle.style.borderWidth = `${borderWidth}px`;
+
+    if (fieldRef.current) {
+      fieldRef.current.appendChild(circle);
+      setTimeout(() => {
+        if (fieldRef.current) {
+          fieldRef.current.removeChild(circle);
+        }
+      }, animationDuration);
+    }
+  };
+
+  useEffect(() => {
+    const interval = setInterval(createCircle, 1500);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
       <div
@@ -147,20 +203,10 @@ export default function Home() {
         )}
       </div>
 
-      {/* ------------------------------ */}
+      {/* Circle Animation Field */}
+      <div ref={fieldRef} className="field"></div>
 
       <div className="home-page">
-        {homepageData && (
-          <div>
-            <h3>People I Look Up To</h3>
-            <InfiniteMarquee
-              speed={"normal"}
-              className="look-up-to"
-              children={homepageData.PeopleILookUpTo}
-            />
-          </div>
-        )}
-
         <div
           className="start-button"
           onClick={startVideo}

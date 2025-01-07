@@ -32,13 +32,17 @@
 }
 
 .marquee-content div a {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .look-up-to .marquee-content div a {
   border: 1.5px solid red;
+}
+
+.favorite-projects .marquee-content div a {
+  border: 1.5px solid blue;
 }

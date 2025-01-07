@@ -7,5 +7,14 @@
     { "Text": "A Person 5", "Link": "/projects/all" },
     { "Text": "A Person 6", "Link": "/projects/all" },
     { "Text": "A Person 7", "Link": "/projects/all" }
+  ],
+  "MyFavoriteProjects": [
+    { "Text": "YesChef", "Link": "/projects/YesChef" },
+    { "Text": "PollR", "Link": "/projects/PollR" },
+    { "Text": "PythonTerminalQuest", "Link": "/projects/PythonTerminalQuest" },
+    { "Text": "Next_Hang_Man", "Link": "/projects/Next_Hang_Man" },
+    { "Text": "DokePex", "Link": "/projects/DokePex" },
+    { "Text": "ButtonSynth", "Link": "/projects/ButtonSynth" },
+    { "Text": "autoCommit", "Link": "/projects/autoCommit" }
   ]
 }

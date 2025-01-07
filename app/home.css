@@ -35,7 +35,7 @@
 }
 
 .start-button {
-  z-index: -1;
+  z-index: 1; /* Ensure it's below the stop button */
 }
 
 .stop-button:hover,
@@ -47,6 +47,7 @@
   fill: #000; /* Icon color */
   width: 24px;
   height: 24px;
+  z-index: 1;
 }
 
 .hidden {
@@ -59,8 +60,138 @@
   height: fit-content;
 }
 
-.home-page h3 {
-  text-align: center;
-  margin: 5px 0;
-  text-decoration: underline;
+.field {
+  background: black;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 90vh;
+}
+
+.circle {
+  border: 3px solid;
+  position: absolute;
+  animation-duration: 7s;
+  background-color: black;
+  opacity: 0;
+}
+
+@keyframes move1 {
+  0% {
+    transform: scale(1) translate(0px, 0px);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(2) translate(50px, 50px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1) translate(100px, 100px);
+    opacity: 0;
+  }
+}
+
+@keyframes move2 {
+  0% {
+    transform: scale(1) translate(0px, 0px);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(2) translate(0px, 50px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1) translate(0px, 100px);
+    opacity: 0;
+  }
+}
+
+@keyframes move3 {
+  0% {
+    transform: scale(1) translate(0px, 0px);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(2) translate(50px, 0px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1) translate(100px, 0px);
+    opacity: 0;
+  }
+}
+
+@keyframes move4 {
+  0% {
+    transform: scale(1) translate(0px, 0px);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(2) translate(0px, -50px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1) translate(0px, -100px);
+    opacity: 0;
+  }
+}
+
+@keyframes move5 {
+  0% {
+    transform: scale(1) translate(0px, 0px);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(2) translate(-50px, 0px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1) translate(-100px, 0px);
+    opacity: 0;
+  }
+}
+
+@keyframes move6 {
+  0% {
+    transform: scale(1) translate(0px, 0px);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(2) translate(50px, -50px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1) translate(100px, -100px);
+    opacity: 0;
+  }
+}
+
+@keyframes move7 {
+  0% {
+    transform: scale(1) translate(0px, 0px);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(2) translate(-50px, 50px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1) translate(-100px, 100px);
+    opacity: 0;
+  }
+}
+
+@keyframes move8 {
+  0% {
+    transform: scale(1) translate(0px, 0px);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(2) translate(-50px, -50px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1) translate(-100px, -100px);
+    opacity: 0;
+  }
 }
