@@ -207,6 +207,9 @@ export default function Home() {
       <div ref={fieldRef} className="field"></div>
 
       <div className="home-page">
+        <div className="home-page-content">
+          <h1>Hi</h1>
+        </div>
         <div
           className="start-button"
           onClick={startVideo}
