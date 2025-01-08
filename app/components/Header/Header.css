@@ -1,12 +1,13 @@
 header {
   margin-top: 1rem;
   margin-bottom: 1rem;
+  z-index: 5;
+  position: relative;
 }
 
 header ul {
   width: 100%;
   display: flex;
-
   justify-content: space-evenly;
   list-style: none;
 }

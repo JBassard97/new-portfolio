@@ -2,25 +2,19 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { Tooltip } from "react-tooltip";
-import InfiniteMarquee from "./components/InfiniteMarquee/InfiniteMarquee";
 import "./home.css";
 
-interface ItemBlock {
-  Text: string;
-  Link: string;
-}
-
 interface HomePageData {
-  PeopleILookUpTo: ItemBlock[];
-  MyFavoriteProjects: ItemBlock[];
+  topic: string;
+  details: string;
 }
 
 export default function Home() {
   const [showVideo, setShowVideo] = useState(false);
   const [videoFading, setVideoFading] = useState(false);
-  const [homepageData, setHomepageData] = useState<HomePageData | null>(null);
+  const [homepageData, setHomepageData] = useState<HomePageData[] | null>(null);
+  const [selectedTopic, setSelectedTopic] = useState<string | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const marqueeRef = useRef<HTMLDivElement>(null);
   const fieldRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -42,27 +36,8 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const marquee = marqueeRef.current;
-    if (!marquee) return;
-
-    const marqueeItems = Array.from(marquee.children) as HTMLElement[];
-    const totalWidth = marqueeItems.reduce(
-      (acc, item) => acc + item.offsetWidth,
-      0
-    );
-    let currentPosition = 0;
-
-    const step = () => {
-      currentPosition -= 1; // Adjust speed here
-      if (Math.abs(currentPosition) >= totalWidth) {
-        currentPosition = 0; // Reset position seamlessly
-      }
-      marquee.style.transform = `translateX(${currentPosition}px)`;
-      requestAnimationFrame(step);
-    };
-
-    step();
-  }, []);
+    console.log("Selected Topic: ", selectedTopic);
+  }, [selectedTopic]);
 
   useEffect(() => {
     const hasSeenIntro = localStorage.getItem("hasSeenIntro");
@@ -94,7 +69,8 @@ export default function Home() {
   const stopVideo = () => {
     const stopButton: any = document.querySelector(".stop-button");
     if (stopButton) {
-      stopButton.style.display = "none";
+      stopButton.removeAttribute("data-tooltip-id"); // Remove tooltip association
+      stopButton.removeAttribute("data-tooltip-content");
     }
 
     setVideoFading(true);
@@ -165,6 +141,14 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
+  const handleSelect = (topic: string) => {
+    if (selectedTopic === topic) {
+      setSelectedTopic(null);
+    } else {
+      setSelectedTopic(topic);
+    }
+  };
+
   return (
     <>
       <div
@@ -187,13 +171,18 @@ export default function Home() {
             <div
               className="stop-button"
               onClick={stopVideo}
-              data-tooltip-id="stop-intro"
-              data-tooltip-content="Stop Intro"
+              data-tooltip-id={
+                showVideo && !videoFading ? "stop-intro" : undefined
+              }
+              data-tooltip-content={
+                showVideo && !videoFading ? "Stop Intro" : undefined
+              }
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                 <path d="M6 6h6v12H6zM12 6h6v12h-6z" />
               </svg>
             </div>
+
             <Tooltip
               id="stop-intro"
               opacity={1}
@@ -203,12 +192,70 @@ export default function Home() {
         )}
       </div>
 
-      {/* Circle Animation Field */}
       <div ref={fieldRef} className="field"></div>
 
       <div className="home-page">
         <div className="home-page-content">
-          <h1>Hi</h1>
+          {homepageData && (
+            <div className="star">
+              <div className="star-row-1">
+                <div
+                  className={`top-point topic ${
+                    selectedTopic === homepageData[0].topic ? "selected" : ""
+                  }`}
+                  onClick={() => handleSelect(homepageData[0].topic)}
+                >
+                  {homepageData[0].topic.split(" ").map((word, i) => (
+                    <p key={i}>{word}</p>
+                  ))}
+                </div>
+              </div>
+              <div className="star-row-2">
+                <div
+                  className={`top-left-point topic ${
+                    selectedTopic === homepageData[4].topic ? "selected" : ""
+                  }`}
+                  onClick={() => handleSelect(homepageData[4].topic)}
+                >
+                  {homepageData[4].topic.split(" ").map((word, i) => (
+                    <p key={i}>{word}</p>
+                  ))}
+                </div>
+                <div
+                  className={`top-right-point topic ${
+                    selectedTopic === homepageData[1].topic ? "selected" : ""
+                  }`}
+                  onClick={() => handleSelect(homepageData[1].topic)}
+                >
+                  {homepageData[1].topic.split(" ").map((word, i) => (
+                    <p key={i}>{word}</p>
+                  ))}
+                </div>
+              </div>
+              <div className="star-row-3">
+                <div
+                  className={`bottom-left-point topic ${
+                    selectedTopic === homepageData[3].topic ? "selected" : ""
+                  }`}
+                  onClick={() => handleSelect(homepageData[3].topic)}
+                >
+                  {homepageData[3].topic.split(" ").map((word, i) => (
+                    <p key={i}>{word}</p>
+                  ))}
+                </div>
+                <div
+                  className={`bottom-right-point topic ${
+                    selectedTopic === homepageData[2].topic ? "selected" : ""
+                  }`}
+                  onClick={() => handleSelect(homepageData[2].topic)}
+                >
+                  {homepageData[2].topic.split(" ").map((word, i) => (
+                    <p key={i}>{word}</p>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
         </div>
         <div
           className="start-button"
@@ -223,7 +270,7 @@ export default function Home() {
         <Tooltip
           id="start-intro"
           opacity={1}
-          style={{ background: "darkblue" }}
+          style={{ background: "darkblue", zIndex: 1000 }}
         />
       </div>
     </>

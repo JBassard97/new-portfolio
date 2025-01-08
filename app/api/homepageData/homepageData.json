@@ -1,20 +1,7 @@
-{
-  "PeopleILookUpTo": [
-    { "Text": "A Person 1", "Link": "/projects/all" },
-    { "Text": "A Person 2", "Link": "/projects/all" },
-    { "Text": "A Person 3", "Link": "/projects/all" },
-    { "Text": "A Person 4", "Link": "/projects/all" },
-    { "Text": "A Person 5", "Link": "/projects/all" },
-    { "Text": "A Person 6", "Link": "/projects/all" },
-    { "Text": "A Person 7", "Link": "/projects/all" }
-  ],
-  "MyFavoriteProjects": [
-    { "Text": "YesChef", "Link": "/projects/YesChef" },
-    { "Text": "PollR", "Link": "/projects/PollR" },
-    { "Text": "PythonTerminalQuest", "Link": "/projects/PythonTerminalQuest" },
-    { "Text": "Next_Hang_Man", "Link": "/projects/Next_Hang_Man" },
-    { "Text": "DokePex", "Link": "/projects/DokePex" },
-    { "Text": "ButtonSynth", "Link": "/projects/ButtonSynth" },
-    { "Text": "autoCommit", "Link": "/projects/autoCommit" }
-  ]
-}
+[
+  { "topic": "Who I Am", "details": "Paris" },
+  { "topic": "What I Do", "details": "Madrid" },
+  { "topic": "My Experience", "details": "Rome" },
+  { "topic": "My Education", "details": "42" },
+  { "topic": "Contact Me", "details": "Do it" }
+]

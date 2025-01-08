@@ -67,7 +67,7 @@
   width: 100%;
   height: 90vh;
   z-index: 1;
-  border: 1px solid red;
+  pointer-events: none;
 }
 
 .circle {
@@ -76,6 +76,7 @@
   animation-duration: 7s;
   background-color: black;
   opacity: 0;
+  pointer-events: none;
 }
 
 @keyframes move1 {
@@ -203,6 +204,62 @@
   position: absolute;
   top: 0;
   left: 0;
-  padding-top: 40px;
+  padding-top: 70px;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.star-row-1,
+.star-row-2,
+.star-row-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+
+.star-row-1 .topic {
+  transform: translateY(35px);
+}
+
+.star-row-2 {
+  gap: 70px;
+}
+
+.star-row-3 {
+  /* margin-top: 20px; */
+  gap: 8px;
+}
+
+.topic {
+  min-height: 100px;
+  min-width: 100px;
+  backdrop-filter: blur(5px);
+  border-radius: 50%;
+  border: 1.5px solid grey;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 5px;
+  transition: all 1s ease, background-color 0.3s ease;
+}
+
+.topic p {
+  font-weight: bold;
+  user-select: none;
+}
+
+.topic:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.topic.selected {
+  max-height: fit-content;
+  border-radius: 0;
+  backdrop-filter: none;
 }
