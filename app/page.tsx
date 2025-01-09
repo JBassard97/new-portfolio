@@ -198,7 +198,12 @@ export default function Home() {
         <div className="home-page-content">
           {homepageData && (
             <div className="star">
-              <div className="star-row-1">
+              <div
+                className="star-row-1"
+                style={{
+                  marginTop: selectedTopic ? "40px" : "20px",
+                }}
+              >
                 <div
                   className={`top-point topic ${
                     selectedTopic === homepageData[0].topic ? "selected" : ""
@@ -208,6 +213,9 @@ export default function Home() {
                   {homepageData[0].topic.split(" ").map((word, i) => (
                     <p key={i}>{word}</p>
                   ))}
+                  {selectedTopic === homepageData[0].topic && (
+                    <p className="topic-details">{homepageData[0].details}</p>
+                  )}
                 </div>
               </div>
               <div className="star-row-2">
@@ -220,6 +228,9 @@ export default function Home() {
                   {homepageData[4].topic.split(" ").map((word, i) => (
                     <p key={i}>{word}</p>
                   ))}
+                  {selectedTopic === homepageData[4].topic && (
+                    <p className="topic-details">{homepageData[4].details}</p>
+                  )}
                 </div>
                 <div
                   className={`top-right-point topic ${
@@ -230,6 +241,9 @@ export default function Home() {
                   {homepageData[1].topic.split(" ").map((word, i) => (
                     <p key={i}>{word}</p>
                   ))}
+                  {selectedTopic === homepageData[1].topic && (
+                    <p className="topic-details">{homepageData[1].details}</p>
+                  )}
                 </div>
               </div>
               <div className="star-row-3">
@@ -242,6 +256,9 @@ export default function Home() {
                   {homepageData[3].topic.split(" ").map((word, i) => (
                     <p key={i}>{word}</p>
                   ))}
+                  {selectedTopic === homepageData[3].topic && (
+                    <p className="topic-details">{homepageData[3].details}</p>
+                  )}
                 </div>
                 <div
                   className={`bottom-right-point topic ${
@@ -252,6 +269,9 @@ export default function Home() {
                   {homepageData[2].topic.split(" ").map((word, i) => (
                     <p key={i}>{word}</p>
                   ))}
+                  {selectedTopic === homepageData[2].topic && (
+                    <p className="topic-details">{homepageData[2].details}</p>
+                  )}
                 </div>
               </div>
             </div>
