@@ -201,7 +201,7 @@ export default function Home() {
               <div
                 className="star-row-1"
                 style={{
-                  marginTop: selectedTopic ? "40px" : "20px",
+                  marginTop: selectedTopic ? "190px" : "0px",
                 }}
               >
                 <div
@@ -210,12 +210,21 @@ export default function Home() {
                   }`}
                   onClick={() => handleSelect(homepageData[0].topic)}
                 >
-                  {homepageData[0].topic.split(" ").map((word, i) => (
-                    <p key={i}>{word}</p>
-                  ))}
-                  {selectedTopic === homepageData[0].topic && (
-                    <p className="topic-details">{homepageData[0].details}</p>
-                  )}
+                  <div className="topic-text">
+                    <div className="topic-name">
+                      {homepageData[0].topic.split(" ").map((word, i) => (
+                        <p key={i}>{word}</p>
+                      ))}
+                    </div>
+                    {selectedTopic === homepageData[0].topic && (
+                      <div
+                        className="topic-details"
+                        dangerouslySetInnerHTML={{
+                          __html: homepageData[0].details,
+                        }}
+                      ></div>
+                    )}
+                  </div>
                 </div>
               </div>
               <div className="star-row-2">
@@ -225,12 +234,35 @@ export default function Home() {
                   }`}
                   onClick={() => handleSelect(homepageData[4].topic)}
                 >
-                  {homepageData[4].topic.split(" ").map((word, i) => (
-                    <p key={i}>{word}</p>
-                  ))}
-                  {selectedTopic === homepageData[4].topic && (
-                    <p className="topic-details">{homepageData[4].details}</p>
-                  )}
+                  <div className="topic-text">
+                    <div className="topic-name">
+                      {homepageData[4].topic.split(" ").map((word, i) => (
+                        <p key={i}>{word}</p>
+                      ))}
+                    </div>
+                    {selectedTopic === homepageData[4].topic && (
+                      <div className="topic-details">
+                        <form onClick={(e) => e.stopPropagation()}>
+                          <div>
+                            <p>Name:</p>
+                            <input type="text" id="name" name="name" />
+                          </div>
+
+                          <div>
+                            <p>Email:</p>
+                            <input type="email" id="email" name="email" />
+                          </div>
+
+                          <div>
+                            <p>Message:</p>
+                            <input id="message" name="message" />
+                          </div>
+
+                          <button type="submit">Submit</button>
+                        </form>
+                      </div>
+                    )}
+                  </div>
                 </div>
                 <div
                   className={`top-right-point topic ${
@@ -238,12 +270,21 @@ export default function Home() {
                   }`}
                   onClick={() => handleSelect(homepageData[1].topic)}
                 >
-                  {homepageData[1].topic.split(" ").map((word, i) => (
-                    <p key={i}>{word}</p>
-                  ))}
-                  {selectedTopic === homepageData[1].topic && (
-                    <p className="topic-details">{homepageData[1].details}</p>
-                  )}
+                  <div className="topic-text">
+                    <div className="topic-name">
+                      {homepageData[1].topic.split(" ").map((word, i) => (
+                        <p key={i}>{word}</p>
+                      ))}
+                    </div>
+                    {selectedTopic === homepageData[1].topic && (
+                      <div
+                        className="topic-details"
+                        dangerouslySetInnerHTML={{
+                          __html: homepageData[1].details,
+                        }}
+                      ></div>
+                    )}
+                  </div>
                 </div>
               </div>
               <div className="star-row-3">
@@ -253,12 +294,21 @@ export default function Home() {
                   }`}
                   onClick={() => handleSelect(homepageData[3].topic)}
                 >
-                  {homepageData[3].topic.split(" ").map((word, i) => (
-                    <p key={i}>{word}</p>
-                  ))}
-                  {selectedTopic === homepageData[3].topic && (
-                    <p className="topic-details">{homepageData[3].details}</p>
-                  )}
+                  <div className="topic-text">
+                    <div className="topic-name">
+                      {homepageData[3].topic.split(" ").map((word, i) => (
+                        <p key={i}>{word}</p>
+                      ))}
+                    </div>
+                    {selectedTopic === homepageData[3].topic && (
+                      <div
+                        className="topic-details"
+                        dangerouslySetInnerHTML={{
+                          __html: homepageData[3].details,
+                        }}
+                      ></div>
+                    )}
+                  </div>
                 </div>
                 <div
                   className={`bottom-right-point topic ${
@@ -266,12 +316,18 @@ export default function Home() {
                   }`}
                   onClick={() => handleSelect(homepageData[2].topic)}
                 >
-                  {homepageData[2].topic.split(" ").map((word, i) => (
-                    <p key={i}>{word}</p>
-                  ))}
-                  {selectedTopic === homepageData[2].topic && (
-                    <p className="topic-details">{homepageData[2].details}</p>
-                  )}
+                  <div className="topic-text">
+                    <div className="topic-name">
+                      {homepageData[2].topic.split(" ").map((word, i) => (
+                        <p key={i}>{word}</p>
+                      ))}
+                    </div>
+                    {selectedTopic === homepageData[2].topic && (
+                      <div className="topic-details">
+                        {homepageData[2].details}
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>

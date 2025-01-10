@@ -3,5 +3,8 @@
   { "topic": "What I Do", "details": "Madrid" },
   { "topic": "My Experience", "details": "Rome" },
   { "topic": "My Education", "details": "42" },
-  { "topic": "Contact Me", "details": "Do it" }
+  {
+    "topic": "Contact Me",
+    "details": ""
+  }
 ]
