@@ -201,9 +201,10 @@ export default function Home() {
               <div
                 className="star-row-1"
                 style={{
-                  marginTop: selectedTopic ? "190px" : "0px",
+                  marginTop: selectedTopic ? "225px" : "0px",
                 }}
               >
+                {/* WHO I AM  */}
                 <div
                   className={`top-point topic ${
                     selectedTopic === homepageData[0].topic ? "selected" : ""
@@ -228,6 +229,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="star-row-2">
+                {/* CONTACT ME */}
                 <div
                   className={`top-left-point topic ${
                     selectedTopic === homepageData[4].topic ? "selected" : ""
@@ -258,12 +260,13 @@ export default function Home() {
                             <input id="message" name="message" />
                           </div>
 
-                          <button type="submit">Submit</button>
+                          <button type="submit">Send</button>
                         </form>
                       </div>
                     )}
                   </div>
                 </div>
+                {/* WHAT I DO */}
                 <div
                   className={`top-right-point topic ${
                     selectedTopic === homepageData[1].topic ? "selected" : ""
@@ -288,6 +291,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="star-row-3">
+                {/* MY EDUCATION */}
                 <div
                   className={`bottom-left-point topic ${
                     selectedTopic === homepageData[3].topic ? "selected" : ""
@@ -301,15 +305,57 @@ export default function Home() {
                       ))}
                     </div>
                     {selectedTopic === homepageData[3].topic && (
-                      <div
-                        className="topic-details"
-                        dangerouslySetInnerHTML={{
-                          __html: homepageData[3].details,
-                        }}
-                      ></div>
+                      <div className="topic-details">
+                        <div className="school-container">
+                          <div className="school">
+                            <img src="/homepageImages/Panther_logo.gif"></img>
+                            <div className="school-name">
+                              <p>Hermitage</p>
+                              <p>High School</p>
+                              <p style={{ color: "gray", fontStyle: "italic" }}>
+                                Class of 2015
+                              </p>
+                            </div>
+                          </div>
+                          <div className="school">
+                            <img
+                              src="/unc-logo.svg"
+                              style={{ marginLeft: 5 + "px" }}
+                            ></img>
+                            <div className="school-name">
+                              <p>University of</p>
+                              <p>North Carolina</p>
+                              <p style={{ color: "gray", fontStyle: "italic" }}>
+                                Bootcamp '23 - '24
+                              </p>
+                            </div>
+                          </div>
+                          <div className="school">
+                            <img src="/homepageImages/su-logo.png"></img>
+                            <div className="school-name">
+                              <p>Shenandoah</p>
+                              <p>University</p>
+                              <p style={{ color: "gray", fontStyle: "italic" }}>
+                                Class of 2019
+                              </p>
+                            </div>
+                          </div>
+                          <div className="school">
+                            <img src="/homepageImages/dt-logo.jpg"></img>
+                            <div className="school-name">
+                              <p>Durham</p>
+                              <p>Tech</p>
+                              <p style={{ color: "gray", fontStyle: "italic" }}>
+                                Enrolling Soon!
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     )}
                   </div>
                 </div>
+                {/* WORK EXPERIENCE */}
                 <div
                   className={`bottom-right-point topic ${
                     selectedTopic === homepageData[2].topic ? "selected" : ""
@@ -324,7 +370,92 @@ export default function Home() {
                     </div>
                     {selectedTopic === homepageData[2].topic && (
                       <div className="topic-details">
-                        {homepageData[2].details}
+                        <div className="job-container">
+                          <div className="job">
+                            <img src="/homepageImages/Target_logo.svg"></img>
+                            <div className="job-name">
+                              <p>Target</p>
+                              <p
+                                style={{
+                                  color: "gray",
+                                  fontStyle: "italic",
+                                }}
+                              >
+                                Cashier
+                              </p>
+                            </div>
+                          </div>
+                          <div className="job">
+                            <img src="/homepageImages/Amf_logo.webp"></img>
+                            <div className="job-name">
+                              <p>AMF</p>
+                              <p
+                                style={{
+                                  color: "gray",
+                                  fontStyle: "italic",
+                                }}
+                              >
+                                Server
+                              </p>
+                            </div>
+                          </div>
+                          <div className="job">
+                            <img src="/homepageImages/mezeh2.png"></img>
+                            <div className="job-name">
+                              <p>Mezeh</p>
+                              <p
+                                style={{
+                                  color: "gray",
+                                  fontStyle: "italic",
+                                }}
+                              >
+                                Customer Service
+                              </p>
+                            </div>
+                          </div>
+                          <div className="job">
+                            <img src="/homepageImages/dominos-pizza.svg"></img>
+                            <div className="job-name">
+                              <p>Domino's</p>
+                              <p
+                                style={{
+                                  color: "gray",
+                                  fontStyle: "italic",
+                                }}
+                              >
+                                Assistant Manager
+                              </p>
+                            </div>
+                          </div>
+                          <div className="job">
+                            <img src="/homepageImages/marco.png"></img>
+                            <div className="job-name">
+                              <p>Marco's Pizza</p>
+                              <p
+                                style={{
+                                  color: "gray",
+                                  fontStyle: "italic",
+                                }}
+                              >
+                                Assistant Manager
+                              </p>
+                            </div>
+                          </div>
+                          <div className="job">
+                            <img src="/homepageImages/5g.png"></img>
+                            <div className="job-name">
+                              <p>Five Guys</p>
+                              <p
+                                style={{
+                                  color: "gray",
+                                  fontStyle: "italic",
+                                }}
+                              >
+                                Assistant Manager
+                              </p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     )}
                   </div>
