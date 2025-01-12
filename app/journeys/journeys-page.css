@@ -138,7 +138,7 @@
   width: 55%;
   height: fit-content;
   position: sticky;
-  top: 2rem;
+  top: 3.5rem;
   opacity: 0;
   transform: translateX(2rem);
   transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
@@ -147,7 +147,7 @@
 .selected-text {
   width: 100%;
   height: fit-content;
-  max-height: 80vh;
+  max-height: 75vh;
   border: 1px solid rgba(0, 255, 247, 0.5);
   box-shadow: 0 0 5px 1px rgba(0, 255, 247, 0.6);
   z-index: 1000;
