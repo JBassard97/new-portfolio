@@ -263,6 +263,7 @@ export default function Home() {
                             target="_blank"
                           >
                             <Image
+                              priority
                               src="/homepageImages/linked.jpg"
                               alt="Image"
                               width={200}
@@ -271,6 +272,7 @@ export default function Home() {
                           </a>
                           <a href="mailto:foxyryuu@gmail.com" target="_blank">
                             <Image
+                              priority
                               src="/homepageImages/gmail.png"
                               alt="Image"
                               width={200}
@@ -282,6 +284,7 @@ export default function Home() {
                             target="_blank"
                           >
                             <Image
+                              priority
                               src="/github.svg"
                               alt="My GitHub"
                               width={30}
@@ -290,6 +293,7 @@ export default function Home() {
                           </a>
                           <a href="tel:+19843277647" target="_blank">
                             <Image
+                              priority
                               src="/homepageImages/phone.png"
                               alt="Image"
                               width={200}
@@ -320,6 +324,7 @@ export default function Home() {
                           <div className="thing">
                             <p>Constant Learning</p>
                             <Image
+                              priority
                               src="/projectImages/regexsimp.png"
                               alt="Image"
                               width={200}
@@ -329,6 +334,7 @@ export default function Home() {
                           <div className="thing">
                             <p>Creating Websites</p>
                             <Image
+                              priority
                               src="/projectImages/PollR_Screenshot.png"
                               alt="Image"
                               width={200}
@@ -338,6 +344,7 @@ export default function Home() {
                           <div className="thing">
                             <p>Having Fun</p>
                             <Image
+                              priority
                               src="/projectImages/synth.png"
                               alt="Image"
                               width={200}
@@ -369,6 +376,7 @@ export default function Home() {
                         <div className="school-container">
                           <div className="school">
                             <Image
+                              priority
                               src="/homepageImages/Panther_logo.gif"
                               alt="Image"
                               width={200}
@@ -384,6 +392,7 @@ export default function Home() {
                           </div>
                           <div className="school">
                             <Image
+                              priority
                               src="/unc-logo.svg"
                               style={{ marginLeft: 5 + "px" }}
                               alt="Image"
@@ -400,6 +409,7 @@ export default function Home() {
                           </div>
                           <div className="school">
                             <Image
+                              priority
                               src="/homepageImages/su-logo.png"
                               alt="Image"
                               width={200}
@@ -415,6 +425,7 @@ export default function Home() {
                           </div>
                           <div className="school">
                             <Image
+                              priority
                               src="/homepageImages/dt-logo.jpg"
                               alt="Image"
                               width={200}
@@ -451,6 +462,7 @@ export default function Home() {
                         <div className="job-container">
                           <div className="job">
                             <Image
+                              priority
                               src="/homepageImages/Target_logo.svg"
                               alt="Image"
                               width={200}
@@ -470,6 +482,7 @@ export default function Home() {
                           </div>
                           <div className="job">
                             <Image
+                              priority
                               src="/homepageImages/Amf_logo.webp"
                               alt="Image"
                               width={200}
@@ -489,6 +502,7 @@ export default function Home() {
                           </div>
                           <div className="job">
                             <Image
+                              priority
                               src="/homepageImages/mezeh2.png"
                               alt="Image"
                               width={200}
@@ -508,6 +522,7 @@ export default function Home() {
                           </div>
                           <div className="job">
                             <Image
+                              priority
                               src="/homepageImages/dominos-pizza.svg"
                               alt="Image"
                               width={200}
@@ -527,6 +542,7 @@ export default function Home() {
                           </div>
                           <div className="job">
                             <Image
+                              priority
                               src="/homepageImages/marco.png"
                               alt="Image"
                               width={200}
@@ -546,6 +562,7 @@ export default function Home() {
                           </div>
                           <div className="job">
                             <Image
+                              priority
                               src="/homepageImages/5g.png"
                               alt="Image"
                               width={200}
