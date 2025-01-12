@@ -18,7 +18,7 @@
   },
   {
     "dateString": "October 2024",
-    "main_event": "<h2>Began Developing PythonTerminalQuest</h2><p class='header-desc'>A Game for your Terminal With a Rivetting Story</p><img src='/projectImages/pythonquest.png'/><p><a href='/projects/PythonTerminalQuest'>View my Project Here</a></p>",
+    "main_event": "<h2>Began Developing Python Terminal Quest</h2><p class='header-desc'>A Game for your Terminal With a Rivetting Story</p><img src='/projectImages/pythonquest.png'/><p><a href='/projects/PythonTerminalQuest'>View my Project Here</a></p>",
     "logs": []
   },
   {
@@ -48,9 +48,9 @@
   },
   {
     "dateString": "May 2024",
-    "main_event": "<h2>Created Next_Hang_Man</h2><p class='header-desc'>A Game That Works Your Brain</p><img src='/projectImages/hangman.png'/><p><a href='/projects/Next_Hang_Man'>View my Project Here</a></p>",
+    "main_event": "<h2>Created Next Hang Man</h2><p class='header-desc'>A Game That Works Your Brain</p><img src='/projectImages/hangman.png'/><p><a href='/projects/Next_Hang_Man'>View my Project Here</a></p>",
     "logs": [
-      "<h2>Created Cover_Letter_Generator</h2><p class='header-desc'>The Tool I Use for Tailoring Cover Letters</p><p><a href='https://github.com/JBassard97/Cover_Letter_Generator'>View my Project Here</a></p>"
+      "<h2>Created Cover Letter Generator</h2><p class='header-desc'>The Tool I Use for Tailoring Cover Letters</p><p><a href='https://github.com/JBassard97/Cover_Letter_Generator'>View my Project Here</a></p>"
     ]
   },
   {

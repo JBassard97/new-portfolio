@@ -406,7 +406,7 @@ form input:focus {
 
 .contact-links {
   display: flex;
-  width: 30%;
+  width: 50%;
   justify-content: space-evenly;
   align-items: center;
   animation: fadeIn 1s ease;
@@ -438,6 +438,7 @@ form input:focus {
   justify-content: space-evenly;
   align-items: center;
   height: fit-content;
+  animation: fadeIn 1s ease;
 }
 
 .school {
@@ -457,6 +458,7 @@ form input:focus {
   width: 40%;
   height: 100%;
   max-width: 100px;
+  animation: fadeIn 1s ease;
 }
 
 .school .school-name {
@@ -481,6 +483,7 @@ form input:focus {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  animation: fadeIn 1s ease;
 }
 
 .job-container .job {
@@ -522,7 +525,7 @@ form input:focus {
 
 .who-i-am-container {
   width: 100%;
-  height: fit-content;
+  min-height: 200px;
   padding: 10px;
   display: flex;
   transition: all 1.5s ease;
@@ -533,8 +536,8 @@ form input:focus {
   width: 150px;
   height: 80%;
   border-radius: 50%;
-  transition: all 1.5s ease;
-  animation: fadeIn 1.5s ease;
+  transition: all 2s ease;
+  animation: fadeIn 2s ease;
 }
 
 .who-i-am-details {
@@ -546,6 +549,7 @@ form input:focus {
   will-change: font-size;
   font-size: calc(0.5rem + 1.1vw);
   color: lightgrey;
+  animation: fadeIn 2s ease;
 }
 
 .what-i-do-container {
@@ -590,6 +594,7 @@ form input:focus {
   left: 0;
   object-fit: cover;
   border-radius: 10px;
+  animation: fadeIn 1s ease;
 }
 
 @keyframes fadeIn {

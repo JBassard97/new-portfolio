@@ -150,41 +150,6 @@ export default function Home() {
     }
   };
 
-  // const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
-  //   e.preventDefault();
-
-  //   const formData = new FormData(e.target as HTMLFormElement);
-
-  //   try {
-  //     const response = await fetch("/api/send-email", {
-  //       method: "POST",
-  //       headers: { "Content-Type": "application/json" },
-  //       body: JSON.stringify({
-  //         name: formData.get("name"),
-  //         email: formData.get("email"),
-  //         message: formData.get("message"),
-  //       }),
-  //     });
-
-  //     if (response.ok) {
-  //       alert("Email sent successfully!");
-  //       (e.target as HTMLFormElement).reset();
-  //     } else {
-  //       let errorMessage = "Failed to send email.";
-  //       try {
-  //         const errorData = await response.json();
-  //         errorMessage = errorData.message || errorMessage;
-  //       } catch {
-  //         // Response not JSON; use generic message.
-  //       }
-  //       alert(errorMessage);
-  //     }
-  //   } catch (error) {
-  //     console.error("Error sending email:", error);
-  //     alert(error);
-  //   }
-  // };
-
   return (
     <>
       <div
@@ -256,7 +221,10 @@ export default function Home() {
                     {selectedTopic === homepageData[0].topic && (
                       <div className="topic-details">
                         <div className="who-i-am-container">
-                          <img src="/homepageImages/me.jpg"></img>
+                          <img
+                            src="/homepageImages/me.jpg"
+                            loading="lazy"
+                          ></img>
                           <p className="who-i-am-details">
                             Jonathan Acciarito is a full-stack web developer
                             with 2 years of experience specializing in MERN
@@ -286,32 +254,6 @@ export default function Home() {
                     </div>
                     {selectedTopic === homepageData[4].topic && (
                       <div className="topic-details">
-                        {/* <form
-                          onClick={(e) => e.stopPropagation()}
-                          onSubmit={sendEmail}
-                        >
-                          <div>
-                            <p>Name:</p>
-                            <input type="text" id="name" name="name" required />
-                          </div>
-
-                          <div>
-                            <p>Email:</p>
-                            <input
-                              type="email"
-                              id="email"
-                              name="email"
-                              required
-                            />
-                          </div>
-
-                          <div>
-                            <p>Message:</p>
-                            <input id="message" name="message" required />
-                          </div>
-
-                          <button type="submit">Send</button>
-                        </form> */}
                         <div className="contact-links">
                           <a
                             href="https://www.linkedin.com/in/jonathan-acciarito-46434b2aa/"
