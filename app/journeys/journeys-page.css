@@ -13,12 +13,22 @@
   /* border: 1px solid blue; */
 }
 
+.journeys-page h1 {
+  position: absolute;
+  top: 0;
+  left: 4rem;
+  /* width: 100%; */
+  color: grey;
+  font-style: italic;
+}
+
 .timeline {
   position: relative;
   width: 6rem;
   height: fit-content;
   /* border: 1px solid red; */
   margin-right: 2rem;
+  margin-top: 6rem;
 }
 
 .vector {

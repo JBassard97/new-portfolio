@@ -244,6 +244,7 @@
   transition: all 0.3s ease, min-width 0.15s ease, transform 0s ease;
   box-shadow: 0 0 8px 5px rgba(82, 82, 82, 0.5);
   position: absolute;
+  animation: fadeIn 1s ease;
 }
 
 .topic p {
@@ -405,14 +406,11 @@ form input:focus {
 
 .contact-links {
   display: flex;
-  flex-direction: column;
+  width: 30%;
   justify-content: space-evenly;
   align-items: center;
   animation: fadeIn 1s ease;
-  margin-left: 5px;
-  position: absolute;
-  margin-left: 258px;
-  height: 80%;
+  padding: 10px;
 }
 
 .contact-links a {

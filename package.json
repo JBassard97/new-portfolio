@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "emailjs-com": "^3.2.0",
     "github-calendar": "^2.3.4",
     "next": "^15.1.2",
     "react": "19.0.0-rc-02c0e824-20241028",

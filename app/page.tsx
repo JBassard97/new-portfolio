@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { Tooltip } from "react-tooltip";
+import emailjs from "emailjs-com";
 import "./home.css";
 
 interface HomePageData {
@@ -149,6 +150,41 @@ export default function Home() {
     }
   };
 
+  // const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
+
+  //   const formData = new FormData(e.target as HTMLFormElement);
+
+  //   try {
+  //     const response = await fetch("/api/send-email", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify({
+  //         name: formData.get("name"),
+  //         email: formData.get("email"),
+  //         message: formData.get("message"),
+  //       }),
+  //     });
+
+  //     if (response.ok) {
+  //       alert("Email sent successfully!");
+  //       (e.target as HTMLFormElement).reset();
+  //     } else {
+  //       let errorMessage = "Failed to send email.";
+  //       try {
+  //         const errorData = await response.json();
+  //         errorMessage = errorData.message || errorMessage;
+  //       } catch {
+  //         // Response not JSON; use generic message.
+  //       }
+  //       alert(errorMessage);
+  //     }
+  //   } catch (error) {
+  //     console.error("Error sending email:", error);
+  //     alert(error);
+  //   }
+  // };
+
   return (
     <>
       <div
@@ -250,24 +286,32 @@ export default function Home() {
                     </div>
                     {selectedTopic === homepageData[4].topic && (
                       <div className="topic-details">
-                        <form onClick={(e) => e.stopPropagation()}>
+                        {/* <form
+                          onClick={(e) => e.stopPropagation()}
+                          onSubmit={sendEmail}
+                        >
                           <div>
                             <p>Name:</p>
-                            <input type="text" id="name" name="name" />
+                            <input type="text" id="name" name="name" required />
                           </div>
 
                           <div>
                             <p>Email:</p>
-                            <input type="email" id="email" name="email" />
+                            <input
+                              type="email"
+                              id="email"
+                              name="email"
+                              required
+                            />
                           </div>
 
                           <div>
                             <p>Message:</p>
-                            <input id="message" name="message" />
+                            <input id="message" name="message" required />
                           </div>
 
                           <button type="submit">Send</button>
-                        </form>
+                        </form> */}
                         <div className="contact-links">
                           <a
                             href="https://www.linkedin.com/in/jonathan-acciarito-46434b2aa/"
@@ -309,7 +353,7 @@ export default function Home() {
                       <div className="topic-details">
                         <div className="what-i-do-container">
                           <div className="thing">
-                            <p>Continuous Learning</p>
+                            <p>Constant Learning</p>
                             <img src="/projectImages/regexsimp.png"></img>
                           </div>
                           <div className="thing">
