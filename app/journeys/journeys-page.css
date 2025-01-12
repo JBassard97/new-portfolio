@@ -157,6 +157,7 @@
   overflow-y: scroll;
   scrollbar-width: none;
   transition: box-shadow 0.3s ease;
+  margin-top: 2.8rem;
 }
 
 .selected-text:hover {
