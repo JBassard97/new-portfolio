@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { Tooltip } from "react-tooltip";
-import emailjs from "emailjs-com";
+import Image from "next/image";
 import "./home.css";
 
 interface HomePageData {
@@ -221,10 +221,13 @@ export default function Home() {
                     {selectedTopic === homepageData[0].topic && (
                       <div className="topic-details">
                         <div className="who-i-am-container">
-                          <img
+                          <Image
                             src="/homepageImages/me.jpg"
+                            alt="Me"
                             loading="lazy"
-                          ></img>
+                            width={200}
+                            height={300}
+                          />
                           <p className="who-i-am-details">
                             Jonathan Acciarito is a full-stack web developer
                             with 2 years of experience specializing in MERN
@@ -259,19 +262,39 @@ export default function Home() {
                             href="https://www.linkedin.com/in/jonathan-acciarito-46434b2aa/"
                             target="_blank"
                           >
-                            <img src="/homepageImages/linked.jpg"></img>
+                            <Image
+                              src="/homepageImages/linked.jpg"
+                              alt="Image"
+                              width={200}
+                              height={100}
+                            />
                           </a>
                           <a href="mailto:foxyryuu@gmail.com" target="_blank">
-                            <img src="/homepageImages/gmail.png"></img>
+                            <Image
+                              src="/homepageImages/gmail.png"
+                              alt="Image"
+                              width={200}
+                              height={100}
+                            />
                           </a>
                           <a
                             href="https://github.com/JBassard97"
                             target="_blank"
                           >
-                            <img src="/github.svg"></img>
+                            <Image
+                              src="/github.svg"
+                              alt="My GitHub"
+                              width={30}
+                              height={30}
+                            />
                           </a>
                           <a href="tel:+19843277647" target="_blank">
-                            <img src="/homepageImages/phone.png"></img>
+                            <Image
+                              src="/homepageImages/phone.png"
+                              alt="Image"
+                              width={200}
+                              height={100}
+                            />
                           </a>
                         </div>
                       </div>
@@ -296,15 +319,30 @@ export default function Home() {
                         <div className="what-i-do-container">
                           <div className="thing">
                             <p>Constant Learning</p>
-                            <img src="/projectImages/regexsimp.png"></img>
+                            <Image
+                              src="/projectImages/regexsimp.png"
+                              alt="Image"
+                              width={200}
+                              height={100}
+                            />
                           </div>
                           <div className="thing">
                             <p>Creating Websites</p>
-                            <img src="/projectImages/PollR_Screenshot.png"></img>
+                            <Image
+                              src="/projectImages/PollR_Screenshot.png"
+                              alt="Image"
+                              width={200}
+                              height={100}
+                            />
                           </div>
                           <div className="thing">
                             <p>Having Fun</p>
-                            <img src="/projectImages/synth.png"></img>
+                            <Image
+                              src="/projectImages/synth.png"
+                              alt="Image"
+                              width={200}
+                              height={100}
+                            />
                           </div>
                         </div>
                       </div>
@@ -330,7 +368,12 @@ export default function Home() {
                       <div className="topic-details">
                         <div className="school-container">
                           <div className="school">
-                            <img src="/homepageImages/Panther_logo.gif"></img>
+                            <Image
+                              src="/homepageImages/Panther_logo.gif"
+                              alt="Image"
+                              width={200}
+                              height={100}
+                            />
                             <div className="school-name">
                               <p>Hermitage</p>
                               <p>High School</p>
@@ -340,10 +383,13 @@ export default function Home() {
                             </div>
                           </div>
                           <div className="school">
-                            <img
+                            <Image
                               src="/unc-logo.svg"
                               style={{ marginLeft: 5 + "px" }}
-                            ></img>
+                              alt="Image"
+                              width={200}
+                              height={100}
+                            />
                             <div className="school-name">
                               <p>University of</p>
                               <p>North Carolina</p>
@@ -353,7 +399,12 @@ export default function Home() {
                             </div>
                           </div>
                           <div className="school">
-                            <img src="/homepageImages/su-logo.png"></img>
+                            <Image
+                              src="/homepageImages/su-logo.png"
+                              alt="Image"
+                              width={200}
+                              height={100}
+                            />
                             <div className="school-name">
                               <p>Shenandoah</p>
                               <p>University</p>
@@ -363,7 +414,12 @@ export default function Home() {
                             </div>
                           </div>
                           <div className="school">
-                            <img src="/homepageImages/dt-logo.jpg"></img>
+                            <Image
+                              src="/homepageImages/dt-logo.jpg"
+                              alt="Image"
+                              width={200}
+                              height={100}
+                            />
                             <div className="school-name">
                               <p>Durham</p>
                               <p>Tech</p>
@@ -394,7 +450,12 @@ export default function Home() {
                       <div className="topic-details">
                         <div className="job-container">
                           <div className="job">
-                            <img src="/homepageImages/Target_logo.svg"></img>
+                            <Image
+                              src="/homepageImages/Target_logo.svg"
+                              alt="Image"
+                              width={200}
+                              height={100}
+                            />
                             <div className="job-name">
                               <p>Target</p>
                               <p
@@ -408,7 +469,12 @@ export default function Home() {
                             </div>
                           </div>
                           <div className="job">
-                            <img src="/homepageImages/Amf_logo.webp"></img>
+                            <Image
+                              src="/homepageImages/Amf_logo.webp"
+                              alt="Image"
+                              width={200}
+                              height={100}
+                            />
                             <div className="job-name">
                               <p>AMF</p>
                               <p
@@ -422,7 +488,12 @@ export default function Home() {
                             </div>
                           </div>
                           <div className="job">
-                            <img src="/homepageImages/mezeh2.png"></img>
+                            <Image
+                              src="/homepageImages/mezeh2.png"
+                              alt="Image"
+                              width={200}
+                              height={100}
+                            />
                             <div className="job-name">
                               <p>Mezeh</p>
                               <p
@@ -436,7 +507,12 @@ export default function Home() {
                             </div>
                           </div>
                           <div className="job">
-                            <img src="/homepageImages/dominos-pizza.svg"></img>
+                            <Image
+                              src="/homepageImages/dominos-pizza.svg"
+                              alt="Image"
+                              width={200}
+                              height={100}
+                            />
                             <div className="job-name">
                               <p>Domino's</p>
                               <p
@@ -450,7 +526,12 @@ export default function Home() {
                             </div>
                           </div>
                           <div className="job">
-                            <img src="/homepageImages/marco.png"></img>
+                            <Image
+                              src="/homepageImages/marco.png"
+                              alt="Image"
+                              width={200}
+                              height={100}
+                            />
                             <div className="job-name">
                               <p>Marco's Pizza</p>
                               <p
@@ -464,7 +545,12 @@ export default function Home() {
                             </div>
                           </div>
                           <div className="job">
-                            <img src="/homepageImages/5g.png"></img>
+                            <Image
+                              src="/homepageImages/5g.png"
+                              alt="Image"
+                              width={200}
+                              height={100}
+                            />
                             <div className="job-name">
                               <p>Five Guys</p>
                               <p
