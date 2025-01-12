@@ -218,12 +218,18 @@ export default function Home() {
                       ))}
                     </div>
                     {selectedTopic === homepageData[0].topic && (
-                      <div
-                        className="topic-details"
-                        dangerouslySetInnerHTML={{
-                          __html: homepageData[0].details,
-                        }}
-                      ></div>
+                      <div className="topic-details">
+                        <div className="who-i-am-container">
+                          <img src="/homepageImages/me.jpg"></img>
+                          <p className="who-i-am-details">
+                            Jonathan Acciarito is a full-stack web developer
+                            with 2 years of experience specializing in MERN
+                            stack applications. A graduate of UNC's Coding
+                            Bootcamp, he hails from Richmond, VA, and is now
+                            based in Chapel Hill, NC.
+                          </p>
+                        </div>
+                      </div>
                     )}
                   </div>
                 </div>
@@ -262,6 +268,26 @@ export default function Home() {
 
                           <button type="submit">Send</button>
                         </form>
+                        <div className="contact-links">
+                          <a
+                            href="https://www.linkedin.com/in/jonathan-acciarito-46434b2aa/"
+                            target="_blank"
+                          >
+                            <img src="/homepageImages/linked.jpg"></img>
+                          </a>
+                          <a href="mailto:foxyryuu@gmail.com" target="_blank">
+                            <img src="/homepageImages/gmail.png"></img>
+                          </a>
+                          <a
+                            href="https://github.com/JBassard97"
+                            target="_blank"
+                          >
+                            <img src="/github.svg"></img>
+                          </a>
+                          <a href="tel:+19843277647" target="_blank">
+                            <img src="/homepageImages/phone.png"></img>
+                          </a>
+                        </div>
                       </div>
                     )}
                   </div>
@@ -280,12 +306,22 @@ export default function Home() {
                       ))}
                     </div>
                     {selectedTopic === homepageData[1].topic && (
-                      <div
-                        className="topic-details"
-                        dangerouslySetInnerHTML={{
-                          __html: homepageData[1].details,
-                        }}
-                      ></div>
+                      <div className="topic-details">
+                        <div className="what-i-do-container">
+                          <div className="thing">
+                            <p>Continuous Learning</p>
+                            <img src="/projectImages/regexsimp.png"></img>
+                          </div>
+                          <div className="thing">
+                            <p>Creating Websites</p>
+                            <img src="/projectImages/PollR_Screenshot.png"></img>
+                          </div>
+                          <div className="thing">
+                            <p>Having Fun</p>
+                            <img src="/projectImages/synth.png"></img>
+                          </div>
+                        </div>
+                      </div>
                     )}
                   </div>
                 </div>

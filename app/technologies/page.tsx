@@ -67,7 +67,7 @@ export default function Technologies() {
 
   return (
     <div className="tech-page">
-      <h4 className="tech-header">Technologies I Use</h4>
+      <h2 className="tech-header">Technologies I Use</h2>
       <ProficiencyKey />
 
       <div className="tech-list">
