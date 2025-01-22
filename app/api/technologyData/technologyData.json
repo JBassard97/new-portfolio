@@ -180,6 +180,14 @@
         "desc": "Modern Web App Build Tool"
       },
       {
+        "name": "Handlebars",
+        "docs": "https://handlebarsjs.com/guide/",
+        "icon": "/handlebars.svg",
+        "hasProjects": true,
+        "type": "framework",
+        "desc": "Simple Templating Engine"
+      },
+      {
         "name": "Bootstrap",
         "docs": "https://getbootstrap.com/docs/5.3/getting-started/introduction/",
         "icon": "/bootstrap.svg",
@@ -246,12 +254,20 @@
         "desc": "Simplify DOM Manipulation"
       },
       {
-        "name": "Handlebars",
-        "docs": "https://handlebarsjs.com/guide/",
-        "icon": "/handlebars.svg",
-        "hasProjects": true,
+        "name": "Native",
+        "docs": "https://reactnative.dev/",
+        "icon": "/react-native.svg",
+        "hasProjects": false,
         "type": "framework",
-        "desc": "Simple Templating Engine"
+        "desc": "Cross-Platform Framework"
+      },
+      {
+        "name": "Expo",
+        "docs": "https://expo.dev/learn",
+        "icon": "/expo.svg",
+        "hasProjects": false,
+        "type": "tool",
+        "desc": "Speeds Up React Native Development"
       }
     ],
     "used_once": [
