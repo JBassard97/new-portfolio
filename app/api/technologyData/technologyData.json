@@ -204,6 +204,30 @@
         "desc": "Utility-First CSS Framework"
       },
       {
+        "name": "Flask",
+        "docs": "https://flask.palletsprojects.com/en/stable/",
+        "icon": "/flask.svg",
+        "hasProjects": true,
+        "type": "framework",
+        "desc": "Lightweight Python Framework"
+      },
+      {
+        "name": "PostgreSQL",
+        "docs": "https://www.postgresql.org/docs/",
+        "icon": "/postgres.svg.png",
+        "hasProjects": true,
+        "type": "database",
+        "desc": "Advanced Relational Database"
+      },
+      {
+        "name": "SQLAlchemy",
+        "docs": "https://docs.sqlalchemy.org/en/20/",
+        "icon": "/SQLAlchemy.svg",
+        "hasProjects": true,
+        "type": "tool",
+        "desc": "Python ORM for Databases"
+      },
+      {
         "name": "Postman",
         "docs": "https://learning.postman.com/docs/publishing-your-api/documenting-your-api/?deviceId=4eee1cf0-3b06-4db1-8491-f298cdaa5913",
         "icon": "/postman.svg",
@@ -318,14 +342,6 @@
         "hasProjects": false,
         "type": "framework",
         "desc": "Python Web Framework"
-      },
-      {
-        "name": "Flask",
-        "docs": "https://flask.palletsprojects.com/en/stable/",
-        "icon": "/flask.svg",
-        "hasProjects": false,
-        "type": "framework",
-        "desc": "Lightweight Python Framework"
       },
       {
         "name": "Java",

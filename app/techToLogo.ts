@@ -60,6 +60,8 @@ const techToLogo = (tech: string) => {
             return "/npm.svg"
         case "php":
             return "/php.svg"
+        case "postgresql":
+            return "/postgres.svg.png"
         case "postman":
             return "/postman.svg"
         case "python":
@@ -70,6 +72,8 @@ const techToLogo = (tech: string) => {
             return "/render.svg"
         case "sass":
             return "/sass.svg"
+        case "sqlalchemy":
+            return "/SQLAlchemy.svg"
         case "svelte":
             return "/svelte.svg"
         case "tailwind":

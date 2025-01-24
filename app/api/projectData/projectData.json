@@ -334,6 +334,29 @@
       ]
     },
     {
+      "name": "ToDoAPI",
+      "githubLink": "https://github.com/JBassard97/ToDoFlaskAPI",
+      "images": ["/projectImages/PostgresFlaskToDo.png"],
+      "isComplete": true,
+      "isDeployed": false,
+      "deployedLink": "",
+      "desc": "An API that evolved into a full-stack app, created solely to learn PostgreSQL and Flask.",
+      "hasFrontend": true,
+      "hasBackend": true,
+      "isFullStack": true,
+      "type": "Web App",
+      "hostedOn": "",
+      "stack": ["Python", "Flask", "SQLAlchemy", "PostgreSQL", "HTML"],
+      "tellMeMore": [
+        "Created and considered an MVP in less than a day.",
+        "Performs all CRUD database operations through HTTP requests."
+      ],
+      "whatILearned": [
+        "How to comfortably manage a PostgreSQL Database.",
+        "Using the SQLAlchemy package as the ORM for Python."
+      ]
+    },
+    {
       "name": "autoCommit",
       "githubLink": "https://github.com/JBassard97/autoCommit",
       "images": ["/projectImages/autocommit.png"],
