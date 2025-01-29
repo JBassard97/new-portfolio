@@ -204,6 +204,30 @@
       ]
     },
     {
+      "name": "Real-Time_Tasks",
+      "githubLink": "",
+      "images": ["/projectImages/realtimetasks.png"],
+      "isComplete": true,
+      "isDeployed": true,
+      "deployedLink": "https://real-time-task-collab.onrender.com/",
+      "desc": "Join a room and everyone can create and complete tasks from a shared to-do list in real time.",
+      "hasFrontend": true,
+      "hasBackend": true,
+      "isFullStack": true,
+      "type": "Web App",
+      "hostedOn": "Render",
+      "stack": ["WebSockets", "React", "TypeScript", "CSS", "Render", "NodeJS"],
+      "tellMeMore": [
+        "Considered an MVP in less than 48 hours.",
+        "Created as an assessment assignment for a prospective job.",
+        "Ornately written README with my thought process for this app's creation."
+      ],
+      "whatILearned": [
+        "Life Lesson: Reapeatedly failing in deployment only makes you stronger.",
+        "Realizing that I had a full stack app that wasn't properly serving the frontend, I reached for Express since I'm very acquanted with it. However, using that gave me repeated PORT errors, so I learned how to do a simple http server integrated with the WebSocket server and that did the trick."
+      ]
+    },
+    {
       "name": "jbassard97nodecolors",
       "githubLink": "https://github.com/JBassard97/nodeColors",
       "images": ["/projectImages/nodecolors.png"],

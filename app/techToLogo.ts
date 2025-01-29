@@ -86,6 +86,8 @@ const techToLogo = (tech: string) => {
             return "/vue.svg"
         case "webpack":
             return "/webpack.svg"
+        case "websockets":
+            return "/websocket.svg"
         case "wordpress":
             return "/wordpress.svg"
         case "yaml":

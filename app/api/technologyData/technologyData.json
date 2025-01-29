@@ -292,6 +292,14 @@
         "hasProjects": false,
         "type": "tool",
         "desc": "Speeds Up React Native Development"
+      },
+      {
+        "name": "WebSockets",
+        "docs": "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API",
+        "icon": "/websocket.svg",
+        "hasProjects": true,
+        "type": "tool",
+        "desc": "Real Time Bidirectional Communication"
       }
     ],
     "used_once": [
