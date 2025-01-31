@@ -304,6 +304,14 @@
     ],
     "used_once": [
       {
+        "name": "Ollama",
+        "docs": "https://github.com/ollama/ollama/tree/main/docs",
+        "icon": "/ollama.svg",
+        "hasProjects": false,
+        "type": "tool",
+        "desc": "Run Open-Source LLMs Locally"
+      },
+      {
         "name": "PHP",
         "docs": "https://www.php.net/manual/en/",
         "icon": "/php.svg",

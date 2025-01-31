@@ -58,6 +58,8 @@ const techToLogo = (tech: string) => {
             return "/node.svg"
         case "npm":
             return "/npm.svg"
+        case "ollama":
+            return "/ollama.svg"
         case "php":
             return "/php.svg"
         case "postgresql":
